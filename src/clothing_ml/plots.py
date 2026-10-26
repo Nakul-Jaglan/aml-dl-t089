@@ -98,7 +98,7 @@ def generate_figures(profile="budget"):
             bars = axis.barh(np.arange(4) + offset, values, height=.34, color=COLORS[feature], label=feature,
                              hatch="//" if feature == "hog" else None)
             for bar, value in zip(bars, values):
-                axis.text(value + .015, bar.get_y() + bar.get_height() / 2, f"{value:.1%}", va="center", fontsize=9)
+                axis.text(value + .015, bar.get_y() + bar.get_height() / 2, f"{value:.3f}", va="center", fontsize=9)
         axis.set_yticks(np.arange(4), list(DISPLAY.values()))
         axis.set_xlim(0, 1.08)
         axis.set_xlabel(title + " (fraction)")

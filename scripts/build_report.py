@@ -132,7 +132,7 @@ for axis, metric, title in zip(axes, ["accuracy", "macro_f1"], ["Accuracy", "Mac
         values = [summary[(summary.feature == feature) & (summary.model == model)][metric].iloc[0] for model in model_names]
         bars = axis.barh(np.arange(4)+offset, values, height=.34, color=color, label=feature_names[feature], hatch="//" if feature == "hog" else None)
         for bar, value in zip(bars, values):
-            axis.text(value+.015, bar.get_y()+bar.get_height()/2, f"{100*value:.1f}", va="center", fontsize=10)
+            axis.text(value+.015, bar.get_y()+bar.get_height()/2, f"{value:.3f}", va="center", fontsize=10)
     axis.set_yticks(range(4), list(model_names.values()), fontsize=10)
     axis.tick_params(labelsize=10)
     axis.invert_yaxis()

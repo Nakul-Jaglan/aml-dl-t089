@@ -249,7 +249,7 @@ for ax, metric in zip(axes, ["accuracy", "macro_f1"]):
         bars = ax.barh(np.arange(4) + offset, values, height=.34, color=color, label=feature,
                        hatch="//" if feature == "hog" else None)
         for bar, value in zip(bars, values):
-            ax.text(value + .012, bar.get_y() + bar.get_height()/2, f"{value:.1%}", va="center", fontsize=9)
+            ax.text(value + .012, bar.get_y() + bar.get_height()/2, f"{value:.3f}", va="center", fontsize=9)
     ax.set_yticks(range(4), names)
     ax.invert_yaxis()
     ax.set_xlim(0, 1.08)
