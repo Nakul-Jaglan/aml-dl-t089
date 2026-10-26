@@ -11,7 +11,7 @@ from skimage.feature import hog
 from .data import CLASS_NAMES, load_official, saved_split
 from .evaluate import validate_predictions
 from .features import HOG_SETTINGS, normalized_images
-from .utils import ROOT, read_json, sha256, write_json
+from .utils import ROOT, RESULTS_ROOT, read_json, sha256, write_json
 
 COLORS = {"pixels": "#285F99", "hog": "#B86C16"}
 DISPLAY = {"lr": "Logistic Regression", "knn": "kNN", "rf": "Random Forest", "svm": "RBF SVM"}
@@ -85,8 +85,8 @@ def generate_eda():
 
 def generate_figures(profile="budget"):
     generate_eda()
-    result = ROOT / "results" / profile
-    directory = ROOT / "figures" / profile
+    result = RESULTS_ROOT / profile
+    directory = ROOT / "figures" / profile if RESULTS_ROOT == ROOT / "results" else RESULTS_ROOT / profile / "figures"
     manifest = read_json(result / "freeze.json")
     summary = pd.read_csv(result / "test_summary.csv")
     train_n = int(summary.train_n.iloc[0])

@@ -4,6 +4,7 @@ from __future__ import annotations
 import hashlib
 import importlib.metadata
 import json
+import os
 import platform
 import subprocess
 from pathlib import Path
@@ -11,6 +12,7 @@ from pathlib import Path
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[2]
+RESULTS_ROOT = Path(os.environ.get("CLOTHING_RESULTS_ROOT", ROOT / "results")).resolve()
 
 
 def jsonable(value):

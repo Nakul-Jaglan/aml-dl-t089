@@ -6,7 +6,8 @@ import pytest
 
 from clothing_ml.data import parse_idx, saved_split
 from clothing_ml.evaluate import label_metrics, prediction_frame, validate_predictions
-from clothing_ml.experiments import final_test
+from clothing_ml.experiments import final_test, validate_manifest
+from clothing_ml.utils import stable_hash
 from clothing_ml.features import make_features
 from clothing_ml.models import make_model
 
@@ -79,4 +80,14 @@ def test_final_test_is_explicit_and_smoke_cannot_unlock():
         final_test("budget", allow_test=False)
     with pytest.raises(ValueError, match="Smoke"):
         final_test("smoke", allow_test=True)
+
+
+def test_freeze_manifest_detects_tampering():
+    manifest = {"selection_stage": "validation_only", "test_used_for_selection": False,
+                "selected_run_id": "toy", "finalists": []}
+    manifest["manifest_sha256"] = stable_hash(manifest)
+    assert validate_manifest(manifest) == manifest["manifest_sha256"]
+    manifest["selected_run_id"] = "changed_after_freeze"
+    with pytest.raises(ValueError, match="integrity"):
+        validate_manifest(manifest)
 

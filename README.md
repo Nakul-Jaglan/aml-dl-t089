@@ -36,6 +36,17 @@ All profiles preserve the official 10,000-example test partition. Validation
 comes only from the official 60,000-example training partition. Original IDs,
 stratification, seed 42 and file hashes are saved.
 
+The checkout includes frozen evidence. **Do not delete or overwrite it to rerun.**
+For a fresh reproduction, set an isolated result location before the commands below:
+
+```bash
+export CLOTHING_RESULTS_ROOT="$PWD/work/reproduction"
+# Windows PowerShell: $env:CLOTHING_RESULTS_ROOT="$PWD/work/reproduction"
+```
+
+Leave this variable unset to inspect the checked-in results. Fitted artifacts for
+isolated reproductions are stored in a separate local subdirectory automatically.
+
 | Profile | Fit images per model | Validation images | Purpose |
 |---|---:|---:|---|
 | `smoke` | 2,000 | 1,000 | Interface checks; final testing is blocked |

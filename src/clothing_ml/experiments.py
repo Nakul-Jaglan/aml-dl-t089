@@ -15,14 +15,15 @@ from .data import load_official, prepare
 from .evaluate import benchmark, complexity, label_metrics, predict_batches, prediction_frame, recall_rows, validate_predictions
 from .features import HOG_SETTINGS, cached_features, make_features
 from .models import MODEL_NAMES, candidates, make_model
-from .utils import ROOT, environment, read_json, sha256, stable_hash, write_json
+from .utils import ROOT, RESULTS_ROOT, environment, read_json, sha256, stable_hash, write_json
 
 
 def profile_paths(profile):
     if profile not in {"smoke", "budget", "full"}:
         raise ValueError("Unknown profile")
-    result = ROOT / "results" / profile
-    artifact = ROOT / "artifacts" / profile
+    result = RESULTS_ROOT / profile
+    artifact_root = ROOT / "artifacts" if RESULTS_ROOT == ROOT / "results" else ROOT / "artifacts" / stable_hash(str(RESULTS_ROOT))[:12]
+    artifact = artifact_root / profile
     for directory in [result, result / "records", result / "predictions", artifact]:
         directory.mkdir(parents=True, exist_ok=True)
     return result, artifact
@@ -38,13 +39,15 @@ def train(profile="budget", search="compact", selection_from=None):
         tr, va = saved["train_idx"], saved["val_idx"]
     params_by_row = None
     if selection_from:
-        previous = read_json(ROOT / f"results/{selection_from}/freeze.json")
+        previous = read_json(RESULTS_ROOT / selection_from / "freeze.json")
+        validate_manifest(previous)
         params_by_row = {(r["feature"], r["model"]): r["parameters"] for r in previous["finalists"]}
     settings = {"profile": profile, "search": search, "selection_from": selection_from,
                 "train_n": len(tr), "validation_n": len(va), "seed": 42,
                 "split_sha256": sha256(split_path), "hog": HOG_SETTINGS,
                 "metric": "validation_macro_f1", "refit_on_train_plus_val": False,
-                "tie_break": "accuracy descending, validation prediction time ascending, run ID ascending"}
+                "tie_break": "accuracy descending, validation prediction time ascending, run ID ascending",
+                "source_files_sha256": {p.name: sha256(p) for p in sorted((ROOT / "src/clothing_ml").glob("*.py"))}}
     write_json(result / "protocol.json", settings)
     write_json(result / "environment.json", environment())
     pd.DataFrame({"sample_id": tr, "source_split": "official_train"}).to_csv(result / "fit_ids.csv.gz", index=False, compression={"method": "gzip", "mtime": 0})
@@ -75,7 +78,9 @@ def train(profile="budget", search="compact", selection_from=None):
                 record = dict(run_id=run_id, profile=profile, feature=feature, model=model_name,
                               parameters=parameters, train_n=len(tr), val_n=len(va), feature_dim=Xtr.shape[1],
                               fingerprint=fingerprint, split_sha256=sha256(split_path), candidate_number=candidate_no,
-                              status="running", feature_cache_seconds=feature_seconds)
+                              status="running", feature_cache_seconds=feature_seconds,
+                              estimator_settings=pipe.named_steps["model"].get_params(deep=False),
+                              scaler=type(pipe.named_steps["scale"]).__name__)
                 write_json(record_path, record)
                 try:
                     with warnings.catch_warnings(record=True) as captured, threadpool_limits(limits=1):
@@ -150,6 +155,15 @@ def freeze(profile="budget"):
     return manifest
 
 
+def validate_manifest(manifest):
+    expected = manifest["manifest_sha256"]
+    if stable_hash({k: v for k, v in manifest.items() if k != "manifest_sha256"}) != expected:
+        raise ValueError("Freeze manifest integrity mismatch")
+    if manifest.get("test_used_for_selection") or manifest.get("selection_stage") != "validation_only":
+        raise ValueError("Manifest does not establish validation-only selection")
+    return expected
+
+
 def final_test(profile="budget", allow_test=False):
     if not allow_test:
         raise ValueError("Final test access requires --allow-test after freezing validation choices")
@@ -157,9 +171,7 @@ def final_test(profile="budget", allow_test=False):
         raise ValueError("Smoke runs are plumbing checks and cannot produce final test results")
     result, _ = profile_paths(profile)
     manifest = read_json(result / "freeze.json")
-    expected = manifest["manifest_sha256"]
-    if stable_hash({k: v for k, v in manifest.items() if k != "manifest_sha256"}) != expected:
-        raise ValueError("Freeze manifest integrity mismatch")
+    expected = validate_manifest(manifest)
     if (result / "test_summary.csv").exists():
         raise ValueError("Final test already recorded. Reuse saved predictions; do not retune or overwrite.")
     images, labels = load_official("test")  # first test-content access in normal workflow
