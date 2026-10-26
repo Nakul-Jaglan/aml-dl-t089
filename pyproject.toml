@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "clothing-phase1"
+version = "0.1.0"
+description = "Reproducible Fashion-MNIST pixels versus HOG classical ML experiment"
+requires-python = ">=3.11"
+dependencies = [
+  "numpy>=2,<3", "pandas>=2,<4", "scipy>=1.13,<2",
+  "scikit-learn>=1.6,<2", "scikit-image>=0.24,<1",
+  "matplotlib>=3.9,<4", "joblib>=1.4,<2", "threadpoolctl>=3,<4"
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "nbformat>=5", "nbclient>=0.10", "nbconvert>=7", "ipykernel>=6"]
+
+[project.scripts]
+clothing-phase1 = "clothing_ml.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+

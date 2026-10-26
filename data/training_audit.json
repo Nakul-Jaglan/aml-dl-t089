@@ -1,0 +1,55 @@
+{
+  "shape": [
+    60000,
+    28,
+    28
+  ],
+  "dtype": "uint8",
+  "pixel_min": 0,
+  "pixel_max": 255,
+  "finite": true,
+  "all_zero_images": 0,
+  "class_counts": [
+    6000,
+    6000,
+    6000,
+    6000,
+    6000,
+    6000,
+    6000,
+    6000,
+    6000,
+    6000
+  ],
+  "train_counts": [
+    4800,
+    4800,
+    4800,
+    4800,
+    4800,
+    4800,
+    4800,
+    4800,
+    4800,
+    4800
+  ],
+  "val_counts": [
+    1200,
+    1200,
+    1200,
+    1200,
+    1200,
+    1200,
+    1200,
+    1200,
+    1200,
+    1200
+  ],
+  "exact_duplicate_groups": 0,
+  "extra_duplicate_images": 0,
+  "conflicting_label_duplicate_groups": 0,
+  "fit_val_duplicate_groups": 0,
+  "cross_duplicate_examples": [],
+  "decision": "Retain official examples and seeded split; disclose exact-duplicate overlap. No near-duplicate or semantic relabeling audit claimed.",
+  "test_content_explored_during_eda": false
+}
