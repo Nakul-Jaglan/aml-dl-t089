@@ -104,9 +104,10 @@ def generate_figures(profile="budget"):
         axis.set_xlabel(title + " (fraction)")
         axis.set_title(title)
         axis.invert_yaxis()
-        axis.legend(frameon=False, loc="lower left")
     fig.suptitle("Pixels versus HOG across four classical classifiers\n" + subtitle)
-    fig.tight_layout()
+    handles, legend_labels = axes[0].get_legend_handles_labels()
+    fig.legend(handles, legend_labels, loc="lower center", ncol=2, frameon=False)
+    fig.tight_layout(rect=(0, .12, 1, .88))
     save_figure(fig, directory, "model_comparison")
     recalls = pd.read_csv(result / "per_class_recall.csv")
     order = [r["run_id"] for r in manifest["finalists"]]

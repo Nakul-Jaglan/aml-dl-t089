@@ -1,0 +1,161 @@
+run_id,stage,label,category,support,recall
+full_pixels_lr_580addbb,test,0,T-shirt/top,1000,0.811
+full_pixels_lr_580addbb,test,1,Trouser,1000,0.956
+full_pixels_lr_580addbb,test,2,Pullover,1000,0.73
+full_pixels_lr_580addbb,test,3,Dress,1000,0.858
+full_pixels_lr_580addbb,test,4,Coat,1000,0.752
+full_pixels_lr_580addbb,test,5,Sandal,1000,0.925
+full_pixels_lr_580addbb,test,6,Shirt,1000,0.572
+full_pixels_lr_580addbb,test,7,Sneaker,1000,0.93
+full_pixels_lr_580addbb,test,8,Bag,1000,0.925
+full_pixels_lr_580addbb,test,9,Ankle boot,1000,0.942
+full_pixels_lr_580addbb,val,0,T-shirt/top,1200,0.83
+full_pixels_lr_580addbb,val,1,Trouser,1200,0.9658333333333333
+full_pixels_lr_580addbb,val,2,Pullover,1200,0.7566666666666667
+full_pixels_lr_580addbb,val,3,Dress,1200,0.8633333333333333
+full_pixels_lr_580addbb,val,4,Coat,1200,0.7825
+full_pixels_lr_580addbb,val,5,Sandal,1200,0.9475
+full_pixels_lr_580addbb,val,6,Shirt,1200,0.6166666666666667
+full_pixels_lr_580addbb,val,7,Sneaker,1200,0.9341666666666667
+full_pixels_lr_580addbb,val,8,Bag,1200,0.9441666666666667
+full_pixels_lr_580addbb,val,9,Ankle boot,1200,0.955
+full_pixels_knn_65305bf5,test,0,T-shirt/top,1000,0.839
+full_pixels_knn_65305bf5,test,1,Trouser,1000,0.968
+full_pixels_knn_65305bf5,test,2,Pullover,1000,0.797
+full_pixels_knn_65305bf5,test,3,Dress,1000,0.857
+full_pixels_knn_65305bf5,test,4,Coat,1000,0.761
+full_pixels_knn_65305bf5,test,5,Sandal,1000,0.804
+full_pixels_knn_65305bf5,test,6,Shirt,1000,0.601
+full_pixels_knn_65305bf5,test,7,Sneaker,1000,0.957
+full_pixels_knn_65305bf5,test,8,Bag,1000,0.951
+full_pixels_knn_65305bf5,test,9,Ankle boot,1000,0.969
+full_pixels_knn_65305bf5,val,0,T-shirt/top,1200,0.8666666666666667
+full_pixels_knn_65305bf5,val,1,Trouser,1200,0.965
+full_pixels_knn_65305bf5,val,2,Pullover,1200,0.7925
+full_pixels_knn_65305bf5,val,3,Dress,1200,0.8575
+full_pixels_knn_65305bf5,val,4,Coat,1200,0.7608333333333334
+full_pixels_knn_65305bf5,val,5,Sandal,1200,0.8191666666666667
+full_pixels_knn_65305bf5,val,6,Shirt,1200,0.6383333333333333
+full_pixels_knn_65305bf5,val,7,Sneaker,1200,0.9533333333333334
+full_pixels_knn_65305bf5,val,8,Bag,1200,0.9616666666666667
+full_pixels_knn_65305bf5,val,9,Ankle boot,1200,0.9691666666666666
+full_pixels_rf_297afe2b,test,0,T-shirt/top,1000,0.857
+full_pixels_rf_297afe2b,test,1,Trouser,1000,0.957
+full_pixels_rf_297afe2b,test,2,Pullover,1000,0.801
+full_pixels_rf_297afe2b,test,3,Dress,1000,0.906
+full_pixels_rf_297afe2b,test,4,Coat,1000,0.823
+full_pixels_rf_297afe2b,test,5,Sandal,1000,0.955
+full_pixels_rf_297afe2b,test,6,Shirt,1000,0.594
+full_pixels_rf_297afe2b,test,7,Sneaker,1000,0.95
+full_pixels_rf_297afe2b,test,8,Bag,1000,0.975
+full_pixels_rf_297afe2b,test,9,Ankle boot,1000,0.949
+full_pixels_rf_297afe2b,val,0,T-shirt/top,1200,0.8708333333333333
+full_pixels_rf_297afe2b,val,1,Trouser,1200,0.9658333333333333
+full_pixels_rf_297afe2b,val,2,Pullover,1200,0.8033333333333333
+full_pixels_rf_297afe2b,val,3,Dress,1200,0.9066666666666666
+full_pixels_rf_297afe2b,val,4,Coat,1200,0.8291666666666667
+full_pixels_rf_297afe2b,val,5,Sandal,1200,0.9625
+full_pixels_rf_297afe2b,val,6,Shirt,1200,0.6291666666666667
+full_pixels_rf_297afe2b,val,7,Sneaker,1200,0.9408333333333333
+full_pixels_rf_297afe2b,val,8,Bag,1200,0.9775
+full_pixels_rf_297afe2b,val,9,Ankle boot,1200,0.9516666666666667
+full_pixels_svm_3fd9d87a,test,0,T-shirt/top,1000,0.844
+full_pixels_svm_3fd9d87a,test,1,Trouser,1000,0.973
+full_pixels_svm_3fd9d87a,test,2,Pullover,1000,0.829
+full_pixels_svm_3fd9d87a,test,3,Dress,1000,0.899
+full_pixels_svm_3fd9d87a,test,4,Coat,1000,0.822
+full_pixels_svm_3fd9d87a,test,5,Sandal,1000,0.962
+full_pixels_svm_3fd9d87a,test,6,Shirt,1000,0.696
+full_pixels_svm_3fd9d87a,test,7,Sneaker,1000,0.966
+full_pixels_svm_3fd9d87a,test,8,Bag,1000,0.978
+full_pixels_svm_3fd9d87a,test,9,Ankle boot,1000,0.959
+full_pixels_svm_3fd9d87a,val,0,T-shirt/top,1200,0.8791666666666667
+full_pixels_svm_3fd9d87a,val,1,Trouser,1200,0.9783333333333334
+full_pixels_svm_3fd9d87a,val,2,Pullover,1200,0.8425
+full_pixels_svm_3fd9d87a,val,3,Dress,1200,0.9091666666666667
+full_pixels_svm_3fd9d87a,val,4,Coat,1200,0.8541666666666666
+full_pixels_svm_3fd9d87a,val,5,Sandal,1200,0.9741666666666666
+full_pixels_svm_3fd9d87a,val,6,Shirt,1200,0.7325
+full_pixels_svm_3fd9d87a,val,7,Sneaker,1200,0.9616666666666667
+full_pixels_svm_3fd9d87a,val,8,Bag,1200,0.9808333333333333
+full_pixels_svm_3fd9d87a,val,9,Ankle boot,1200,0.9591666666666666
+full_hog_lr_580addbb,test,0,T-shirt/top,1000,0.833
+full_hog_lr_580addbb,test,1,Trouser,1000,0.975
+full_hog_lr_580addbb,test,2,Pullover,1000,0.797
+full_hog_lr_580addbb,test,3,Dress,1000,0.87
+full_hog_lr_580addbb,test,4,Coat,1000,0.818
+full_hog_lr_580addbb,test,5,Sandal,1000,0.95
+full_hog_lr_580addbb,test,6,Shirt,1000,0.66
+full_hog_lr_580addbb,test,7,Sneaker,1000,0.942
+full_hog_lr_580addbb,test,8,Bag,1000,0.971
+full_hog_lr_580addbb,test,9,Ankle boot,1000,0.944
+full_hog_lr_580addbb,val,0,T-shirt/top,1200,0.845
+full_hog_lr_580addbb,val,1,Trouser,1200,0.9725
+full_hog_lr_580addbb,val,2,Pullover,1200,0.8225
+full_hog_lr_580addbb,val,3,Dress,1200,0.8808333333333334
+full_hog_lr_580addbb,val,4,Coat,1200,0.8016666666666666
+full_hog_lr_580addbb,val,5,Sandal,1200,0.9441666666666667
+full_hog_lr_580addbb,val,6,Shirt,1200,0.7016666666666667
+full_hog_lr_580addbb,val,7,Sneaker,1200,0.9383333333333334
+full_hog_lr_580addbb,val,8,Bag,1200,0.965
+full_hog_lr_580addbb,val,9,Ankle boot,1200,0.9608333333333333
+full_hog_knn_65305bf5,test,0,T-shirt/top,1000,0.835
+full_hog_knn_65305bf5,test,1,Trouser,1000,0.975
+full_hog_knn_65305bf5,test,2,Pullover,1000,0.823
+full_hog_knn_65305bf5,test,3,Dress,1000,0.866
+full_hog_knn_65305bf5,test,4,Coat,1000,0.816
+full_hog_knn_65305bf5,test,5,Sandal,1000,0.89
+full_hog_knn_65305bf5,test,6,Shirt,1000,0.637
+full_hog_knn_65305bf5,test,7,Sneaker,1000,0.981
+full_hog_knn_65305bf5,test,8,Bag,1000,0.954
+full_hog_knn_65305bf5,test,9,Ankle boot,1000,0.957
+full_hog_knn_65305bf5,val,0,T-shirt/top,1200,0.8608333333333333
+full_hog_knn_65305bf5,val,1,Trouser,1200,0.9808333333333333
+full_hog_knn_65305bf5,val,2,Pullover,1200,0.8416666666666667
+full_hog_knn_65305bf5,val,3,Dress,1200,0.8608333333333333
+full_hog_knn_65305bf5,val,4,Coat,1200,0.7983333333333333
+full_hog_knn_65305bf5,val,5,Sandal,1200,0.8933333333333333
+full_hog_knn_65305bf5,val,6,Shirt,1200,0.6358333333333334
+full_hog_knn_65305bf5,val,7,Sneaker,1200,0.9691666666666666
+full_hog_knn_65305bf5,val,8,Bag,1200,0.9541666666666667
+full_hog_knn_65305bf5,val,9,Ankle boot,1200,0.9608333333333333
+full_hog_rf_297afe2b,test,0,T-shirt/top,1000,0.851
+full_hog_rf_297afe2b,test,1,Trouser,1000,0.948
+full_hog_rf_297afe2b,test,2,Pullover,1000,0.812
+full_hog_rf_297afe2b,test,3,Dress,1000,0.894
+full_hog_rf_297afe2b,test,4,Coat,1000,0.822
+full_hog_rf_297afe2b,test,5,Sandal,1000,0.948
+full_hog_rf_297afe2b,test,6,Shirt,1000,0.602
+full_hog_rf_297afe2b,test,7,Sneaker,1000,0.937
+full_hog_rf_297afe2b,test,8,Bag,1000,0.968
+full_hog_rf_297afe2b,test,9,Ankle boot,1000,0.947
+full_hog_rf_297afe2b,val,0,T-shirt/top,1200,0.8775
+full_hog_rf_297afe2b,val,1,Trouser,1200,0.9558333333333333
+full_hog_rf_297afe2b,val,2,Pullover,1200,0.8266666666666667
+full_hog_rf_297afe2b,val,3,Dress,1200,0.8975
+full_hog_rf_297afe2b,val,4,Coat,1200,0.79
+full_hog_rf_297afe2b,val,5,Sandal,1200,0.9483333333333334
+full_hog_rf_297afe2b,val,6,Shirt,1200,0.63
+full_hog_rf_297afe2b,val,7,Sneaker,1200,0.9166666666666666
+full_hog_rf_297afe2b,val,8,Bag,1200,0.965
+full_hog_rf_297afe2b,val,9,Ankle boot,1200,0.9541666666666667
+full_hog_svm_3fd9d87a,test,0,T-shirt/top,1000,0.857
+full_hog_svm_3fd9d87a,test,1,Trouser,1000,0.976
+full_hog_svm_3fd9d87a,test,2,Pullover,1000,0.862
+full_hog_svm_3fd9d87a,test,3,Dress,1000,0.912
+full_hog_svm_3fd9d87a,test,4,Coat,1000,0.864
+full_hog_svm_3fd9d87a,test,5,Sandal,1000,0.965
+full_hog_svm_3fd9d87a,test,6,Shirt,1000,0.733
+full_hog_svm_3fd9d87a,test,7,Sneaker,1000,0.973
+full_hog_svm_3fd9d87a,test,8,Bag,1000,0.983
+full_hog_svm_3fd9d87a,test,9,Ankle boot,1000,0.966
+full_hog_svm_3fd9d87a,val,0,T-shirt/top,1200,0.8858333333333334
+full_hog_svm_3fd9d87a,val,1,Trouser,1200,0.9816666666666667
+full_hog_svm_3fd9d87a,val,2,Pullover,1200,0.8633333333333333
+full_hog_svm_3fd9d87a,val,3,Dress,1200,0.9191666666666667
+full_hog_svm_3fd9d87a,val,4,Coat,1200,0.8366666666666667
+full_hog_svm_3fd9d87a,val,5,Sandal,1200,0.9683333333333334
+full_hog_svm_3fd9d87a,val,6,Shirt,1200,0.7483333333333333
+full_hog_svm_3fd9d87a,val,7,Sneaker,1200,0.9616666666666667
+full_hog_svm_3fd9d87a,val,8,Bag,1200,0.98
+full_hog_svm_3fd9d87a,val,9,Ankle boot,1200,0.9708333333333333

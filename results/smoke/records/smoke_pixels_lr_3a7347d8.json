@@ -1,0 +1,182 @@
+{
+  "run_id": "smoke_pixels_lr_3a7347d8",
+  "profile": "smoke",
+  "feature": "pixels",
+  "model": "lr",
+  "parameters": {
+    "C": 1.0
+  },
+  "train_n": 2000,
+  "val_n": 1000,
+  "feature_dim": 784,
+  "fingerprint": "f8f59b046a1b03d0fcae66bd9c899519dca98c7c9935bc25189787704b6fdce0",
+  "split_sha256": "800178fd66febfb5b4a5460ee3b7e7317bf918d2f270678f4a6ce3776a89645b",
+  "candidate_number": 0,
+  "status": "completed",
+  "feature_cache_seconds": 0.009419834008440375,
+  "fit_seconds": 0.08372433297336102,
+  "validation_predict_seconds": 0.0012489170767366886,
+  "warnings": [],
+  "converged": true,
+  "accuracy": 0.791,
+  "macro_f1": 0.7901406539061846,
+  "metrics": {
+    "accuracy": 0.791,
+    "macro_f1": 0.7901406539061846,
+    "support": [
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100
+    ],
+    "recall": [
+      0.83,
+      0.98,
+      0.66,
+      0.72,
+      0.59,
+      0.9,
+      0.58,
+      0.82,
+      0.9,
+      0.93
+    ],
+    "confusion": [
+      [
+        83,
+        0,
+        5,
+        2,
+        0,
+        0,
+        8,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        98,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        3,
+        0,
+        66,
+        2,
+        13,
+        0,
+        15,
+        0,
+        1,
+        0
+      ],
+      [
+        11,
+        3,
+        2,
+        72,
+        5,
+        0,
+        5,
+        0,
+        2,
+        0
+      ],
+      [
+        1,
+        0,
+        22,
+        6,
+        59,
+        0,
+        11,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        90,
+        0,
+        6,
+        0,
+        4
+      ],
+      [
+        18,
+        1,
+        10,
+        4,
+        7,
+        2,
+        58,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        10,
+        0,
+        82,
+        0,
+        8
+      ],
+      [
+        1,
+        0,
+        3,
+        1,
+        0,
+        1,
+        2,
+        1,
+        90,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        4,
+        0,
+        93
+      ]
+    ]
+  },
+  "complexity": {
+    "complexity_type": "learned classifier coefficient and intercept scalars",
+    "complexity_value": 7850,
+    "scaler_stored_mean_scale_scalars": 1568
+  },
+  "artifact_path": "artifacts/smoke/smoke_pixels_lr_3a7347d8.joblib",
+  "artifact_sha256": "ba4e1c05f097c67a6ab094d02099a253cd036e75b8d20a1fffd41b26af4104e1",
+  "prediction_sha256": "59789cd5d3c21bb7f6d75190028c728181519edab0a64d969336c26af8f28c2b",
+  "serialized_bytes": 48475
+}

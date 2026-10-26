@@ -1,0 +1,27 @@
+{
+  "profile": "smoke",
+  "search": "baseline",
+  "selection_from": null,
+  "train_n": 2000,
+  "validation_n": 1000,
+  "seed": 42,
+  "split_sha256": "800178fd66febfb5b4a5460ee3b7e7317bf918d2f270678f4a6ce3776a89645b",
+  "hog": {
+    "orientations": 9,
+    "pixels_per_cell": [
+      4,
+      4
+    ],
+    "cells_per_block": [
+      2,
+      2
+    ],
+    "block_norm": "L2-Hys",
+    "transform_sqrt": false,
+    "feature_vector": true,
+    "channel_axis": null
+  },
+  "metric": "validation_macro_f1",
+  "refit_on_train_plus_val": false,
+  "tie_break": "accuracy descending, validation prediction time ascending, run ID ascending"
+}

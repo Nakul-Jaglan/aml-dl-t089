@@ -1,0 +1,39 @@
+{
+  "profile": "full",
+  "search": "compact",
+  "selection_from": "budget",
+  "train_n": 48000,
+  "validation_n": 12000,
+  "seed": 42,
+  "split_sha256": "9172928b23246a9a23877f6ad6428698b97ea5de6ef13e6b1b9cafec24380ec9",
+  "hog": {
+    "orientations": 9,
+    "pixels_per_cell": [
+      4,
+      4
+    ],
+    "cells_per_block": [
+      2,
+      2
+    ],
+    "block_norm": "L2-Hys",
+    "transform_sqrt": false,
+    "feature_vector": true,
+    "channel_axis": null
+  },
+  "metric": "validation_macro_f1",
+  "refit_on_train_plus_val": false,
+  "tie_break": "accuracy descending, validation prediction time ascending, run ID ascending",
+  "source_files_sha256": {
+    "__init__.py": "d473d716b244e848d01fb48c1a9c9d01024682d3ed20793e94f923e9b25cb61b",
+    "__main__.py": "11cf323249f4ba4e79c9fb7660c0979fc91a3822bc5362286376b69808b41195",
+    "cli.py": "b851fe4afc730a8ea66417c01ed9c2dbe83dfc77cc06a8929f94d95afb55da30",
+    "data.py": "53a16af469c351947877c546896a3fe8a1eca6128800fcdd755757e95f1cabdc",
+    "evaluate.py": "2a24e1305b06bc95d26b7bff35aef64da8eded3feda6a2e13f16377b4a034cdb",
+    "experiments.py": "89422ebc99d6c48f9459741cfc9fab3310e61ffe14d9be329440f5366f5a86af",
+    "features.py": "e4718f2cfac6454ea7d9cf2a7f525a81fd7959659acca7862933ae7ea6f84301",
+    "models.py": "6a5656e134b38e4116a60792181dc5ab3c42a2eaef2107a54f27adc16d5210dd",
+    "plots.py": "c4106c165d07bc97d4b43bc984ec3a8e6d8a4cef888352b75ecd8b15cf222801",
+    "utils.py": "ba537fe9b8df63773e1c718f16bf34cc6d68ca3e86ea159173f87fabca8a44a2"
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "run_id": "budget_pixels_lr_3a7347d8",
+  "profile": "budget",
+  "feature": "pixels",
+  "model": "lr",
+  "parameters": {
+    "C": 1.0
+  },
+  "train_n": 12000,
+  "val_n": 12000,
+  "feature_dim": 784,
+  "fingerprint": "391518bfa0db35ab2ef7e2251b3afa96807d62238475290f03e865ecfde26340",
+  "split_sha256": "174d0f3b3455bbcd2e32d8fb99dcc01534a6ea208a03177a565593fa4d3223ed",
+  "candidate_number": 1,
+  "status": "completed",
+  "feature_cache_seconds": 0.0925556670408696,
+  "fit_seconds": 1.6266698749968782,
+  "validation_predict_seconds": 0.013679833966307342,
+  "warnings": [],
+  "converged": true,
+  "accuracy": 0.8079166666666666,
+  "macro_f1": 0.8083156555341742,
+  "metrics": {
+    "accuracy": 0.8079166666666666,
+    "macro_f1": 0.8083156555341742,
+    "support": [
+      1200,
+      1200,
+      1200,
+      1200,
+      1200,
+      1200,
+      1200,
+      1200,
+      1200,
+      1200
+    ],
+    "recall": [
+      0.7616666666666667,
+      0.95,
+      0.6941666666666667,
+      0.8075,
+      0.7041666666666667,
+      0.8866666666666667,
+      0.5708333333333333,
+      0.9,
+      0.8841666666666667,
+      0.92
+    ],
+    "confusion": [
+      [
+        914,
+        2,
+        39,
+        58,
+        10,
+        1,
+        156,
+        4,
+        15,
+        1
+      ],
+      [
+        9,
+        1140,
+        7,
+        27,
+        11,
+        1,
+        4,
+        0,
+        1,
+        0
+      ],
+      [
+        27,
+        6,
+        833,
+        21,
+        155,
+        1,
+        149,
+        0,
+        8,
+        0
+      ],
+      [
+        66,
+        41,
+        28,
+        969,
+        44,
+        0,
+        47,
+        2,
+        2,
+        1
+      ],
+      [
+        5,
+        5,
+        156,
+        51,
+        845,
+        3,
+        122,
+        1,
+        12,
+        0
+      ],
+      [
+        2,
+        1,
+        2,
+        4,
+        0,
+        1064,
+        3,
+        70,
+        16,
+        38
+      ],
+      [
+        157,
+        7,
+        155,
+        54,
+        122,
+        2,
+        685,
+        1,
+        17,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        67,
+        0,
+        1080,
+        3,
+        50
+      ],
+      [
+        15,
+        3,
+        22,
+        14,
+        11,
+        21,
+        36,
+        7,
+        1061,
+        10
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        0,
+        41,
+        2,
+        49,
+        2,
+        1104
+      ]
+    ]
+  },
+  "complexity": {
+    "complexity_type": "learned classifier coefficient and intercept scalars",
+    "complexity_value": 7850,
+    "scaler_stored_mean_scale_scalars": 1568
+  },
+  "artifact_path": "artifacts/budget/budget_pixels_lr_3a7347d8.joblib",
+  "artifact_sha256": "1f0d19a72064f69025aa9eccc8813c6bfa70b2ccb8c80dc7bec7c1271ca46b8a",
+  "prediction_sha256": "dd04dd9c0383230026617b54a20857dc8f29a2a97a313b780734bb541f5064c0",
+  "serialized_bytes": 48566
+}

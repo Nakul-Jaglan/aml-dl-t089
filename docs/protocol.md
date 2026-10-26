@@ -110,3 +110,11 @@ No generalization to arbitrary color catalogue photos or causal explanation of
 errors is established. Any later model revision requires a new evaluation policy;
 the already examined test set is no longer an untouched selection-independent exam.
 
+## Provenance after figure review
+
+The freeze preserves the source commit and module hashes used for model fitting.
+Later presentation-only changes to plot legend placement and report/notebook layout
+do not alter model, feature, data or evaluation code, frozen artifacts, predictions
+or selection. The committed source history records that distinction. Do not rewrite
+the freeze hash to hide later presentation work.
+

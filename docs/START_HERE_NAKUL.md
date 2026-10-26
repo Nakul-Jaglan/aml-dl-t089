@@ -58,7 +58,9 @@ score does not automatically imply a smaller, faster or more deployable model.
 
 All five members must review their assigned part and record actual contributions.
 No generated document can demonstrate individual understanding for the viva.
-Confirm the faculty's evaluation date, report template/page limit, AI-use policy,
-section, roll numbers and affiliation details. These have not been supplied.
-Do not invent them or claim completed teammate contributions.
+Section A and all five roll numbers have been supplied. They are stored in the
+git-ignored `private/student_details.json`; the private submission PDF includes
+them, while public repository files omit them. Confirm the faculty's evaluation
+date, report template/page limit, AI-use policy and institutional affiliation.
+Do not invent those details or claim completed teammate contributions.
 

@@ -14,14 +14,46 @@ ownership does not establish anyone's completed individual contribution.
 See `docs/contributions.md` for the distinction and `docs/START_HERE_NAKUL.md`
 for the review and viva path.
 
+## Executed Phase 1 results
+
+All eight final models used the same **48,000 fit images**, 12,000 validation
+images and official 10,000-image test partition. The model selected on validation
+before test access was **HOG + RBF SVM**: **90.91% test accuracy** and **0.9090
+macro F1**. Its lowest category recall was Shirt, at 73.3%.
+
+| Model | Pixels accuracy | HOG accuracy | Pixels macro F1 | HOG macro F1 |
+|---|---:|---:|---:|---:|
+| Logistic Regression | 84.01% | 87.60% | 0.8394 | 0.8757 |
+| kNN | 85.04% | 87.34% | 0.8505 | 0.8730 |
+| Random Forest | 87.67% | 87.29% | 0.8753 | 0.8718 |
+| RBF SVM | 89.28% | 90.91% | 0.8924 | 0.9090 |
+
+HOG helps three families under the declared preprocessing policy and slightly
+weakens RF here. These one-split differences do not establish statistical
+significance or a universal winner. Inference and storage trade-offs are in the
+notebook and report.
+
+Start with the [executed master notebook](notebooks/00_phase1_master.ipynb), its
+[HTML companion](notebooks/00_phase1_master.html), the [public report](report/main.pdf),
+and [Nakul's review guide](docs/START_HERE_NAKUL.md). The report is an IEEE-format
+draft for human review; final faculty formatting requirements remain unconfirmed.
+The slide content is a [12-slide outline with speaker notes](docs/presentation_outline.md),
+rather than an exported PowerPoint deck.
+
+Section A and the five roll numbers were supplied by the team. Roll numbers live
+only in git-ignored private author files and `report/submission.pdf`. Public
+GitHub files and `report/main.pdf` omit those identifiers. See [report build notes](report/README.md).
+
 ## Quick start
 
-Use Python 3.11 or newer (the tested version and packages are recorded with each run).
+Use Python 3.12 for the exact tested lock file. The package also supports compatible
+Python 3.11+ environments when dependencies are resolved rather than locked.
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -e '.[dev]'
+python -m ipykernel install --prefix .venv --name clothing-phase1 --display-name "Python 3 (Phase 1 environment)"
 python -m clothing_ml prepare
 python -m pytest -q
 ```
