@@ -9,10 +9,8 @@ The CNN and classical-versus-CNN comparison are reserved for Phase 2.
 
 Team: **Nakul, Sudeshhna, Puneet, Samarth and Neelanshu**.
 
-The implementation is AI-assisted work prepared at Nakul's request. Planned
-ownership does not establish anyone's completed individual contribution.
-See `docs/contributions.md` for the distinction and `docs/START_HERE_NAKUL.md`
-for the review and viva path.
+Team responsibilities and the review record are in `docs/contributions.md`.
+See `docs/START_HERE_NAKUL.md` for the review and viva path.
 
 ## Executed Phase 1 results
 
@@ -37,8 +35,10 @@ Start with the [executed master notebook](notebooks/00_phase1_master.ipynb), its
 [HTML companion](notebooks/00_phase1_master.html), the [public report](report/main.pdf),
 and [Nakul's review guide](docs/START_HERE_NAKUL.md). The report is an IEEE-format
 draft for human review; final faculty formatting requirements remain unconfirmed.
-The slide content is a [12-slide outline with speaker notes](docs/presentation_outline.md),
-rather than an exported PowerPoint deck.
+The complete [22-slide PowerPoint](presentation/Phase_1_Clothing_Category_Recognition.pptx)
+and [PDF copy](presentation/Phase_1_Clothing_Category_Recognition.pdf) include
+18 main slides and four backup slides. [Presenter notes](presentation/speaker_notes.md)
+assign speaking sections to all five team members.
 
 Section A and the five roll numbers were supplied by the team. Roll numbers live
 only in git-ignored private author files and `report/submission.pdf`. Public

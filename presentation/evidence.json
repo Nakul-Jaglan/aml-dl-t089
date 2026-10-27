@@ -1,0 +1,366 @@
+{
+  "selected_run_id": "full_hog_svm_3fd9d87a",
+  "model_names": [
+    "Logistic Regression",
+    "kNN",
+    "Random Forest",
+    "RBF SVM"
+  ],
+  "f1": {
+    "pixels": [
+      0.8394108477821337,
+      0.850471695703207,
+      0.8753402326994596,
+      0.8924348746692686
+    ],
+    "hog": [
+      0.8757107952547998,
+      0.8730424548581306,
+      0.8718054032018259,
+      0.908953029269961
+    ]
+  },
+  "delta": [
+    3.629994747266607,
+    2.257075915492357,
+    -0.3534829497633729,
+    1.6518154600692392
+  ],
+  "class_names": [
+    "T-shirt/top",
+    "Trouser",
+    "Pullover",
+    "Dress",
+    "Coat",
+    "Sandal",
+    "Shirt",
+    "Sneaker",
+    "Bag",
+    "Ankle boot"
+  ],
+  "recall": [
+    0.857,
+    0.976,
+    0.862,
+    0.912,
+    0.864,
+    0.965,
+    0.733,
+    0.973,
+    0.983,
+    0.966
+  ],
+  "confusion_table": [
+    [
+      "Actual / predicted",
+      "T-shirt/top",
+      "Pullover",
+      "Coat",
+      "Shirt",
+      "Other"
+    ],
+    [
+      "T-shirt/top",
+      "857",
+      "14",
+      "4",
+      "104",
+      "21"
+    ],
+    [
+      "Pullover",
+      "12",
+      "862",
+      "57",
+      "59",
+      "10"
+    ],
+    [
+      "Coat",
+      "3",
+      "51",
+      "864",
+      "42",
+      "40"
+    ],
+    [
+      "Shirt",
+      "103",
+      "63",
+      "64",
+      "733",
+      "37"
+    ]
+  ],
+  "results_table": [
+    [
+      "Pipeline",
+      "Val. F1",
+      "Test acc.",
+      "Test F1"
+    ],
+    [
+      "Pixels + Logistic Regression",
+      "0.8590",
+      "84.01%",
+      "0.8394"
+    ],
+    [
+      "Pixels + kNN",
+      "0.8585",
+      "85.04%",
+      "0.8505"
+    ],
+    [
+      "Pixels + Random Forest",
+      "0.8828",
+      "87.67%",
+      "0.8753"
+    ],
+    [
+      "Pixels + RBF SVM",
+      "0.9068",
+      "89.28%",
+      "0.8924"
+    ],
+    [
+      "HOG + Logistic Regression",
+      "0.8834",
+      "87.60%",
+      "0.8757"
+    ],
+    [
+      "HOG + kNN",
+      "0.8749",
+      "87.34%",
+      "0.8730"
+    ],
+    [
+      "HOG + Random Forest",
+      "0.8752",
+      "87.29%",
+      "0.8718"
+    ],
+    [
+      "HOG + RBF SVM",
+      "0.9114",
+      "90.91%",
+      "0.9090"
+    ]
+  ],
+  "parameters_table": [
+    [
+      "Pipeline",
+      "Selected setting",
+      "Scaling"
+    ],
+    [
+      "Pixels + Logistic Regression",
+      "C = 0.1",
+      "StandardScaler"
+    ],
+    [
+      "Pixels + kNN",
+      "k = 5",
+      "None"
+    ],
+    [
+      "Pixels + Random Forest",
+      "depth = None",
+      "None"
+    ],
+    [
+      "Pixels + RBF SVM",
+      "C = 10",
+      "StandardScaler"
+    ],
+    [
+      "HOG + Logistic Regression",
+      "C = 0.1",
+      "StandardScaler"
+    ],
+    [
+      "HOG + kNN",
+      "k = 5",
+      "StandardScaler"
+    ],
+    [
+      "HOG + Random Forest",
+      "depth = None",
+      "None"
+    ],
+    [
+      "HOG + RBF SVM",
+      "C = 10",
+      "StandardScaler"
+    ]
+  ],
+  "complexity_table": [
+    [
+      "Pipeline",
+      "Model-specific quantity",
+      "MiB"
+    ],
+    [
+      "Pixels + Logistic Regression",
+      "7,850 weights + bias",
+      "0.05"
+    ],
+    [
+      "Pixels + kNN",
+      "37,632,000 stored feature scalars",
+      "31.10"
+    ],
+    [
+      "Pixels + Random Forest",
+      "1,633,648 tree nodes",
+      "35.01"
+    ],
+    [
+      "Pixels + RBF SVM",
+      "13,725,289 decision-array scalars",
+      "39.34"
+    ],
+    [
+      "HOG + Logistic Regression",
+      "12,970 weights + bias",
+      "0.08"
+    ],
+    [
+      "HOG + kNN",
+      "62,208,000 stored feature scalars",
+      "147.27"
+    ],
+    [
+      "HOG + Random Forest",
+      "1,828,070 tree nodes",
+      "40.24"
+    ],
+    [
+      "HOG + RBF SVM",
+      "27,295,425 decision-array scalars",
+      "87.82"
+    ]
+  ],
+  "timing_table": [
+    [
+      "Classifier",
+      "Pixels (ms/image)",
+      "HOG (ms/image)"
+    ],
+    [
+      "Logistic Regression",
+      "0.0014",
+      "0.1473"
+    ],
+    [
+      "kNN",
+      "0.3298",
+      "0.9880"
+    ],
+    [
+      "Random Forest",
+      "0.0609",
+      "0.2061"
+    ],
+    [
+      "RBF SVM",
+      "3.2468",
+      "21.7090"
+    ]
+  ],
+  "svm_groups": {
+    "Both correct": 8534,
+    "Only pixels correct": 394,
+    "Only HOG correct": 557,
+    "Both wrong": 515
+  },
+  "sources": [
+    "results/full/test_summary.csv",
+    "results/full/validation_summary.csv",
+    "results/full/freeze.json",
+    "results/full/complexity.json",
+    "results/full/full_hog_svm_3fd9d87a_test_metrics.json",
+    "results/full/error_example_ids.csv"
+  ],
+  "gallery_examples": [
+    {
+      "sample_id": 6527,
+      "label": 0
+    },
+    {
+      "sample_id": 32861,
+      "label": 1
+    },
+    {
+      "sample_id": 49382,
+      "label": 2
+    },
+    {
+      "sample_id": 58879,
+      "label": 3
+    },
+    {
+      "sample_id": 22767,
+      "label": 4
+    },
+    {
+      "sample_id": 55043,
+      "label": 5
+    },
+    {
+      "sample_id": 45500,
+      "label": 6
+    },
+    {
+      "sample_id": 9190,
+      "label": 7
+    },
+    {
+      "sample_id": 27810,
+      "label": 8
+    },
+    {
+      "sample_id": 45436,
+      "label": 9
+    }
+  ],
+  "error_examples": [
+    {
+      "model": "svm",
+      "group": "Only HOG correct",
+      "group_count": 557,
+      "sample_id": 17,
+      "y_true": 4,
+      "pixel_prediction": 2,
+      "hog_prediction": 4
+    },
+    {
+      "model": "svm",
+      "group": "Only HOG correct",
+      "group_count": 557,
+      "sample_id": 49,
+      "y_true": 2,
+      "pixel_prediction": 6,
+      "hog_prediction": 2
+    },
+    {
+      "model": "svm",
+      "group": "Both wrong",
+      "group_count": 515,
+      "sample_id": 12,
+      "y_true": 7,
+      "pixel_prediction": 5,
+      "hog_prediction": 5
+    },
+    {
+      "model": "svm",
+      "group": "Both wrong",
+      "group_count": 515,
+      "sample_id": 23,
+      "y_true": 9,
+      "pixel_prediction": 5,
+      "hog_prediction": 5
+    }
+  ]
+}
