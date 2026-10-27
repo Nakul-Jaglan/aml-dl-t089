@@ -105,7 +105,11 @@ of neural-network-style parameters.
 One split, one seed, a modest search, fixed HOG settings and implementation-specific
 scalers limit generalization of comparisons. Preprocessing differences mean the
 results compare the declared feature pipelines, not a pure HOG ablation with
-identical scalers everywhere. Exact hash checks do not find all near-duplicates.
+identical scalers everywhere. Exact hash checks do not find all near-duplicates;
+that gap is now measured exhaustively in `data/near_duplicate_audit.json` and
+reviewed in `docs/data_quality_review.md`. The test-side part of that audit is
+post-freeze and descriptive: it reports a limitation of the published numbers and
+is not grounds for reselection or re-tuning.
 No generalization to arbitrary color catalogue photos or causal explanation of
 errors is established. Any later model revision requires a new evaluation policy;
 the already examined test set is no longer an untouched selection-independent exam.

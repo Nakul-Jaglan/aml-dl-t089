@@ -137,6 +137,7 @@ data/                 saved split IDs, source checksums and training audit
 notebooks/            executed master notebook and HTML companion
 results/<profile>/    protocol, candidates, freeze, predictions and metrics
 figures/              reproducible EDA, comparisons and error-analysis figures
+data/near_duplicate_audit.json  exhaustive near-duplicate measurement (data review)
 report/               LaTeX/IEEE-format report source and compiled PDF
 docs/                 protocol, research notes, Nakul guide and contribution log
 artifacts/            locally trained models (git-ignored; regenerate by command)
@@ -158,7 +159,10 @@ The course's Phase 1 rubric and individual-viva requirement are recorded in
 
 This is a low-resolution grayscale benchmark. Its results do not establish
 performance on arbitrary real catalogue photos. Exact duplicate checks do not
-detect every near-duplicate or verify all semantic labels. A single fixed
+verify semantic labels, and they do not detect near-duplicates; an exhaustive
+pixel-space near-duplicate audit ([`docs/data_quality_review.md`](docs/data_quality_review.md))
+finds six test images with a training near-twin, which shifts test accuracy by
+0.0055 percentage points. A single fixed
 validation split and a small search do not establish statistically significant
 superiority or globally optimal settings. See the executed notebook for observed
 results and the final report for the supported conclusions.
