@@ -1,0 +1,65 @@
+model,group,group_count,sample_id,y_true,pixel_prediction,hog_prediction
+lr,Both correct,7865,0,9,9,9
+lr,Both correct,7865,1,2,2,2
+lr,Both correct,7865,2,1,1,1
+lr,Both correct,7865,3,1,1,1
+lr,Only pixels correct,536,16,2,2,6
+lr,Only pixels correct,536,21,5,5,7
+lr,Only pixels correct,536,26,6,6,4
+lr,Only pixels correct,536,43,7,7,9
+lr,Only HOG correct,895,17,4,2,4
+lr,Only HOG correct,895,50,4,6,4
+lr,Only HOG correct,895,51,4,2,4
+lr,Only HOG correct,895,53,8,6,8
+lr,Both wrong,704,12,7,5,5
+lr,Both wrong,704,25,4,2,2
+lr,Both wrong,704,40,6,0,0
+lr,Both wrong,704,42,3,4,6
+knn,Both correct,7993,0,9,9,9
+knn,Both correct,7993,1,2,2,2
+knn,Both correct,7993,2,1,1,1
+knn,Both correct,7993,3,1,1,1
+knn,Only pixels correct,511,4,6,6,0
+knn,Only pixels correct,511,23,9,9,7
+knn,Only pixels correct,511,26,6,6,4
+knn,Only pixels correct,511,29,3,3,4
+knn,Only HOG correct,741,45,7,9,7
+knn,Only HOG correct,741,51,4,2,4
+knn,Only HOG correct,741,120,0,8,0
+knn,Only HOG correct,741,129,5,7,5
+knn,Both wrong,755,12,7,5,5
+knn,Both wrong,755,17,4,6,6
+knn,Both wrong,755,21,5,7,7
+knn,Both wrong,755,25,4,2,6
+rf,Both correct,8331,0,9,9,9
+rf,Both correct,8331,1,2,2,2
+rf,Both correct,8331,2,1,1,1
+rf,Both correct,8331,3,1,1,1
+rf,Only pixels correct,436,17,4,4,6
+rf,Only pixels correct,436,26,6,6,4
+rf,Only pixels correct,436,29,3,3,4
+rf,Only pixels correct,436,103,2,2,6
+rf,Only HOG correct,398,49,2,6,2
+rf,Only HOG correct,398,51,4,2,4
+rf,Only HOG correct,398,67,3,4,3
+rf,Only HOG correct,398,98,4,2,4
+rf,Both wrong,835,12,7,5,5
+rf,Both wrong,835,21,5,7,7
+rf,Both wrong,835,23,9,5,7
+rf,Both wrong,835,25,4,2,6
+svm,Both correct,8534,0,9,9,9
+svm,Both correct,8534,1,2,2,2
+svm,Both correct,8534,2,1,1,1
+svm,Both correct,8534,3,1,1,1
+svm,Only pixels correct,394,43,7,7,9
+svm,Only pixels correct,394,103,2,2,6
+svm,Only pixels correct,394,227,2,2,6
+svm,Only pixels correct,394,241,6,6,4
+svm,Only HOG correct,557,17,4,2,4
+svm,Only HOG correct,557,49,2,6,2
+svm,Only HOG correct,557,51,4,2,4
+svm,Only HOG correct,557,67,3,4,3
+svm,Both wrong,515,12,7,5,5
+svm,Both wrong,515,23,9,5,5
+svm,Both wrong,515,25,4,2,6
+svm,Both wrong,515,40,6,0,0

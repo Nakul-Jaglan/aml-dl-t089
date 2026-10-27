@@ -1,0 +1,182 @@
+{
+  "run_id": "budget_pixels_lr_580addbb",
+  "profile": "budget",
+  "feature": "pixels",
+  "model": "lr",
+  "parameters": {
+    "C": 0.1
+  },
+  "train_n": 12000,
+  "val_n": 12000,
+  "feature_dim": 784,
+  "fingerprint": "b628aed5823872a973cc63b88538d01e282d687e25749c526e0f6abf55261aad",
+  "split_sha256": "174d0f3b3455bbcd2e32d8fb99dcc01534a6ea208a03177a565593fa4d3223ed",
+  "candidate_number": 0,
+  "status": "completed",
+  "feature_cache_seconds": 0.0925556670408696,
+  "fit_seconds": 1.5629915420431644,
+  "validation_predict_seconds": 0.042569292010739446,
+  "warnings": [],
+  "converged": true,
+  "accuracy": 0.8375833333333333,
+  "macro_f1": 0.8374850616400196,
+  "metrics": {
+    "accuracy": 0.8375833333333333,
+    "macro_f1": 0.8374850616400196,
+    "support": [
+      1200,
+      1200,
+      1200,
+      1200,
+      1200,
+      1200,
+      1200,
+      1200,
+      1200,
+      1200
+    ],
+    "recall": [
+      0.8108333333333333,
+      0.9616666666666667,
+      0.7175,
+      0.8433333333333334,
+      0.7533333333333333,
+      0.9241666666666667,
+      0.5958333333333333,
+      0.9158333333333334,
+      0.9166666666666666,
+      0.9366666666666666
+    ],
+    "confusion": [
+      [
+        973,
+        2,
+        27,
+        53,
+        5,
+        1,
+        127,
+        1,
+        11,
+        0
+      ],
+      [
+        6,
+        1154,
+        5,
+        26,
+        4,
+        1,
+        4,
+        0,
+        0,
+        0
+      ],
+      [
+        21,
+        5,
+        861,
+        17,
+        145,
+        1,
+        142,
+        0,
+        8,
+        0
+      ],
+      [
+        53,
+        27,
+        23,
+        1012,
+        47,
+        0,
+        36,
+        1,
+        1,
+        0
+      ],
+      [
+        4,
+        2,
+        129,
+        47,
+        904,
+        0,
+        104,
+        0,
+        10,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        2,
+        0,
+        1109,
+        1,
+        53,
+        8,
+        25
+      ],
+      [
+        169,
+        8,
+        129,
+        49,
+        112,
+        2,
+        715,
+        0,
+        16,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        60,
+        0,
+        1099,
+        2,
+        39
+      ],
+      [
+        16,
+        1,
+        13,
+        13,
+        4,
+        11,
+        32,
+        4,
+        1100,
+        6
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        0,
+        24,
+        3,
+        46,
+        1,
+        1124
+      ]
+    ]
+  },
+  "complexity": {
+    "complexity_type": "learned classifier coefficient and intercept scalars",
+    "complexity_value": 7850,
+    "scaler_stored_mean_scale_scalars": 1568
+  },
+  "artifact_path": "artifacts/budget/budget_pixels_lr_580addbb.joblib",
+  "artifact_sha256": "59442c01af2e7a93a3cfa35c5710adbd3de9d9c5eb4b33227d929ab03228320c",
+  "prediction_sha256": "c96849e9739a6b264e1500a707419f4d80f62ca04f8acc3b2723fb7248dc46d6",
+  "serialized_bytes": 48602
+}

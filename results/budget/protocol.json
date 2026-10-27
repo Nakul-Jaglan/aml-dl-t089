@@ -1,0 +1,27 @@
+{
+  "profile": "budget",
+  "search": "compact",
+  "selection_from": null,
+  "train_n": 12000,
+  "validation_n": 12000,
+  "seed": 42,
+  "split_sha256": "174d0f3b3455bbcd2e32d8fb99dcc01534a6ea208a03177a565593fa4d3223ed",
+  "hog": {
+    "orientations": 9,
+    "pixels_per_cell": [
+      4,
+      4
+    ],
+    "cells_per_block": [
+      2,
+      2
+    ],
+    "block_norm": "L2-Hys",
+    "transform_sqrt": false,
+    "feature_vector": true,
+    "channel_axis": null
+  },
+  "metric": "validation_macro_f1",
+  "refit_on_train_plus_val": false,
+  "tie_break": "accuracy descending, validation prediction time ascending, run ID ascending"
+}

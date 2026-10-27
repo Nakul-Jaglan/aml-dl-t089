@@ -1,0 +1,182 @@
+{
+  "run_id": "budget_hog_lr_3a7347d8",
+  "profile": "budget",
+  "feature": "hog",
+  "model": "lr",
+  "parameters": {
+    "C": 1.0
+  },
+  "train_n": 12000,
+  "val_n": 12000,
+  "feature_dim": 1296,
+  "fingerprint": "2a9044089c2772ac5f3dbeb1d0dc2c2c20d00dc906f965267a01e6b07aa77006",
+  "split_sha256": "174d0f3b3455bbcd2e32d8fb99dcc01534a6ea208a03177a565593fa4d3223ed",
+  "candidate_number": 1,
+  "status": "completed",
+  "feature_cache_seconds": 3.6505014579743147,
+  "fit_seconds": 1.1799909169785678,
+  "validation_predict_seconds": 0.01669875008519739,
+  "warnings": [],
+  "converged": true,
+  "accuracy": 0.8381666666666666,
+  "macro_f1": 0.8385052216896737,
+  "metrics": {
+    "accuracy": 0.8381666666666666,
+    "macro_f1": 0.8385052216896737,
+    "support": [
+      1200,
+      1200,
+      1200,
+      1200,
+      1200,
+      1200,
+      1200,
+      1200,
+      1200,
+      1200
+    ],
+    "recall": [
+      0.8008333333333333,
+      0.96,
+      0.745,
+      0.83,
+      0.7116666666666667,
+      0.9258333333333333,
+      0.6141666666666666,
+      0.9208333333333333,
+      0.9325,
+      0.9408333333333333
+    ],
+    "confusion": [
+      [
+        961,
+        3,
+        32,
+        41,
+        14,
+        0,
+        141,
+        0,
+        8,
+        0
+      ],
+      [
+        8,
+        1152,
+        6,
+        27,
+        2,
+        0,
+        3,
+        0,
+        2,
+        0
+      ],
+      [
+        36,
+        1,
+        894,
+        21,
+        119,
+        0,
+        123,
+        0,
+        6,
+        0
+      ],
+      [
+        29,
+        29,
+        29,
+        996,
+        50,
+        0,
+        59,
+        0,
+        8,
+        0
+      ],
+      [
+        5,
+        3,
+        138,
+        57,
+        854,
+        0,
+        136,
+        0,
+        7,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1111,
+        1,
+        58,
+        4,
+        24
+      ],
+      [
+        165,
+        4,
+        113,
+        47,
+        123,
+        0,
+        737,
+        0,
+        11,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        53,
+        0,
+        1105,
+        1,
+        41
+      ],
+      [
+        17,
+        3,
+        19,
+        11,
+        10,
+        2,
+        13,
+        4,
+        1119,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        27,
+        0,
+        42,
+        2,
+        1129
+      ]
+    ]
+  },
+  "complexity": {
+    "complexity_type": "learned classifier coefficient and intercept scalars",
+    "complexity_value": 12970,
+    "scaler_stored_mean_scale_scalars": 2592
+  },
+  "artifact_path": "artifacts/budget/budget_hog_lr_3a7347d8.joblib",
+  "artifact_sha256": "03e7d56ecb6b59bdab00486e2a24b0b9282db685c9a9980a6847d1bc7be634fa",
+  "prediction_sha256": "6745b8f0409a3a834123888ca51b5c12d984071fb8c5d4aab4689786e45bc575",
+  "serialized_bytes": 79530
+}

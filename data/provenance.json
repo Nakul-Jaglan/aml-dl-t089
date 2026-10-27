@@ -1,0 +1,14 @@
+{
+  "source": "https://github.com/zalandoresearch/fashion-mnist",
+  "download_base": "https://raw.githubusercontent.com/zalandoresearch/fashion-mnist/master/data/fashion/",
+  "published_md5": {
+    "train-images-idx3-ubyte.gz": "8d4fb7e6c68d591d4c3dfef9ec88bf0d",
+    "train-labels-idx1-ubyte.gz": "25c81989df183df01b3e8a0aad5dffbe",
+    "t10k-images-idx3-ubyte.gz": "bef4ecab320f06d8554ea6380940ec79",
+    "t10k-labels-idx1-ubyte.gz": "bb300cfdad3c16e7a12a480ee83cd310"
+  },
+  "seed": 42,
+  "validation_fraction": 0.2,
+  "split_sha256": "9172928b23246a9a23877f6ad6428698b97ea5de6ef13e6b1b9cafec24380ec9",
+  "sample_id_rule": "source_split plus original row index"
+}

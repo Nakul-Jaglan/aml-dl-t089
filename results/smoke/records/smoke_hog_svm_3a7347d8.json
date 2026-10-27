@@ -1,0 +1,185 @@
+{
+  "run_id": "smoke_hog_svm_3a7347d8",
+  "profile": "smoke",
+  "feature": "hog",
+  "model": "svm",
+  "parameters": {
+    "C": 1.0
+  },
+  "train_n": 2000,
+  "val_n": 1000,
+  "feature_dim": 1296,
+  "fingerprint": "ce77f2e3c4300c5ae79409a7db5c9e0f28649f36f8859c51062a9fd7a3bc19bc",
+  "split_sha256": "800178fd66febfb5b4a5460ee3b7e7317bf918d2f270678f4a6ce3776a89645b",
+  "candidate_number": 0,
+  "status": "completed",
+  "feature_cache_seconds": 0.42816595803014934,
+  "fit_seconds": 0.4227227909723297,
+  "validation_predict_seconds": 1.5645127500174567,
+  "warnings": [
+    "The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`"
+  ],
+  "converged": true,
+  "accuracy": 0.853,
+  "macro_f1": 0.8525300303346712,
+  "metrics": {
+    "accuracy": 0.853,
+    "macro_f1": 0.8525300303346712,
+    "support": [
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100
+    ],
+    "recall": [
+      0.82,
+      0.96,
+      0.76,
+      0.85,
+      0.71,
+      0.95,
+      0.67,
+      0.89,
+      0.96,
+      0.96
+    ],
+    "confusion": [
+      [
+        82,
+        0,
+        1,
+        2,
+        0,
+        0,
+        11,
+        0,
+        4,
+        0
+      ],
+      [
+        0,
+        96,
+        0,
+        3,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        76,
+        3,
+        9,
+        0,
+        10,
+        0,
+        2,
+        0
+      ],
+      [
+        6,
+        3,
+        0,
+        85,
+        3,
+        0,
+        3,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        11,
+        8,
+        71,
+        0,
+        9,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        95,
+        0,
+        5,
+        0,
+        0
+      ],
+      [
+        18,
+        0,
+        1,
+        3,
+        9,
+        0,
+        67,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        5,
+        0,
+        89,
+        1,
+        5
+      ],
+      [
+        1,
+        0,
+        1,
+        2,
+        0,
+        0,
+        0,
+        0,
+        96,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        2,
+        0,
+        96
+      ]
+    ]
+  },
+  "complexity": {
+    "complexity_type": "stored SVC decision-array scalars (storage proxy)",
+    "complexity_value": 2073690,
+    "support_vectors": 1589,
+    "scaler_stored_mean_scale_scalars": 2592
+  },
+  "artifact_path": "artifacts/smoke/smoke_hog_svm_3a7347d8.joblib",
+  "artifact_sha256": "d8d2372a62c59ad0e3d0ac453907babe3a4eef3f064c9b86136c751acdc0b628",
+  "prediction_sha256": "f471e035b3a6b544d89497d032483092fe77317f9a2e728db1f1d447a45d83bb",
+  "serialized_bytes": 6851509
+}

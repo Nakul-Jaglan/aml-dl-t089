@@ -1,0 +1,105 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "run_id": "full_pixels_lr_580addbb",
+      "stage": "val",
+      "rows": 12000,
+      "predictions_sha256": "21be31887c9278b22529597a5b4f379f7e23c4d8dcbf9cf7780256a02155f8f1"
+    },
+    {
+      "run_id": "full_pixels_lr_580addbb",
+      "stage": "test",
+      "rows": 10000,
+      "predictions_sha256": "a2e19f44a3fd2f94c4c83f4d93ca2387d0c2f28daf04e4f7058e0da6ec0e5440"
+    },
+    {
+      "run_id": "full_pixels_knn_65305bf5",
+      "stage": "val",
+      "rows": 12000,
+      "predictions_sha256": "facd2428235e5d1351c37b4ea0f50cac3a0c2ae6a8ce00ad48025d4a75c4e4fb"
+    },
+    {
+      "run_id": "full_pixels_knn_65305bf5",
+      "stage": "test",
+      "rows": 10000,
+      "predictions_sha256": "997befccf5b3f22415492211b416092c21cf80937e68e66e507c2ae6fd21330c"
+    },
+    {
+      "run_id": "full_pixels_rf_297afe2b",
+      "stage": "val",
+      "rows": 12000,
+      "predictions_sha256": "284c09a7912a4b7cab77d4d1a84cd52e8e5eeaa4f208e79246ad7fa76263e540"
+    },
+    {
+      "run_id": "full_pixels_rf_297afe2b",
+      "stage": "test",
+      "rows": 10000,
+      "predictions_sha256": "a30ea1442fe81f188516ece58d7f74c426cf67aa01fb1ce20a716bf3df8a6f5d"
+    },
+    {
+      "run_id": "full_pixels_svm_3fd9d87a",
+      "stage": "val",
+      "rows": 12000,
+      "predictions_sha256": "450629fadcbc63d1a10cfda5fff9925c3209963fc51a1fb826d7666ab0882107"
+    },
+    {
+      "run_id": "full_pixels_svm_3fd9d87a",
+      "stage": "test",
+      "rows": 10000,
+      "predictions_sha256": "9d318d3c7a5f591e87a02e5b819b05cc5a51311d1a54cf02f828e0a27e48d349"
+    },
+    {
+      "run_id": "full_hog_lr_580addbb",
+      "stage": "val",
+      "rows": 12000,
+      "predictions_sha256": "edad8309361504f5567bbc4439f86a3d079f0035b126f98cb978bfc1645c7275"
+    },
+    {
+      "run_id": "full_hog_lr_580addbb",
+      "stage": "test",
+      "rows": 10000,
+      "predictions_sha256": "b08d6a25b8756781c3e142a7223afca872dddab098c405b8a0cb1fb239899e70"
+    },
+    {
+      "run_id": "full_hog_knn_65305bf5",
+      "stage": "val",
+      "rows": 12000,
+      "predictions_sha256": "bd4d63651f687cdbe6413230537be22fe7b27e4f9d12b692867aba281e2be8bc"
+    },
+    {
+      "run_id": "full_hog_knn_65305bf5",
+      "stage": "test",
+      "rows": 10000,
+      "predictions_sha256": "b1a775f92ae752033caa73760a63022e3e8c1fd51f3a1f46c6c847048bbb328e"
+    },
+    {
+      "run_id": "full_hog_rf_297afe2b",
+      "stage": "val",
+      "rows": 12000,
+      "predictions_sha256": "f0dc87efcfaf290a73c8ac221ff7f4b31bb4f70603e43d3e4381a4e842e7b504"
+    },
+    {
+      "run_id": "full_hog_rf_297afe2b",
+      "stage": "test",
+      "rows": 10000,
+      "predictions_sha256": "4ee53e50536106a4678a6af6acd11494eed2c2c4b0cbc03960ad6f23ac5dbc17"
+    },
+    {
+      "run_id": "full_hog_svm_3fd9d87a",
+      "stage": "val",
+      "rows": 12000,
+      "predictions_sha256": "1619fb865df6fcf86c5e1aa925688ebf603c19bcfbcaf4ec71b7beaf374aa98d"
+    },
+    {
+      "run_id": "full_hog_svm_3fd9d87a",
+      "stage": "test",
+      "rows": 10000,
+      "predictions_sha256": "8d3e05eee4a5834af3952c01dbe841a62f5a10b5713095b4fe60e2a9f81004f4"
+    }
+  ],
+  "finalists": 8,
+  "train_n_each": 48000,
+  "validation_selected_run_id": "full_hog_svm_3fd9d87a",
+  "test_used_for_selection": false
+}

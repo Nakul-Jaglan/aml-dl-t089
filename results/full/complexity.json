@@ -1,0 +1,72 @@
+[
+  {
+    "run_id": "full_pixels_lr_580addbb",
+    "complexity_type": "learned classifier coefficient and intercept scalars",
+    "complexity_value": 7850,
+    "scaler_stored_mean_scale_scalars": 1568,
+    "serialized_bytes": 49125
+  },
+  {
+    "run_id": "full_pixels_knn_65305bf5",
+    "complexity_type": "stored training feature scalars (not learned weights)",
+    "complexity_value": 37632000,
+    "stored_rows": 48000,
+    "stored_feature_bytes": 150528000,
+    "learned_weight_count": null,
+    "learned_weight_note": "not applicable to instance-based kNN",
+    "scaler_stored_mean_scale_scalars": 0,
+    "serialized_bytes": 32614887
+  },
+  {
+    "run_id": "full_pixels_rf_297afe2b",
+    "complexity_type": "total tree nodes (not neural-equivalent parameters)",
+    "complexity_value": 1633648,
+    "trees": 200,
+    "max_tree_depth": 48,
+    "scaler_stored_mean_scale_scalars": 0,
+    "serialized_bytes": 36713164
+  },
+  {
+    "run_id": "full_pixels_svm_3fd9d87a",
+    "complexity_type": "stored SVC decision-array scalars (storage proxy)",
+    "complexity_value": 13725289,
+    "support_vectors": 17308,
+    "scaler_stored_mean_scale_scalars": 1568,
+    "serialized_bytes": 41251876
+  },
+  {
+    "run_id": "full_hog_lr_580addbb",
+    "complexity_type": "learned classifier coefficient and intercept scalars",
+    "complexity_value": 12970,
+    "scaler_stored_mean_scale_scalars": 2592,
+    "serialized_bytes": 80201
+  },
+  {
+    "run_id": "full_hog_knn_65305bf5",
+    "complexity_type": "stored training feature scalars (not learned weights)",
+    "complexity_value": 62208000,
+    "stored_rows": 48000,
+    "stored_feature_bytes": 248832000,
+    "learned_weight_count": null,
+    "learned_weight_note": "not applicable to instance-based kNN",
+    "scaler_stored_mean_scale_scalars": 2592,
+    "serialized_bytes": 154424671
+  },
+  {
+    "run_id": "full_hog_rf_297afe2b",
+    "complexity_type": "total tree nodes (not neural-equivalent parameters)",
+    "complexity_value": 1828070,
+    "trees": 200,
+    "max_tree_depth": 55,
+    "scaler_stored_mean_scale_scalars": 0,
+    "serialized_bytes": 42190315
+  },
+  {
+    "run_id": "full_hog_svm_3fd9d87a",
+    "complexity_type": "stored SVC decision-array scalars (storage proxy)",
+    "complexity_value": 27295425,
+    "support_vectors": 20916,
+    "scaler_stored_mean_scale_scalars": 2592,
+    "serialized_bytes": 92083815
+  }
+]

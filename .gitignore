@@ -15,4 +15,9 @@ report/*.log
 report/*.out
 report/*.fls
 report/*.fdb_latexmk
+private/
+report/author_details.local.tex
+report/submission.tex
+report/submission.pdf
+report/submission.*
 

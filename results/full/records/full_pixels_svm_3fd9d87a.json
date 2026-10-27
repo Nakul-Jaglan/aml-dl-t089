@@ -1,0 +1,203 @@
+{
+  "run_id": "full_pixels_svm_3fd9d87a",
+  "profile": "full",
+  "feature": "pixels",
+  "model": "svm",
+  "parameters": {
+    "C": 10.0
+  },
+  "train_n": 48000,
+  "val_n": 12000,
+  "feature_dim": 784,
+  "fingerprint": "db2bdc746d39f123b87e6098d2776670f8878ee0a4f99bb8678d254a2d8b70cc",
+  "split_sha256": "9172928b23246a9a23877f6ad6428698b97ea5de6ef13e6b1b9cafec24380ec9",
+  "candidate_number": 0,
+  "status": "completed",
+  "feature_cache_seconds": 0.2083134170388803,
+  "estimator_settings": {
+    "C": 10.0,
+    "break_ties": false,
+    "cache_size": 512,
+    "class_weight": null,
+    "coef0": 0.0,
+    "decision_function_shape": "ovr",
+    "degree": 3,
+    "gamma": "scale",
+    "kernel": "rbf",
+    "max_iter": -1,
+    "probability": false,
+    "random_state": null,
+    "shrinking": true,
+    "tol": 0.001,
+    "verbose": false
+  },
+  "scaler": "StandardScaler",
+  "fit_seconds": 100.69492804200854,
+  "validation_predict_seconds": 39.56553766597062,
+  "warnings": [
+    "The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`"
+  ],
+  "converged": true,
+  "accuracy": 0.9071666666666667,
+  "macro_f1": 0.9068283989190824,
+  "metrics": {
+    "accuracy": 0.9071666666666667,
+    "macro_f1": 0.9068283989190824,
+    "support": [
+      1200,
+      1200,
+      1200,
+      1200,
+      1200,
+      1200,
+      1200,
+      1200,
+      1200,
+      1200
+    ],
+    "recall": [
+      0.8791666666666667,
+      0.9783333333333334,
+      0.8425,
+      0.9091666666666667,
+      0.8541666666666666,
+      0.9741666666666666,
+      0.7325,
+      0.9616666666666667,
+      0.9808333333333333,
+      0.9591666666666666
+    ],
+    "confusion": [
+      [
+        1055,
+        1,
+        17,
+        12,
+        3,
+        0,
+        96,
+        0,
+        16,
+        0
+      ],
+      [
+        1,
+        1174,
+        2,
+        15,
+        2,
+        1,
+        5,
+        0,
+        0,
+        0
+      ],
+      [
+        21,
+        0,
+        1011,
+        14,
+        77,
+        0,
+        74,
+        0,
+        3,
+        0
+      ],
+      [
+        34,
+        7,
+        8,
+        1091,
+        36,
+        0,
+        20,
+        0,
+        4,
+        0
+      ],
+      [
+        3,
+        0,
+        78,
+        37,
+        1025,
+        0,
+        55,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1169,
+        1,
+        18,
+        5,
+        7
+      ],
+      [
+        125,
+        2,
+        78,
+        29,
+        67,
+        0,
+        879,
+        0,
+        20,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        22,
+        0,
+        1154,
+        1,
+        23
+      ],
+      [
+        1,
+        2,
+        4,
+        5,
+        3,
+        3,
+        5,
+        0,
+        1177,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        9,
+        0,
+        35,
+        5,
+        1151
+      ]
+    ]
+  },
+  "complexity": {
+    "complexity_type": "stored SVC decision-array scalars (storage proxy)",
+    "complexity_value": 13725289,
+    "support_vectors": 17308,
+    "scaler_stored_mean_scale_scalars": 1568
+  },
+  "artifact_path": "artifacts/full/full_pixels_svm_3fd9d87a.joblib",
+  "artifact_sha256": "edaf6fd29f769ed2fa15348af1fe1567a2f157c6e77cb0bfdbd64603d54739fe",
+  "prediction_sha256": "450629fadcbc63d1a10cfda5fff9925c3209963fc51a1fb826d7666ab0882107",
+  "serialized_bytes": 41251876
+}

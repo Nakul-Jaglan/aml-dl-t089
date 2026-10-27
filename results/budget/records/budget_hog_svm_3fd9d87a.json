@@ -1,0 +1,185 @@
+{
+  "run_id": "budget_hog_svm_3fd9d87a",
+  "profile": "budget",
+  "feature": "hog",
+  "model": "svm",
+  "parameters": {
+    "C": 10.0
+  },
+  "train_n": 12000,
+  "val_n": 12000,
+  "feature_dim": 1296,
+  "fingerprint": "ee8ee44ad6f2b96bc9dc425e7389c0b253bc3cc9e3b56f590e6a7f4eed372ecd",
+  "split_sha256": "174d0f3b3455bbcd2e32d8fb99dcc01534a6ea208a03177a565593fa4d3223ed",
+  "candidate_number": 1,
+  "status": "completed",
+  "feature_cache_seconds": 3.6505014579743147,
+  "fit_seconds": 13.00326575001236,
+  "validation_predict_seconds": 81.94771454110742,
+  "warnings": [
+    "The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`"
+  ],
+  "converged": true,
+  "accuracy": 0.8908333333333334,
+  "macro_f1": 0.8905337276885315,
+  "metrics": {
+    "accuracy": 0.8908333333333334,
+    "macro_f1": 0.8905337276885315,
+    "support": [
+      1200,
+      1200,
+      1200,
+      1200,
+      1200,
+      1200,
+      1200,
+      1200,
+      1200,
+      1200
+    ],
+    "recall": [
+      0.8683333333333333,
+      0.9758333333333333,
+      0.8258333333333333,
+      0.8975,
+      0.795,
+      0.9533333333333334,
+      0.7058333333333333,
+      0.95,
+      0.9758333333333333,
+      0.9608333333333333
+    ],
+    "confusion": [
+      [
+        1042,
+        2,
+        15,
+        29,
+        3,
+        0,
+        97,
+        0,
+        12,
+        0
+      ],
+      [
+        2,
+        1171,
+        1,
+        17,
+        1,
+        0,
+        6,
+        0,
+        2,
+        0
+      ],
+      [
+        20,
+        0,
+        991,
+        13,
+        87,
+        0,
+        82,
+        0,
+        7,
+        0
+      ],
+      [
+        24,
+        12,
+        9,
+        1077,
+        36,
+        0,
+        38,
+        0,
+        4,
+        0
+      ],
+      [
+        3,
+        0,
+        99,
+        50,
+        954,
+        0,
+        90,
+        0,
+        4,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1144,
+        0,
+        39,
+        1,
+        15
+      ],
+      [
+        148,
+        2,
+        81,
+        32,
+        76,
+        0,
+        847,
+        0,
+        14,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        28,
+        0,
+        1140,
+        2,
+        30
+      ],
+      [
+        5,
+        1,
+        2,
+        4,
+        3,
+        2,
+        9,
+        1,
+        1171,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        10,
+        0,
+        37,
+        0,
+        1153
+      ]
+    ]
+  },
+  "complexity": {
+    "complexity_type": "stored SVC decision-array scalars (storage proxy)",
+    "complexity_value": 8971920,
+    "support_vectors": 6875,
+    "scaler_stored_mean_scale_scalars": 2592
+  },
+  "artifact_path": "artifacts/budget/budget_hog_svm_3fd9d87a.joblib",
+  "artifact_sha256": "846bba8ca7d92570679ac6b2aa7fdc673f6d34dddc27a956b3fd9460a8328559",
+  "prediction_sha256": "413e458a11ada99e691706857b49087724eb6f686ca67130063a1dbeb95d882a",
+  "serialized_bytes": 29987592
+}
