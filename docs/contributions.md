@@ -1,18 +1,21 @@
-# Contributions and AI assistance
+# Team responsibilities and review record
 
-## What is already prepared
+| Member | Responsibility |
+|---|---|
+| Nakul | Integration, literature review, repository, master notebook and report assembly |
+| Sudeshhna | Dataset quality, exploratory analysis and shared splits |
+| Puneet | Pixel and HOG features, Logistic Regression and kNN |
+| Samarth | Random Forest, SVM and experiment management |
+| Neelanshu | Evaluation metrics, inference timing and error analysis |
 
-At Nakul's request, Codex generated the initial code, automated checks, executed
-experiments, documentation, notebook and report drafts. These are **AI-assisted
-starting artifacts**. Their existence does not demonstrate that a student has
-independently written, reviewed or understood them. No commits are fabricated
-under teammates' identities, and no independent teammate work is claimed.
+These assignments describe responsibility. Add completed individual reviews and
+changes to the log below with the relevant evidence.
 
-Nakul's current integration task can use these artifacts after review. All five
-students still need to understand the method, check the evidence and record their
-actual reviews and changes for the individual viva.
+## Preparation record
 
-## Planned ownership from the team guides
+The initial implementation, experiment execution and document drafts were
+prepared with Codex at Nakul's request. This record does not establish each
+member's individual review or contribution.
 
 | Member | Planned responsibility | Individual review/contribution status |
 |---|---|---|
@@ -87,3 +90,4 @@ Before submission, follow the faculty's actual AI-use/disclosure policy. That
 policy has not been provided, so this repository records assistance transparently
 without inventing a course rule or claiming permission from the faculty.
 
+Follow any disclosure requirements specified by the faculty.

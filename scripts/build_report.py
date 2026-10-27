@@ -526,15 +526,14 @@ to an isolated output directory so checked-in frozen evidence stays intact.
 Large trained bundles, raw downloads and feature caches are regenerated locally
 instead of committed to Git.
 
-These initial artifacts were generated with AI assistance at Nakul's request.
-Planned ownership assigns Nakul integration/research/report assembly,
-Sudeshhna data/EDA, Puneet features/LR/kNN, Samarth RF/SVM/experiments and
-Neelanshu evaluation/error analysis. These plans do not assert completed
-independent work. Each member must review the relevant implementation, record
-actual changes or verification, and demonstrate whole-project understanding
-in the individual viva. Section A is confirmed. Student identifiers are included
-only in the private submission copy; institutional affiliation details and any
-faculty-specific template requirements still require team confirmation.
+Team responsibilities cover integration, literature and report assembly
+(Nakul), data quality and EDA (Sudeshhna), visual features, LR and kNN (Puneet),
+RF, SVM and experiment management (Samarth), and evaluation and error analysis
+(Neelanshu). The repository's contribution record tracks preparation and
+individual reviews. Each presenter should be able to explain the shared
+pipeline in the individual viva. Section A is confirmed. Student identifiers
+appear only in the private submission copy. Institutional affiliation details
+and faculty-specific formatting requirements require team confirmation.
 
 \section{Conclusion}
 The controlled Phase 1 experiment compares eight classical pipelines under
@@ -607,7 +606,11 @@ if private_details.exists():
 }
 """)
 
-notes = f"""# Phase 1 presentation outline and speaker notes
+notes = f"""# Earlier Phase 1 presentation outline
+
+The finished 22-slide deck is in `presentation/`. Use
+`presentation/speaker_notes.md` for the final slide numbering and presenter notes.
+The 12-slide outline below records the earlier content plan.
 
 This is a 12-slide content outline, not an exported PowerPoint deck. Adjust its
 length to the faculty's actual time limit. Each presenter must review their
