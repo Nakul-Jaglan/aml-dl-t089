@@ -2,7 +2,7 @@
 
 Open `Phase_1_Clothing_Category_Recognition.pptx` to edit or present the deck.
 The PDF is a portable copy. Both have 22 slides: 18 main slides and four backup
-slides. Speaker notes are embedded in the PowerPoint and also provided in
+slides. Short, conversational Hinglish speaker notes are embedded in the PowerPoint and also provided in
 `speaker_notes.md`. Adjust pacing to the faculty time limit.
 
 ## Speaking assignments
