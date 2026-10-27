@@ -1,0 +1,480 @@
+{
+  "source": "official_train validation partition only; official test not loaded",
+  "split_sha256": "9172928b23246a9a23877f6ad6428698b97ea5de6ef13e6b1b9cafec24380ec9",
+  "rows": {
+    "pixels": {
+      "run_id": "full_pixels_knn_65305bf5",
+      "k": 5,
+      "fit_n": 48000,
+      "validation_n": 12000,
+      "refit_reproduces_saved_validation_predictions": true,
+      "validation_errors": 1699,
+      "errors_with_majority_of_neighbours_carrying_predicted_label": 1452,
+      "errors_with_no_neighbour_carrying_true_label": 514,
+      "mean_neighbours_carrying_true_label": 1.0158917010005886,
+      "most_frequent_error_pairs": [
+        {
+          "true": "Shirt",
+          "predicted": "T-shirt/top",
+          "count": 183
+        },
+        {
+          "true": "Shirt",
+          "predicted": "Pullover",
+          "count": 131
+        },
+        {
+          "true": "Coat",
+          "predicted": "Pullover",
+          "count": 127
+        },
+        {
+          "true": "Coat",
+          "predicted": "Shirt",
+          "count": 125
+        },
+        {
+          "true": "Pullover",
+          "predicted": "Coat",
+          "count": 123
+        },
+        {
+          "true": "Sandal",
+          "predicted": "Sneaker",
+          "count": 119
+        }
+      ],
+      "panel": [
+        {
+          "val_id": 164,
+          "true": "Shirt",
+          "predicted": "T-shirt/top",
+          "neighbours": [
+            {
+              "fit_id": 40993,
+              "label": "T-shirt/top",
+              "distance": 2.976734161376953
+            },
+            {
+              "fit_id": 34897,
+              "label": "Shirt",
+              "distance": 3.0938045978546143
+            },
+            {
+              "fit_id": 13065,
+              "label": "T-shirt/top",
+              "distance": 3.196256637573242
+            },
+            {
+              "fit_id": 2118,
+              "label": "T-shirt/top",
+              "distance": 3.2505428791046143
+            },
+            {
+              "fit_id": 29805,
+              "label": "T-shirt/top",
+              "distance": 3.2921142578125
+            }
+          ]
+        },
+        {
+          "val_id": 623,
+          "true": "Shirt",
+          "predicted": "Pullover",
+          "neighbours": [
+            {
+              "fit_id": 43141,
+              "label": "Pullover",
+              "distance": 3.1492440700531006
+            },
+            {
+              "fit_id": 580,
+              "label": "Pullover",
+              "distance": 3.1799519062042236
+            },
+            {
+              "fit_id": 17411,
+              "label": "Shirt",
+              "distance": 3.2076752185821533
+            },
+            {
+              "fit_id": 41462,
+              "label": "Pullover",
+              "distance": 3.669590950012207
+            },
+            {
+              "fit_id": 8319,
+              "label": "Pullover",
+              "distance": 3.7040579319000244
+            }
+          ]
+        },
+        {
+          "val_id": 188,
+          "true": "Coat",
+          "predicted": "Pullover",
+          "neighbours": [
+            {
+              "fit_id": 10320,
+              "label": "Pullover",
+              "distance": 4.105399131774902
+            },
+            {
+              "fit_id": 24244,
+              "label": "Coat",
+              "distance": 4.403682231903076
+            },
+            {
+              "fit_id": 32772,
+              "label": "Shirt",
+              "distance": 4.449392795562744
+            },
+            {
+              "fit_id": 56116,
+              "label": "Coat",
+              "distance": 4.465361595153809
+            },
+            {
+              "fit_id": 6662,
+              "label": "Pullover",
+              "distance": 4.512200355529785
+            }
+          ]
+        },
+        {
+          "val_id": 396,
+          "true": "Coat",
+          "predicted": "Shirt",
+          "neighbours": [
+            {
+              "fit_id": 17636,
+              "label": "Shirt",
+              "distance": 3.594724655151367
+            },
+            {
+              "fit_id": 56413,
+              "label": "Shirt",
+              "distance": 3.6399593353271484
+            },
+            {
+              "fit_id": 19184,
+              "label": "Coat",
+              "distance": 3.6676230430603027
+            },
+            {
+              "fit_id": 33432,
+              "label": "Pullover",
+              "distance": 3.714137554168701
+            },
+            {
+              "fit_id": 53347,
+              "label": "Coat",
+              "distance": 3.7337372303009033
+            }
+          ]
+        },
+        {
+          "val_id": 1206,
+          "true": "Pullover",
+          "predicted": "Coat",
+          "neighbours": [
+            {
+              "fit_id": 17333,
+              "label": "Pullover",
+              "distance": 4.087393760681152
+            },
+            {
+              "fit_id": 40184,
+              "label": "Coat",
+              "distance": 4.182367324829102
+            },
+            {
+              "fit_id": 51829,
+              "label": "Coat",
+              "distance": 4.277293682098389
+            },
+            {
+              "fit_id": 55360,
+              "label": "Coat",
+              "distance": 4.392193794250488
+            },
+            {
+              "fit_id": 8932,
+              "label": "Coat",
+              "distance": 4.436987400054932
+            }
+          ]
+        },
+        {
+          "val_id": 244,
+          "true": "Sandal",
+          "predicted": "Sneaker",
+          "neighbours": [
+            {
+              "fit_id": 2991,
+              "label": "Sneaker",
+              "distance": 6.1206793785095215
+            },
+            {
+              "fit_id": 38180,
+              "label": "Sneaker",
+              "distance": 6.129597187042236
+            },
+            {
+              "fit_id": 2561,
+              "label": "Sandal",
+              "distance": 6.162479400634766
+            },
+            {
+              "fit_id": 26483,
+              "label": "Sneaker",
+              "distance": 6.347626686096191
+            },
+            {
+              "fit_id": 36027,
+              "label": "Sneaker",
+              "distance": 6.373419284820557
+            }
+          ]
+        }
+      ]
+    },
+    "hog": {
+      "run_id": "full_hog_knn_65305bf5",
+      "k": 5,
+      "fit_n": 48000,
+      "validation_n": 12000,
+      "refit_reproduces_saved_validation_predictions": true,
+      "validation_errors": 1493,
+      "errors_with_majority_of_neighbours_carrying_predicted_label": 1265,
+      "errors_with_no_neighbour_carrying_true_label": 429,
+      "mean_neighbours_carrying_true_label": 1.0656396517079705,
+      "most_frequent_error_pairs": [
+        {
+          "true": "Shirt",
+          "predicted": "T-shirt/top",
+          "count": 158
+        },
+        {
+          "true": "Shirt",
+          "predicted": "Pullover",
+          "count": 142
+        },
+        {
+          "true": "Pullover",
+          "predicted": "Coat",
+          "count": 106
+        },
+        {
+          "true": "Coat",
+          "predicted": "Shirt",
+          "count": 101
+        },
+        {
+          "true": "Shirt",
+          "predicted": "Coat",
+          "count": 95
+        },
+        {
+          "true": "T-shirt/top",
+          "predicted": "Shirt",
+          "count": 93
+        }
+      ],
+      "panel": [
+        {
+          "val_id": 245,
+          "true": "Shirt",
+          "predicted": "T-shirt/top",
+          "neighbours": [
+            {
+              "fit_id": 29802,
+              "label": "T-shirt/top",
+              "distance": 28.28734588623047
+            },
+            {
+              "fit_id": 25247,
+              "label": "T-shirt/top",
+              "distance": 29.0999698638916
+            },
+            {
+              "fit_id": 18442,
+              "label": "Shirt",
+              "distance": 29.893342971801758
+            },
+            {
+              "fit_id": 7897,
+              "label": "Dress",
+              "distance": 30.846435546875
+            },
+            {
+              "fit_id": 12678,
+              "label": "Shirt",
+              "distance": 31.000410079956055
+            }
+          ]
+        },
+        {
+          "val_id": 18,
+          "true": "Shirt",
+          "predicted": "Pullover",
+          "neighbours": [
+            {
+              "fit_id": 59665,
+              "label": "Pullover",
+              "distance": 31.839757919311523
+            },
+            {
+              "fit_id": 37661,
+              "label": "Shirt",
+              "distance": 32.99848937988281
+            },
+            {
+              "fit_id": 2332,
+              "label": "Pullover",
+              "distance": 33.09069061279297
+            },
+            {
+              "fit_id": 25327,
+              "label": "Pullover",
+              "distance": 33.127708435058594
+            },
+            {
+              "fit_id": 58646,
+              "label": "Shirt",
+              "distance": 33.194271087646484
+            }
+          ]
+        },
+        {
+          "val_id": 1206,
+          "true": "Pullover",
+          "predicted": "Coat",
+          "neighbours": [
+            {
+              "fit_id": 35580,
+              "label": "Coat",
+              "distance": 30.580432891845703
+            },
+            {
+              "fit_id": 24191,
+              "label": "Coat",
+              "distance": 30.7634334564209
+            },
+            {
+              "fit_id": 31840,
+              "label": "Coat",
+              "distance": 31.19272232055664
+            },
+            {
+              "fit_id": 5159,
+              "label": "Coat",
+              "distance": 31.459781646728516
+            },
+            {
+              "fit_id": 33024,
+              "label": "Coat",
+              "distance": 31.46809959411621
+            }
+          ]
+        },
+        {
+          "val_id": 1338,
+          "true": "Coat",
+          "predicted": "Shirt",
+          "neighbours": [
+            {
+              "fit_id": 12967,
+              "label": "Shirt",
+              "distance": 30.0427188873291
+            },
+            {
+              "fit_id": 31023,
+              "label": "Shirt",
+              "distance": 30.186595916748047
+            },
+            {
+              "fit_id": 35777,
+              "label": "Shirt",
+              "distance": 30.43424415588379
+            },
+            {
+              "fit_id": 43085,
+              "label": "Coat",
+              "distance": 30.61008071899414
+            },
+            {
+              "fit_id": 46714,
+              "label": "Pullover",
+              "distance": 30.614957809448242
+            }
+          ]
+        },
+        {
+          "val_id": 623,
+          "true": "Shirt",
+          "predicted": "Coat",
+          "neighbours": [
+            {
+              "fit_id": 46618,
+              "label": "Coat",
+              "distance": 25.914148330688477
+            },
+            {
+              "fit_id": 17419,
+              "label": "Coat",
+              "distance": 28.721294403076172
+            },
+            {
+              "fit_id": 49533,
+              "label": "Coat",
+              "distance": 28.83346176147461
+            },
+            {
+              "fit_id": 14451,
+              "label": "Coat",
+              "distance": 29.232545852661133
+            },
+            {
+              "fit_id": 54207,
+              "label": "Coat",
+              "distance": 29.49392318725586
+            }
+          ]
+        },
+        {
+          "val_id": 321,
+          "true": "T-shirt/top",
+          "predicted": "Shirt",
+          "neighbours": [
+            {
+              "fit_id": 29802,
+              "label": "T-shirt/top",
+              "distance": 28.791576385498047
+            },
+            {
+              "fit_id": 18442,
+              "label": "Shirt",
+              "distance": 28.994413375854492
+            },
+            {
+              "fit_id": 53948,
+              "label": "T-shirt/top",
+              "distance": 29.08760643005371
+            },
+            {
+              "fit_id": 52453,
+              "label": "Shirt",
+              "distance": 29.45846176147461
+            },
+            {
+              "fit_id": 32272,
+              "label": "Shirt",
+              "distance": 29.51605987548828
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
