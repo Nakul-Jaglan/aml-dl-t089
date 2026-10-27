@@ -1,4 +1,8 @@
-# Phase 1 presentation outline and speaker notes
+# Earlier Phase 1 presentation outline
+
+The finished 22-slide deck is in `presentation/`. Use
+`presentation/speaker_notes.md` for the final slide numbering and presenter notes.
+The 12-slide outline below records the earlier content plan.
 
 This is a 12-slide content outline, not an exported PowerPoint deck. Adjust its
 length to the faculty's actual time limit. Each presenter must review their
