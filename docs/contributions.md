@@ -21,7 +21,7 @@ member's individual review or contribution.
 |---|---|---|
 | Nakul | Integration, literature, repository, master notebook, report assembly | AI-assisted materials prepared; human review/viva practice pending |
 | Sudeshhna | Data quality, EDA, shared splits | Near-duplicate audit contributed (AI-assisted, see log below); personal review and viva preparation pending |
-| Puneet | Pixels/HOG, LR and kNN | Human review and own contribution pending |
+| Puneet | Pixels/HOG, LR and kNN | Feature tests, kNN neighbour analysis and LR/kNN notebook contributed (AI-assisted, see log below); personal review and viva preparation pending |
 | Samarth | RF, SVM and experiment harness | Human review and own contribution pending |
 | Neelanshu | Metrics, timing and error analysis | Human review and own contribution pending |
 
@@ -84,6 +84,42 @@ AI assistance: Prepared with Claude, on the same transparent basis as the rest o
   this repository. The measurements are reproducible from the committed scripts.
   Sudeshhna's own review of this work, and her ability to explain it in the
   individual viva, are separate and are NOT claimed by this entry.
+```
+
+### 2026-10-28 — Puneet — features, Logistic Regression and kNN
+
+```text
+Date: 2026-10-28
+Member: Puneet
+File/run/figure: tests/test_features.py, scripts/knn_neighbours.py,
+  figures/full/knn_neighbours_{hog,pixels}.png/.pdf, figures/full/knn_neighbours.json,
+  scripts/build_features_notebook.py, notebooks/02_features_lr_knn.ipynb
+Actual change or review: Reviewed src/clothing_ml/features.py, models.py and the
+  LR/kNN path through experiments.py against the Phase 1 work guide. Added only
+  new files; no source module, split, frozen record, prediction or test result
+  was modified, so the recorded source-file hashes still match.
+  - 16 feature/pipeline tests: HOG length derived from the declared settings,
+    exact divide-by-255 ordering, batch-independent deterministic features,
+    finite HOG on blank/saturated images, orientation sensitivity, shape and
+    feature-name rejection, feature-cache tamper detection, LR/kNN scaling
+    policy and the LR learned-scalar count 10(d+1).
+  - kNN neighbour analysis of every validation error for both frozen kNN rows.
+  - An executed walkthrough notebook for the four LR/kNN rows.
+Verification and finding: All tests pass. Refitting both frozen kNN rows on the
+  48,000 fit IDs reproduces all 12,000 saved validation predictions exactly.
+  HOG kNN makes 1,493 validation errors; in 1,265 a majority of the five nearest
+  fit images carry the predicted label and in 429 none carries the true label
+  (pixels: 1,699 / 1,452 / 514), mostly among Shirt, T-shirt/top, Pullover and
+  Coat. Refitting the frozen LR rows reproduces 11,949/12,000 (pixels) and
+  11,983/12,000 (HOG) saved validation predictions, with macro F1 within 0.0002;
+  the notebook reports this as near-complete rather than exact agreement.
+  Within the same split and training size, HOG raised validation macro F1 by
+  2.44 pp for LR and 1.64 pp for kNN. Official test data was not loaded.
+Commit or evidence path: main; tests/test_features.py; figures/full/knn_neighbours.json;
+  notebooks/02_features_lr_knn.ipynb
+AI assistance: Prepared with Claude, on the same transparent basis as the rest of
+  this repository. Puneet's own review of this work, and the ability to explain it
+  in the individual viva, are separate and are NOT claimed by this entry.
 ```
 
 Before submission, follow the faculty's actual AI-use/disclosure policy. That

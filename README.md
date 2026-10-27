@@ -134,9 +134,10 @@ saved predictions. Do not retune against final test results.
 src/clothing_ml/       data, features, models, experiments, evaluation and plots
 tests/                meaningful data/ID/leakage/final-test guard checks
 data/                 saved split IDs, source checksums and training audit
-notebooks/            executed master notebook and HTML companion
+notebooks/            executed master notebook, HTML companion and features/LR/kNN notebook
 results/<profile>/    protocol, candidates, freeze, predictions and metrics
 figures/              reproducible EDA, comparisons and error-analysis figures
+                      (kNN neighbour panels: python scripts/knn_neighbours.py)
 data/near_duplicate_audit.json  exhaustive near-duplicate measurement (data review)
 report/               LaTeX/IEEE-format report source and compiled PDF
 docs/                 protocol, research notes, Nakul guide and contribution log
