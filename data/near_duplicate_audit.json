@@ -1,0 +1,508 @@
+{
+  "purpose": "Quantify near-duplicate overlap that exact SHA-256 image hashing cannot detect.",
+  "relates_to": "data/training_audit.json, which reports zero exact duplicates and claims no near-duplicate audit.",
+  "exact_duplicate_groups_reference": 0,
+  "comparisons": [
+    {
+      "comparison": "validation versus fit pool",
+      "query_split": "official_train",
+      "n_query": 12000,
+      "reference_split": "official_train",
+      "n_reference": 48000,
+      "exhaustive": true,
+      "metric": "root-mean-square pixel difference on the raw 0-255 scale",
+      "exact_below_rms": 15.0,
+      "distribution": {
+        "min": 1.1434,
+        "p01": 14.5007,
+        "p05": 18.2095,
+        "median": 31.7625,
+        "mean": 33.1203,
+        "max": 88.5392
+      },
+      "counts_below": {
+        "1.0": 0,
+        "2.0": 2,
+        "5.0": 5,
+        "10.0": 17
+      },
+      "fraction_below_rms_5_percent": 0.0417,
+      "nearest_neighbour_shares_label_percent": 85.05,
+      "closest_pairs": [
+        {
+          "query": "official_train:10205",
+          "query_class": "Coat",
+          "neighbour": "official_train:23412",
+          "neighbour_class": "Coat",
+          "same_class": true,
+          "rms_pixel_difference": 1.1434,
+          "differing_pixels": 343,
+          "max_absolute_difference": 5,
+          "mean_absolute_difference": 0.6747
+        },
+        {
+          "query": "official_train:45497",
+          "query_class": "Sneaker",
+          "neighbour": "official_train:59812",
+          "neighbour_class": "Sneaker",
+          "same_class": true,
+          "rms_pixel_difference": 1.5415,
+          "differing_pixels": 126,
+          "max_absolute_difference": 21,
+          "mean_absolute_difference": 0.4911
+        },
+        {
+          "query": "official_train:29645",
+          "query_class": "Shirt",
+          "neighbour": "official_train:13618",
+          "neighbour_class": "Shirt",
+          "same_class": true,
+          "rms_pixel_difference": 2.7611,
+          "differing_pixels": 446,
+          "max_absolute_difference": 23,
+          "mean_absolute_difference": 1.3814
+        },
+        {
+          "query": "official_train:18103",
+          "query_class": "Coat",
+          "neighbour": "official_train:24819",
+          "neighbour_class": "Coat",
+          "same_class": true,
+          "rms_pixel_difference": 3.6411,
+          "differing_pixels": 471,
+          "max_absolute_difference": 10,
+          "mean_absolute_difference": 2.551
+        },
+        {
+          "query": "official_train:25251",
+          "query_class": "T-shirt/top",
+          "neighbour": "official_train:13005",
+          "neighbour_class": "T-shirt/top",
+          "same_class": true,
+          "rms_pixel_difference": 3.9541,
+          "differing_pixels": 452,
+          "max_absolute_difference": 18,
+          "mean_absolute_difference": 2.4031
+        },
+        {
+          "query": "official_train:5503",
+          "query_class": "Bag",
+          "neighbour": "official_train:28024",
+          "neighbour_class": "Bag",
+          "same_class": true,
+          "rms_pixel_difference": 5.1153,
+          "differing_pixels": 417,
+          "max_absolute_difference": 56,
+          "mean_absolute_difference": 2.4719
+        },
+        {
+          "query": "official_train:6300",
+          "query_class": "Coat",
+          "neighbour": "official_train:19456",
+          "neighbour_class": "Coat",
+          "same_class": true,
+          "rms_pixel_difference": 5.3034,
+          "differing_pixels": 441,
+          "max_absolute_difference": 38,
+          "mean_absolute_difference": 3.2181
+        },
+        {
+          "query": "official_train:56004",
+          "query_class": "T-shirt/top",
+          "neighbour": "official_train:58762",
+          "neighbour_class": "T-shirt/top",
+          "same_class": true,
+          "rms_pixel_difference": 5.7243,
+          "differing_pixels": 102,
+          "max_absolute_difference": 74,
+          "mean_absolute_difference": 1.0102
+        },
+        {
+          "query": "official_train:56744",
+          "query_class": "Shirt",
+          "neighbour": "official_train:29705",
+          "neighbour_class": "Shirt",
+          "same_class": true,
+          "rms_pixel_difference": 6.4503,
+          "differing_pixels": 477,
+          "max_absolute_difference": 70,
+          "mean_absolute_difference": 3.4247
+        },
+        {
+          "query": "official_train:55613",
+          "query_class": "T-shirt/top",
+          "neighbour": "official_train:27857",
+          "neighbour_class": "T-shirt/top",
+          "same_class": true,
+          "rms_pixel_difference": 6.6556,
+          "differing_pixels": 452,
+          "max_absolute_difference": 62,
+          "mean_absolute_difference": 2.713
+        },
+        {
+          "query": "official_train:36921",
+          "query_class": "Shirt",
+          "neighbour": "official_train:24535",
+          "neighbour_class": "Shirt",
+          "same_class": true,
+          "rms_pixel_difference": 6.8784,
+          "differing_pixels": 464,
+          "max_absolute_difference": 37,
+          "mean_absolute_difference": 3.9043
+        },
+        {
+          "query": "official_train:54360",
+          "query_class": "T-shirt/top",
+          "neighbour": "official_train:11916",
+          "neighbour_class": "T-shirt/top",
+          "same_class": true,
+          "rms_pixel_difference": 7.4403,
+          "differing_pixels": 463,
+          "max_absolute_difference": 47,
+          "mean_absolute_difference": 4.2972
+        },
+        {
+          "query": "official_train:3704",
+          "query_class": "Pullover",
+          "neighbour": "official_train:1928",
+          "neighbour_class": "Pullover",
+          "same_class": true,
+          "rms_pixel_difference": 7.9719,
+          "differing_pixels": 464,
+          "max_absolute_difference": 30,
+          "mean_absolute_difference": 5.6964
+        },
+        {
+          "query": "official_train:54541",
+          "query_class": "T-shirt/top",
+          "neighbour": "official_train:40990",
+          "neighbour_class": "T-shirt/top",
+          "same_class": true,
+          "rms_pixel_difference": 8.0706,
+          "differing_pixels": 418,
+          "max_absolute_difference": 86,
+          "mean_absolute_difference": 4.1786
+        },
+        {
+          "query": "official_train:38570",
+          "query_class": "Trouser",
+          "neighbour": "official_train:29937",
+          "neighbour_class": "Trouser",
+          "same_class": true,
+          "rms_pixel_difference": 8.7164,
+          "differing_pixels": 304,
+          "max_absolute_difference": 36,
+          "mean_absolute_difference": 3.9401
+        },
+        {
+          "query": "official_train:1756",
+          "query_class": "Shirt",
+          "neighbour": "official_train:56506",
+          "neighbour_class": "Shirt",
+          "same_class": true,
+          "rms_pixel_difference": 9.3057,
+          "differing_pixels": 441,
+          "max_absolute_difference": 70,
+          "mean_absolute_difference": 3.4018
+        },
+        {
+          "query": "official_train:31764",
+          "query_class": "Shirt",
+          "neighbour": "official_train:26814",
+          "neighbour_class": "Shirt",
+          "same_class": true,
+          "rms_pixel_difference": 9.8729,
+          "differing_pixels": 415,
+          "max_absolute_difference": 64,
+          "mean_absolute_difference": 5.6901
+        },
+        {
+          "query": "official_train:18244",
+          "query_class": "Shirt",
+          "neighbour": "official_train:8844",
+          "neighbour_class": "Shirt",
+          "same_class": true,
+          "rms_pixel_difference": 10.6545,
+          "differing_pixels": 477,
+          "max_absolute_difference": 56,
+          "mean_absolute_difference": 6.9298
+        },
+        {
+          "query": "official_train:20810",
+          "query_class": "Coat",
+          "neighbour": "official_train:37193",
+          "neighbour_class": "Coat",
+          "same_class": true,
+          "rms_pixel_difference": 10.7224,
+          "differing_pixels": 367,
+          "max_absolute_difference": 85,
+          "mean_absolute_difference": 5.0982
+        },
+        {
+          "query": "official_train:48171",
+          "query_class": "Trouser",
+          "neighbour": "official_train:17272",
+          "neighbour_class": "Trouser",
+          "same_class": true,
+          "rms_pixel_difference": 10.7569,
+          "differing_pixels": 256,
+          "max_absolute_difference": 66,
+          "mean_absolute_difference": 4.5064
+        }
+      ]
+    },
+    {
+      "comparison": "official test versus official training",
+      "query_split": "official_test",
+      "n_query": 10000,
+      "reference_split": "official_train",
+      "n_reference": 60000,
+      "exhaustive": true,
+      "metric": "root-mean-square pixel difference on the raw 0-255 scale",
+      "exact_below_rms": 15.0,
+      "distribution": {
+        "min": 0.7432,
+        "p01": 14.1219,
+        "p05": 17.8955,
+        "median": 31.5384,
+        "mean": 32.7825,
+        "max": 82.4713
+      },
+      "counts_below": {
+        "1.0": 1,
+        "2.0": 1,
+        "5.0": 6,
+        "10.0": 18
+      },
+      "fraction_below_rms_5_percent": 0.06,
+      "nearest_neighbour_shares_label_percent": 84.97,
+      "closest_pairs": [
+        {
+          "query": "official_test:4998",
+          "query_class": "T-shirt/top",
+          "neighbour": "official_train:13360",
+          "neighbour_class": "T-shirt/top",
+          "same_class": true,
+          "rms_pixel_difference": 0.7432,
+          "differing_pixels": 162,
+          "max_absolute_difference": 4,
+          "mean_absolute_difference": 0.3023
+        },
+        {
+          "query": "official_test:9867",
+          "query_class": "T-shirt/top",
+          "neighbour": "official_train:58762",
+          "neighbour_class": "T-shirt/top",
+          "same_class": true,
+          "rms_pixel_difference": 2.3471,
+          "differing_pixels": 61,
+          "max_absolute_difference": 54,
+          "mean_absolute_difference": 0.2793
+        },
+        {
+          "query": "official_test:2605",
+          "query_class": "Shirt",
+          "neighbour": "official_train:11932",
+          "neighbour_class": "Shirt",
+          "same_class": true,
+          "rms_pixel_difference": 2.7574,
+          "differing_pixels": 486,
+          "max_absolute_difference": 21,
+          "mean_absolute_difference": 2.0191
+        },
+        {
+          "query": "official_test:6210",
+          "query_class": "Coat",
+          "neighbour": "official_train:19456",
+          "neighbour_class": "Coat",
+          "same_class": true,
+          "rms_pixel_difference": 3.3961,
+          "differing_pixels": 400,
+          "max_absolute_difference": 20,
+          "mean_absolute_difference": 1.8929
+        },
+        {
+          "query": "official_test:2115",
+          "query_class": "Trouser",
+          "neighbour": "official_train:18494",
+          "neighbour_class": "Trouser",
+          "same_class": true,
+          "rms_pixel_difference": 3.5643,
+          "differing_pixels": 224,
+          "max_absolute_difference": 43,
+          "mean_absolute_difference": 1.4286
+        },
+        {
+          "query": "official_test:4926",
+          "query_class": "Trouser",
+          "neighbour": "official_train:18494",
+          "neighbour_class": "Trouser",
+          "same_class": true,
+          "rms_pixel_difference": 4.5797,
+          "differing_pixels": 224,
+          "max_absolute_difference": 45,
+          "mean_absolute_difference": 1.9069
+        },
+        {
+          "query": "official_test:2770",
+          "query_class": "Trouser",
+          "neighbour": "official_train:29438",
+          "neighbour_class": "Trouser",
+          "same_class": true,
+          "rms_pixel_difference": 5.7603,
+          "differing_pixels": 207,
+          "max_absolute_difference": 31,
+          "mean_absolute_difference": 2.324
+        },
+        {
+          "query": "official_test:7799",
+          "query_class": "Dress",
+          "neighbour": "official_train:14928",
+          "neighbour_class": "Dress",
+          "same_class": true,
+          "rms_pixel_difference": 6.4752,
+          "differing_pixels": 331,
+          "max_absolute_difference": 40,
+          "mean_absolute_difference": 3.1582
+        },
+        {
+          "query": "official_test:7465",
+          "query_class": "Shirt",
+          "neighbour": "official_train:29645",
+          "neighbour_class": "Shirt",
+          "same_class": true,
+          "rms_pixel_difference": 6.702,
+          "differing_pixels": 502,
+          "max_absolute_difference": 44,
+          "mean_absolute_difference": 4.1926
+        },
+        {
+          "query": "official_test:2436",
+          "query_class": "Trouser",
+          "neighbour": "official_train:48447",
+          "neighbour_class": "Trouser",
+          "same_class": true,
+          "rms_pixel_difference": 7.1653,
+          "differing_pixels": 202,
+          "max_absolute_difference": 59,
+          "mean_absolute_difference": 2.4923
+        },
+        {
+          "query": "official_test:4222",
+          "query_class": "Shirt",
+          "neighbour": "official_train:20255",
+          "neighbour_class": "Shirt",
+          "same_class": true,
+          "rms_pixel_difference": 7.2695,
+          "differing_pixels": 493,
+          "max_absolute_difference": 22,
+          "mean_absolute_difference": 5.4936
+        },
+        {
+          "query": "official_test:436",
+          "query_class": "Trouser",
+          "neighbour": "official_train:51970",
+          "neighbour_class": "Trouser",
+          "same_class": true,
+          "rms_pixel_difference": 7.5901,
+          "differing_pixels": 196,
+          "max_absolute_difference": 47,
+          "mean_absolute_difference": 3.125
+        },
+        {
+          "query": "official_test:8869",
+          "query_class": "Shirt",
+          "neighbour": "official_train:970",
+          "neighbour_class": "Shirt",
+          "same_class": true,
+          "rms_pixel_difference": 8.2853,
+          "differing_pixels": 476,
+          "max_absolute_difference": 35,
+          "mean_absolute_difference": 5.3814
+        },
+        {
+          "query": "official_test:6650",
+          "query_class": "Shirt",
+          "neighbour": "official_train:23773",
+          "neighbour_class": "Shirt",
+          "same_class": true,
+          "rms_pixel_difference": 8.6411,
+          "differing_pixels": 446,
+          "max_absolute_difference": 65,
+          "mean_absolute_difference": 5.1173
+        },
+        {
+          "query": "official_test:2230",
+          "query_class": "Shirt",
+          "neighbour": "official_train:8657",
+          "neighbour_class": "Shirt",
+          "same_class": true,
+          "rms_pixel_difference": 8.6459,
+          "differing_pixels": 458,
+          "max_absolute_difference": 42,
+          "mean_absolute_difference": 4.8151
+        },
+        {
+          "query": "official_test:7357",
+          "query_class": "Trouser",
+          "neighbour": "official_train:18802",
+          "neighbour_class": "Trouser",
+          "same_class": true,
+          "rms_pixel_difference": 8.8664,
+          "differing_pixels": 191,
+          "max_absolute_difference": 66,
+          "mean_absolute_difference": 3.1901
+        },
+        {
+          "query": "official_test:5181",
+          "query_class": "Coat",
+          "neighbour": "official_train:25069",
+          "neighbour_class": "Coat",
+          "same_class": true,
+          "rms_pixel_difference": 9.8194,
+          "differing_pixels": 471,
+          "max_absolute_difference": 56,
+          "mean_absolute_difference": 6.4987
+        },
+        {
+          "query": "official_test:7391",
+          "query_class": "Dress",
+          "neighbour": "official_train:37669",
+          "neighbour_class": "Dress",
+          "same_class": true,
+          "rms_pixel_difference": 9.9994,
+          "differing_pixels": 247,
+          "max_absolute_difference": 101,
+          "mean_absolute_difference": 2.9286
+        },
+        {
+          "query": "official_test:868",
+          "query_class": "Sandal",
+          "neighbour": "official_train:26802",
+          "neighbour_class": "Sandal",
+          "same_class": true,
+          "rms_pixel_difference": 10.2826,
+          "differing_pixels": 157,
+          "max_absolute_difference": 72,
+          "mean_absolute_difference": 3.264
+        },
+        {
+          "query": "official_test:8056",
+          "query_class": "Trouser",
+          "neighbour": "official_train:35543",
+          "neighbour_class": "Trouser",
+          "same_class": true,
+          "rms_pixel_difference": 10.7717,
+          "differing_pixels": 230,
+          "max_absolute_difference": 61,
+          "mean_absolute_difference": 4.2487
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Pixel-space distance only. It does not detect the same product photographed at another angle, scale or exposure, nor semantically repeated catalogue items.",
+    "A small RMS difference is evidence of a near-identical frame, not proof of a reused source photograph.",
+    "The test comparison is a post-freeze audit. It describes a limitation of the already-reported test numbers and must not be used to reselect a model or re-tune anything."
+  ]
+}
