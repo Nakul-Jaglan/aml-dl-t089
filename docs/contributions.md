@@ -22,7 +22,7 @@ member's individual review or contribution.
 | Nakul | Integration, literature, repository, master notebook, report assembly | AI-assisted materials prepared; human review/viva practice pending |
 | Sudeshhna | Data quality, EDA, shared splits | Near-duplicate audit contributed (AI-assisted, see log below); personal review and viva preparation pending |
 | Puneet | Pixels/HOG, LR and kNN | Feature tests, kNN neighbour analysis and LR/kNN notebook contributed (AI-assisted, see log below); personal review and viva preparation pending |
-| Samarth | RF, SVM and experiment harness | Human review and own contribution pending |
+| Samarth | RF, SVM and experiment harness; Phase 2 training runner, ablations, fusion | Phase 2 runner, ablations and fusion contributed (AI-assisted, see log below); personal review and viva preparation pending |
 | Neelanshu | Metrics, timing and error analysis | Human review and own contribution pending |
 
 ## Add real evidence as work happens
@@ -119,6 +119,35 @@ Commit or evidence path: main; tests/test_features.py; figures/full/knn_neighbou
   notebooks/02_features_lr_knn.ipynb
 AI assistance: Prepared with Claude, on the same transparent basis as the rest of
   this repository. Puneet's own review of this work, and the ability to explain it
+  in the individual viva, are separate and are NOT claimed by this entry.
+```
+
+### 2026-11-17 — Samarth — Phase 2 training runner, ablations and fusion
+
+```text
+Date: 2026-11-17
+Member: Samarth
+File/run/figure: src/clothing_ml/phase2/ (runner, select, fusion, plots, stand-in
+  data/model interfaces), configs/phase2/*.json, tests/test_phase2_training.py,
+  docs/phase2_training_protocol.md, docs/phase2_samarth_results.md,
+  results/phase2/, figures/phase2/full/, artifacts/phase2/full/
+Actual change or review: Added a config-driven CNN training runner (AdamW,
+  cross-entropy, validation-macro-F1 checkpoint with earlier-epoch tie rule,
+  patience 5, atomic writes, reload-before-export, full run record), a
+  fresh-process reload check, validation-only selection, a one-time freeze and a
+  separate --allow-test command, and the optional embedding/HOG fusion with two
+  LR controls. New subpackage only: Phase 1 source hashes are unchanged.
+  The loader and CNN are stand-ins following the agreed handoff contract until
+  Sudeshhna's and Puneet's modules land.
+Verification and finding: 36/36 tests pass. Smoke run and the selected CNN both
+  reproduce all exported validation predictions after a fresh-process reload
+  (1,000/1,000 and 12,000/12,000). Validation macro F1: cnn2 0.9267, no dropout
+  0.9231, +-2 px translation 0.9202, CNN-3 0.9308 (selected). Fusion LR 0.9261 vs
+  embedding-only LR 0.9319 and HOG-only LR 0.8832: fusion not supported. Official
+  test not opened; four rows frozen (manifest 250f974a...).
+Commit or evidence path: branch phase2/training-samarth; docs/phase2_samarth_results.md
+AI assistance: Prepared with Claude, on the same transparent basis as the rest of
+  this repository. Samarth's own review of this work, and the ability to explain it
   in the individual viva, are separate and are NOT claimed by this entry.
 ```
 

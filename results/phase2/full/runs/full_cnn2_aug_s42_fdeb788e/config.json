@@ -1,0 +1,23 @@
+{
+  "profile": "full",
+  "blocks": 2,
+  "dropout": 0.3,
+  "augmentation": "translate2",
+  "seed": 42,
+  "device": "cpu",
+  "batch_size": 128,
+  "max_epochs": 25,
+  "patience": 5,
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.0001
+  },
+  "loss": "CrossEntropyLoss",
+  "selection_metric": "val_macro_f1",
+  "run_order": 3,
+  "name": "cnn2_aug",
+  "purpose": "Augmentation ablation: add the fit-only +/-2 px translation; everything else as cnn2.",
+  "config_sha256": "fdeb788ed08e44f419e99f1a613d673145626ca1850d15c46d4af3b01fbe5ff0",
+  "run_id": "full_cnn2_aug_s42_fdeb788e"
+}

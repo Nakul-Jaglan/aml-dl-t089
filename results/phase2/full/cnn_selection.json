@@ -1,0 +1,44 @@
+{
+  "selected_run_id": "full_cnn3_s42_80a2edee",
+  "selection_rule": "highest validation macro F1, then validation accuracy, then declared run_order (cnn2=1, cnn2_p0=2, cnn2_aug=3, cnn3=4); primary seed 42 only",
+  "selection_stage": "validation_only",
+  "test_used_for_selection": false,
+  "checkpoint_path": "artifacts/phase2/full/full_cnn3_s42_80a2edee.pt",
+  "checkpoint_sha256": "e29a9d77d042c3e645e465ccb918c2f815467f8806adb0bbcf5474f563ce52e7",
+  "arch": {
+    "blocks": 3,
+    "dropout": 0.3
+  },
+  "val_macro_f1": 0.9307809868130175,
+  "val_accuracy": 0.9309166666666666,
+  "split_sha256": "9172928b23246a9a23877f6ad6428698b97ea5de6ef13e6b1b9cafec24380ec9",
+  "fit_ids_sha256": "41b00d32916b14fe22b736b44c7c784fa408d11b5d0dddf61726041b894f2792",
+  "val_ids_sha256": "2a34b6d240caa618a620c58e760cf61fa0fb06bbeca76640c43e38add60ad104",
+  "candidates": [
+    {
+      "run_id": "full_cnn2_aug_s42_fdeb788e",
+      "val_macro_f1": 0.9202012465099486,
+      "val_accuracy": 0.921,
+      "run_order": 3
+    },
+    {
+      "run_id": "full_cnn2_p0_s42_1d36ac31",
+      "val_macro_f1": 0.9231219020232635,
+      "val_accuracy": 0.923,
+      "run_order": 2
+    },
+    {
+      "run_id": "full_cnn2_s42_3617f59e",
+      "val_macro_f1": 0.9267079529707491,
+      "val_accuracy": 0.9269166666666667,
+      "run_order": 1
+    },
+    {
+      "run_id": "full_cnn3_s42_80a2edee",
+      "val_macro_f1": 0.9307809868130175,
+      "val_accuracy": 0.9309166666666666,
+      "run_order": 4
+    }
+  ],
+  "selected_utc": "2026-11-17T18:09:37.866858+00:00"
+}
