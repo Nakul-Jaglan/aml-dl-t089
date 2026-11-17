@@ -1,0 +1,23 @@
+{
+  "profile": "full",
+  "blocks": 2,
+  "dropout": 0.0,
+  "augmentation": "none",
+  "seed": 42,
+  "device": "cpu",
+  "batch_size": 128,
+  "max_epochs": 25,
+  "patience": 5,
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.0001
+  },
+  "loss": "CrossEntropyLoss",
+  "selection_metric": "val_macro_f1",
+  "run_order": 2,
+  "name": "cnn2_p0",
+  "purpose": "Dropout ablation: only p changes (0.30 -> 0.00).",
+  "config_sha256": "1d36ac31a873cde9804c4e1952a798d648760e10cc4c3f6af66b4e8546351bc4",
+  "run_id": "full_cnn2_p0_s42_1d36ac31"
+}

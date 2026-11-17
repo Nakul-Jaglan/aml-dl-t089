@@ -1,0 +1,23 @@
+{
+  "profile": "full",
+  "blocks": 3,
+  "dropout": 0.3,
+  "augmentation": "none",
+  "seed": 42,
+  "device": "cpu",
+  "batch_size": 128,
+  "max_epochs": 25,
+  "patience": 5,
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.0001
+  },
+  "loss": "CrossEntropyLoss",
+  "selection_metric": "val_macro_f1",
+  "run_order": 4,
+  "name": "cnn3",
+  "purpose": "Architecture comparison: third conv block (extra pooling also changes the head input size).",
+  "config_sha256": "80a2edee15f1fd2ff1ed4aa9e6ef80f2b8f9a1ea47b52d0fd483df4f7539643a",
+  "run_id": "full_cnn3_s42_80a2edee"
+}

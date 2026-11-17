@@ -1,0 +1,3 @@
+{"name": "cnn2", "profile": "full", "blocks": 2, "dropout": 0.30, "augmentation": "none",
+ "seed": 42, "device": "cpu", "run_order": 1,
+ "purpose": "Main reference configuration: two conv blocks, dropout 0.30, divide-by-255 only."}
