@@ -122,6 +122,35 @@ AI assistance: Prepared with Claude, on the same transparent basis as the rest o
   in the individual viva, are separate and are NOT claimed by this entry.
 ```
 
+### 2026-11-18 — Puneet — Phase 2 SmallCNN architecture, tests, and feature interface
+
+```text
+Date: 2026-11-18
+Member: Puneet
+File/run/figure: src/clothing_ml/phase2/models.py, tests/test_phase2_models.py,
+  scripts/phase2_model_demo.py, docs/phase2_cnn_architecture_puneet.md
+Actual change or review: Designed, implemented, tested, and documented the Phase 2
+  SmallCNN model architecture supporting depth=2 (CNN-2) and depth=3 (CNN-3),
+  configurable dropout, and the 64-dimensional feature interface (encode) for
+  the ML+DL hybrid experiment.
+Verification and finding:
+  - Exact parameter arithmetic derived and asserted:
+    CNN-2: 320 + 18,496 + 200,768 + 650 = 220,234 trainable parameters.
+    CNN-3: 320 + 18,496 + 36,928 + 36,928 + 650 = 93,322 trainable parameters.
+    The third pooling layer downsamples spatial resolution to 3x3, shrinking the
+    dense projection input from 3,136 to 576 and saving 163,840 weights (net 57.6%
+    parameter reduction).
+  - 7 automated unit tests passed: synthetic forward pass [B, 10], finite
+    CrossEntropyLoss, non-zero Conv1 backprop gradients, encode [B, 64],
+    dropout=0.0 train/eval determinism, and atomic checkpoint roundtrip.
+  - Live demo script verified on real Fashion-MNIST images from data/raw on CPU.
+  - Complete handoff document with IEEE LaTeX report section prepared for Nakul.
+Commit or evidence path: branch phase2/cnn-architecture-puneet; PR #6;
+  docs/phase2_cnn_architecture_puneet.md; scripts/phase2_model_demo.py
+AI assistance: Prepared on the same transparent basis as Phase 1. The code,
+  tests, arithmetic proofs, and demo scripts are verified and reproducible.
+```
+
 Before submission, follow the faculty's actual AI-use/disclosure policy. That
 policy has not been provided, so this repository records assistance transparently
 without inventing a course rule or claiming permission from the faculty.
