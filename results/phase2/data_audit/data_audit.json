@@ -1,0 +1,493 @@
+{
+  "purpose": "Phase 2 CNN data adapter audit and augmentation-policy evidence (Sudeshhna)",
+  "official_test_loaded": false,
+  "raw": {
+    "shape": [
+      60000,
+      28,
+      28
+    ],
+    "dtype": "uint8",
+    "pixel_min": 0,
+    "pixel_max": 255,
+    "class_names": [
+      "T-shirt/top",
+      "Trouser",
+      "Pullover",
+      "Dress",
+      "Coat",
+      "Sandal",
+      "Shirt",
+      "Sneaker",
+      "Bag",
+      "Ankle boot"
+    ]
+  },
+  "splits": {
+    "smoke": {
+      "split_file": "data/smoke_indices.npz",
+      "split_sha256": "800178fd66febfb5b4a5460ee3b7e7317bf918d2f270678f4a6ce3776a89645b",
+      "fit_n": 2000,
+      "val_n": 1000,
+      "fit_per_class": [
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "val_per_class": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "covers_all_official_train_rows": false,
+      "subset_of_full": true
+    },
+    "full": {
+      "split_file": "data/full_indices.npz",
+      "split_sha256": "9172928b23246a9a23877f6ad6428698b97ea5de6ef13e6b1b9cafec24380ec9",
+      "fit_n": 48000,
+      "val_n": 12000,
+      "fit_per_class": [
+        4800,
+        4800,
+        4800,
+        4800,
+        4800,
+        4800,
+        4800,
+        4800,
+        4800,
+        4800
+      ],
+      "val_per_class": [
+        1200,
+        1200,
+        1200,
+        1200,
+        1200,
+        1200,
+        1200,
+        1200,
+        1200,
+        1200
+      ],
+      "covers_all_official_train_rows": true
+    }
+  },
+  "provenance": {
+    "data_provenance_split_sha256": "9172928b23246a9a23877f6ad6428698b97ea5de6ef13e6b1b9cafec24380ec9",
+    "phase1_protocol_split_sha256": "9172928b23246a9a23877f6ad6428698b97ea5de6ef13e6b1b9cafec24380ec9",
+    "provenance_matches": true,
+    "phase2_run_records": {
+      "full_cnn2_aug_p50_s42_fe3c3cdd": {
+        "split_sha256": "9172928b23246a9a23877f6ad6428698b97ea5de6ef13e6b1b9cafec24380ec9",
+        "matches": true
+      },
+      "full_cnn2_aug_s42_fdeb788e": {
+        "split_sha256": "9172928b23246a9a23877f6ad6428698b97ea5de6ef13e6b1b9cafec24380ec9",
+        "matches": true
+      },
+      "full_cnn2_p0_s42_1d36ac31": {
+        "split_sha256": "9172928b23246a9a23877f6ad6428698b97ea5de6ef13e6b1b9cafec24380ec9",
+        "matches": true
+      },
+      "full_cnn2_s42_3617f59e": {
+        "split_sha256": "9172928b23246a9a23877f6ad6428698b97ea5de6ef13e6b1b9cafec24380ec9",
+        "matches": true
+      },
+      "full_cnn3_s42_80a2edee": {
+        "split_sha256": "9172928b23246a9a23877f6ad6428698b97ea5de6ef13e6b1b9cafec24380ec9",
+        "matches": true
+      },
+      "smoke_cnn2_s42_e7074488": {
+        "split_sha256": "800178fd66febfb5b4a5460ee3b7e7317bf918d2f270678f4a6ce3776a89645b",
+        "matches": true
+      }
+    },
+    "all_runs_match": true,
+    "published_md5_verified_by_loader": {
+      "train-images-idx3-ubyte.gz": "8d4fb7e6c68d591d4c3dfef9ec88bf0d",
+      "train-labels-idx1-ubyte.gz": "25c81989df183df01b3e8a0aad5dffbe",
+      "t10k-images-idx3-ubyte.gz": "bef4ecab320f06d8554ea6380940ec79",
+      "t10k-labels-idx1-ubyte.gz": "bb300cfdad3c16e7a12a480ee83cd310"
+    }
+  },
+  "first_batches": {
+    "smoke_fit": {
+      "shape": [
+        128,
+        1,
+        28,
+        28
+      ],
+      "image_dtype": "float32",
+      "label_dtype": "int64",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true,
+      "examples": [
+        {
+          "original_id": 9422,
+          "label": 8,
+          "class": "Bag"
+        },
+        {
+          "original_id": 10277,
+          "label": 4,
+          "class": "Coat"
+        },
+        {
+          "original_id": 13136,
+          "label": 6,
+          "class": "Shirt"
+        },
+        {
+          "original_id": 29452,
+          "label": 7,
+          "class": "Sneaker"
+        },
+        {
+          "original_id": 57204,
+          "label": 1,
+          "class": "Trouser"
+        }
+      ]
+    },
+    "smoke_val": {
+      "shape": [
+        512,
+        1,
+        28,
+        28
+      ],
+      "image_dtype": "float32",
+      "label_dtype": "int64",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true,
+      "examples": [
+        {
+          "original_id": 7577,
+          "label": 8,
+          "class": "Bag"
+        },
+        {
+          "original_id": 20693,
+          "label": 6,
+          "class": "Shirt"
+        },
+        {
+          "original_id": 36930,
+          "label": 4,
+          "class": "Coat"
+        },
+        {
+          "original_id": 43036,
+          "label": 2,
+          "class": "Pullover"
+        },
+        {
+          "original_id": 13018,
+          "label": 6,
+          "class": "Shirt"
+        }
+      ]
+    },
+    "smoke_meta": {
+      "profile": "smoke",
+      "source_split": "official_train",
+      "split_file": "data/smoke_indices.npz",
+      "split_sha256": "800178fd66febfb5b4a5460ee3b7e7317bf918d2f270678f4a6ce3776a89645b",
+      "fit_n": 2000,
+      "val_n": 1000,
+      "seed": 42,
+      "batch_size": 128,
+      "eval_batch_size": 512,
+      "augmentation": "none",
+      "fit_transform": null,
+      "val_transform": null,
+      "num_workers": 0,
+      "drop_last": false
+    },
+    "full_fit": {
+      "shape": [
+        128,
+        1,
+        28,
+        28
+      ],
+      "image_dtype": "float32",
+      "label_dtype": "int64",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true,
+      "examples": [
+        {
+          "original_id": 13287,
+          "label": 2,
+          "class": "Pullover"
+        },
+        {
+          "original_id": 31165,
+          "label": 0,
+          "class": "T-shirt/top"
+        },
+        {
+          "original_id": 50331,
+          "label": 2,
+          "class": "Pullover"
+        },
+        {
+          "original_id": 44721,
+          "label": 4,
+          "class": "Coat"
+        },
+        {
+          "original_id": 16996,
+          "label": 4,
+          "class": "Coat"
+        }
+      ]
+    },
+    "full_val": {
+      "shape": [
+        512,
+        1,
+        28,
+        28
+      ],
+      "image_dtype": "float32",
+      "label_dtype": "int64",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true,
+      "examples": [
+        {
+          "original_id": 37343,
+          "label": 5,
+          "class": "Sandal"
+        },
+        {
+          "original_id": 2050,
+          "label": 4,
+          "class": "Coat"
+        },
+        {
+          "original_id": 12128,
+          "label": 5,
+          "class": "Sandal"
+        },
+        {
+          "original_id": 30987,
+          "label": 2,
+          "class": "Pullover"
+        },
+        {
+          "original_id": 43799,
+          "label": 1,
+          "class": "Trouser"
+        }
+      ]
+    },
+    "full_meta": {
+      "profile": "full",
+      "source_split": "official_train",
+      "split_file": "data/full_indices.npz",
+      "split_sha256": "9172928b23246a9a23877f6ad6428698b97ea5de6ef13e6b1b9cafec24380ec9",
+      "fit_n": 48000,
+      "val_n": 12000,
+      "seed": 42,
+      "batch_size": 128,
+      "eval_batch_size": 512,
+      "augmentation": "none",
+      "fit_transform": null,
+      "val_transform": null,
+      "num_workers": 0,
+      "drop_last": false
+    }
+  },
+  "stable_evaluation": {
+    "val_batches": 24,
+    "val_n": 12000,
+    "two_passes_identical_images": true,
+    "two_passes_identical_labels": true,
+    "two_passes_identical_ids": true,
+    "val_order_equals_saved_order": true,
+    "fit_epoch_covers_each_fit_id_once": true,
+    "fit_epoch_is_shuffled": true,
+    "val_tensor_sha256": "5a0d8256b31d4a0e4144fa57237eac43c3238fd6c01cf873d0196c6b8cd978a6"
+  },
+  "wraparound": {
+    "cases": 125,
+    "all_passed": true,
+    "uncovered_border_is_zero": true,
+    "shape_after_shift": [
+      1,
+      28,
+      28
+    ]
+  },
+  "policy_statistics": {
+    "translate2": {
+      "policy": {
+        "max_shift": 2,
+        "p": 1.0,
+        "fill": 0.0,
+        "wraparound": false
+      },
+      "fit_items": 48000,
+      "fraction_shift_drawn": 1.0,
+      "fraction_left_unchanged": 0.0394375,
+      "offset_counts": {
+        "(-1, -1)": 1923,
+        "(-1, -2)": 1877,
+        "(-1, 0)": 1819,
+        "(-1, 1)": 1881,
+        "(-1, 2)": 1903,
+        "(-2, -1)": 1904,
+        "(-2, -2)": 1906,
+        "(-2, 0)": 1912,
+        "(-2, 1)": 1920,
+        "(-2, 2)": 1915,
+        "(0, -1)": 1902,
+        "(0, -2)": 1913,
+        "(0, 0)": 1893,
+        "(0, 1)": 2056,
+        "(0, 2)": 1944,
+        "(1, -1)": 1901,
+        "(1, -2)": 2014,
+        "(1, 0)": 2031,
+        "(1, 1)": 1954,
+        "(1, 2)": 1882,
+        "(2, -1)": 1912,
+        "(2, -2)": 1926,
+        "(2, 0)": 1927,
+        "(2, 1)": 1903,
+        "(2, 2)": 1882
+      }
+    },
+    "translate2_p50": {
+      "policy": {
+        "max_shift": 2,
+        "p": 0.5,
+        "fill": 0.0,
+        "wraparound": false
+      },
+      "fit_items": 48000,
+      "fraction_shift_drawn": 0.49964583333333334,
+      "fraction_left_unchanged": 0.5201458333333333,
+      "offset_counts": {
+        "(-1, -1)": 930,
+        "(-1, -2)": 945,
+        "(-1, 0)": 911,
+        "(-1, 1)": 981,
+        "(-1, 2)": 971,
+        "(-2, -1)": 951,
+        "(-2, -2)": 963,
+        "(-2, 0)": 964,
+        "(-2, 1)": 954,
+        "(-2, 2)": 943,
+        "(0, -1)": 975,
+        "(0, -2)": 951,
+        "(0, 0)": 950,
+        "(0, 1)": 999,
+        "(0, 2)": 986,
+        "(1, -1)": 935,
+        "(1, -2)": 948,
+        "(1, 0)": 997,
+        "(1, 1)": 1016,
+        "(1, 2)": 917,
+        "(2, -1)": 1001,
+        "(2, -2)": 931,
+        "(2, 0)": 956,
+        "(2, 1)": 961,
+        "(2, 2)": 947,
+        "None": 24017
+      }
+    }
+  },
+  "example_grid_ids": {
+    "0": [
+      6527,
+      12979,
+      15775,
+      54561
+    ],
+    "1": [
+      817,
+      28664,
+      50015,
+      55093
+    ],
+    "2": [
+      846,
+      1649,
+      11967,
+      17485
+    ],
+    "3": [
+      22088,
+      49589,
+      51830,
+      56133
+    ],
+    "4": [
+      20653,
+      36681,
+      38410,
+      52361
+    ],
+    "5": [
+      25720,
+      31429,
+      51881,
+      57502
+    ],
+    "6": [
+      13128,
+      29894,
+      36650,
+      54674
+    ],
+    "7": [
+      856,
+      3638,
+      42694,
+      52391
+    ],
+    "8": [
+      27446,
+      39161,
+      57671,
+      57862
+    ],
+    "9": [
+      16203,
+      26847,
+      32417,
+      38892
+    ]
+  },
+  "figures": [
+    "figures/phase2/data/example_grid.png",
+    "figures/phase2/data/shift_comparison.png"
+  ],
+  "environment": {
+    "torch": "2.15.0",
+    "numpy": "2.5.4"
+  }
+}

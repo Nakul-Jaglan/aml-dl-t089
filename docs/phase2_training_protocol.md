@@ -26,6 +26,7 @@ committed is a new protocol revision and must say why. Shared decisions
 | 2 | `cnn2_p0.json` | dropout 0.00 | dropout ablation |
 | 3 | `cnn2_aug.json` | fit-only ±2 px translation | augmentation ablation |
 | 4 | `cnn3.json` | third conv block | architecture comparison (depth + head size) |
+| 5 | `cnn2_aug_p50.json` | fit-only ±2 px shift with p = 0.5 | revision (Sudeshhna): work-guide policy, run after the freeze; validation-only, never selectable |
 
 Architecture (stand-in following the agreed handoff until Puneet's module lands):
 each block is Conv3x3(pad 1) → ReLU → MaxPool2x2 with 32, 64 (, 128) channels;
