@@ -1,0 +1,16 @@
+run_id,role,val_macro_f1,test_accuracy,test_macro_f1,test_shirt_recall,median_ms_per_image,ms_range,complexity_value,complexity_unit
+full_cnn3_s42_80a2edee,Selected CNN,0.9307809868130175,0.9214,0.9207446504151703,0.717,0.31200703906364424,0.2934-0.4210,167114,trainable float32 scalars (all CNN-3 parameters)
+full_hog_svm_3fd9d87a,Phase 1 reference (validation-selected),0.9114407959350187,0.9091,0.908953029269961,0.733,19.748312663089962,19.3017-19.9025,27295425,"stored SVC decision-array scalars (support vectors + dual coefficients + intercepts); storage proxy, not learned weights"
+full_emb_lr_C0.1_033b7a83,LR control (CNN embedding),0.9318574221735529,0.9221,0.921774022368497,0.746,0.3146451826196994,0.2941-0.3930,650,LR coefficients + intercepts
+full_hog_lr_C0.1_c1406307,LR control (HOG),0.883225932731067,0.876,0.8757223506647399,0.661,0.20532674120943284,0.2037-0.2151,12970,LR coefficients + intercepts
+full_fusion_lr_C0.1_db46d180,Hybrid (embedding + HOG),0.9261378769624532,0.9206,0.9205502764941695,0.76,0.5175190830115639,0.5151-0.5537,13610,LR coefficients + intercepts
+full_cnn2_aug_s42_fdeb788e,CNN ablation (validation only),0.9202012465099486,validation only,validation only,validation only,not timed,,,
+full_cnn2_p0_s42_1d36ac31,CNN ablation (validation only),0.9231219020232635,validation only,validation only,validation only,not timed,,,
+full_cnn2_s42_3617f59e,CNN ablation (validation only),0.9267079529707491,validation only,validation only,validation only,not timed,,,
+full_hog_knn_65305bf5,Phase 1 context,0.8749347202839474,0.8734,0.8730424548581306,0.637,not timed,,,
+full_hog_lr_580addbb,Phase 1 context,0.8834162634116351,0.876,0.8757107952547998,0.66,not timed,,,
+full_hog_rf_297afe2b,Phase 1 context,0.8751557658752382,0.8729,0.8718054032018259,0.602,not timed,,,
+full_pixels_knn_65305bf5,Phase 1 context,0.8584910270751076,0.8504,0.850471695703207,0.601,not timed,,,
+full_pixels_lr_580addbb,Phase 1 context,0.8590445936976489,0.8401,0.8394108477821337,0.572,not timed,,,
+full_pixels_rf_297afe2b,Phase 1 context,0.8827915425741539,0.8767,0.8753402326994596,0.594,not timed,,,
+full_pixels_svm_3fd9d87a,Phase 1 context,0.9068283989190824,0.8928,0.8924348746692686,0.696,not timed,,,

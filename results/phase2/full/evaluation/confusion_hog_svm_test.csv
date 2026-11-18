@@ -1,0 +1,11 @@
+,T-shirt/top,Trouser,Pullover,Dress,Coat,Sandal,Shirt,Sneaker,Bag,Ankle boot
+true T-shirt/top,857,2,14,12,4,0,104,0,7,0
+true Trouser,1,976,0,16,0,0,6,0,1,0
+true Pullover,12,1,862,7,57,0,59,0,2,0
+true Dress,13,9,9,912,29,0,27,0,1,0
+true Coat,3,1,51,35,864,0,42,0,4,0
+true Sandal,0,0,0,0,0,965,0,30,1,4
+true Shirt,103,2,63,27,64,0,733,0,8,0
+true Sneaker,0,0,0,0,0,11,0,973,0,16
+true Bag,0,1,2,3,4,2,4,1,983,0
+true Ankle boot,0,0,0,0,0,4,0,29,1,966

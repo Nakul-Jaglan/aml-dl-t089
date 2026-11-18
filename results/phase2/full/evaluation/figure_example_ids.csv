@@ -1,0 +1,33 @@
+panel,group,sample_id,y_true,true_category,cnn_pred,cnn_category,svm_pred,svm_category
+all,Both correct,0,9,Ankle boot,9,Ankle boot,9,Ankle boot
+all,Both correct,1,2,Pullover,2,Pullover,2,Pullover
+all,Both correct,2,1,Trouser,1,Trouser,1,Trouser
+all,Both correct,3,1,Trouser,1,Trouser,1,Trouser
+all,Only CNN correct,12,7,Sneaker,7,Sneaker,5,Sandal
+all,Only CNN correct,40,6,Shirt,6,Shirt,0,T-shirt/top
+all,Only CNN correct,43,7,Sneaker,7,Sneaker,9,Ankle boot
+all,Only CNN correct,136,2,Pullover,2,Pullover,6,Shirt
+all,Only HOG + SVM correct,17,4,Coat,6,Shirt,4,Coat
+all,Only HOG + SVM correct,57,4,Coat,6,Shirt,4,Coat
+all,Only HOG + SVM correct,67,3,Dress,4,Coat,3,Dress
+all,Only HOG + SVM correct,73,6,Shirt,2,Pullover,6,Shirt
+all,Both wrong,23,9,Ankle boot,5,Sandal,5,Sandal
+all,Both wrong,25,4,Coat,2,Pullover,6,Shirt
+all,Both wrong,42,3,Dress,6,Shirt,6,Shirt
+all,Both wrong,66,2,Pullover,6,Shirt,6,Shirt
+upper_body,Both correct,1,2,Pullover,2,Pullover,2,Pullover
+upper_body,Both correct,4,6,Shirt,6,Shirt,6,Shirt
+upper_body,Both correct,6,4,Coat,4,Coat,4,Coat
+upper_body,Both correct,7,6,Shirt,6,Shirt,6,Shirt
+upper_body,Only CNN correct,40,6,Shirt,6,Shirt,0,T-shirt/top
+upper_body,Only CNN correct,136,2,Pullover,2,Pullover,6,Shirt
+upper_body,Only CNN correct,222,2,Pullover,2,Pullover,6,Shirt
+upper_body,Only CNN correct,227,2,Pullover,2,Pullover,6,Shirt
+upper_body,Only HOG + SVM correct,17,4,Coat,6,Shirt,4,Coat
+upper_body,Only HOG + SVM correct,57,4,Coat,6,Shirt,4,Coat
+upper_body,Only HOG + SVM correct,73,6,Shirt,2,Pullover,6,Shirt
+upper_body,Only HOG + SVM correct,153,4,Coat,3,Dress,4,Coat
+upper_body,Both wrong,25,4,Coat,2,Pullover,6,Shirt
+upper_body,Both wrong,66,2,Pullover,6,Shirt,6,Shirt
+upper_body,Both wrong,89,6,Shirt,2,Pullover,2,Pullover
+upper_body,Both wrong,98,4,Coat,2,Pullover,2,Pullover

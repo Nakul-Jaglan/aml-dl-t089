@@ -1,0 +1,32 @@
+{
+  "cnn_run_id": "full_cnn3_s42_80a2edee",
+  "svm_run_id": "full_hog_svm_3fd9d87a",
+  "n": 10000,
+  "groups": {
+    "Both correct": 8789,
+    "Only CNN correct": 425,
+    "Only HOG + SVM correct": 302,
+    "Both wrong": 484
+  },
+  "groups_sum": 10000,
+  "accuracy_delta_cnn_minus_svm": 0.012299999999999978,
+  "discordant_identity": "(425 - 302) / 10000 = 0.0123",
+  "mcnemar": {
+    "discordant_pairs": 727,
+    "only_a": 425,
+    "only_b": 302,
+    "two_sided_p": 5.762161111621216e-06,
+    "test": "exact McNemar (binomial on discordant pairs)"
+  },
+  "true_shirt_support": 1000,
+  "shirt_confusions": {
+    "cnn_shirt_to_T-shirt/top": 134,
+    "cnn_shirt_to_Pullover": 60,
+    "cnn_shirt_to_Coat": 57,
+    "svm_shirt_to_T-shirt/top": 103,
+    "svm_shirt_to_Pullover": 63,
+    "svm_shirt_to_Coat": 64
+  },
+  "example_rule": "first 4 sorted original test IDs per group; panel 'upper_body' restricts to true T-shirt/top, Pullover, Coat, Shirt",
+  "created_utc": "2026-11-18T18:52:45.525229+00:00"
+}
