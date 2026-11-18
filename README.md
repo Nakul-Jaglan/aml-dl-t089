@@ -44,6 +44,21 @@ Section A and the five roll numbers were supplied by the team. Roll numbers live
 only in git-ignored private author files and `report/submission.pdf`. Public
 GitHub files and `report/main.pdf` omit those identifiers. See [report build notes](report/README.md).
 
+## Phase 2 (in progress): small CNN training runner, ablations and fusion
+
+Samarth's Phase 2 runner and validation evidence are in
+[`docs/phase2_samarth_results.md`](docs/phase2_samarth_results.md) and
+[`docs/phase2_training_protocol.md`](docs/phase2_training_protocol.md).
+Install PyTorch with `python -m pip install -e '.[dev,phase2]'` (or the official PyTorch installer for your platform), then:
+
+```bash
+python -m clothing_ml.phase2 train --config configs/phase2/smoke.json
+python -m clothing_ml.phase2 verify --profile smoke --run-id smoke_cnn2_s42_e7074488
+```
+
+On validation, a three-block CNN reached 0.9308 macro F1 (Phase 1 HOG + SVM: 0.9114
+on the same IDs). Phase 2 official-test results have not been produced yet.
+
 ## Quick start
 
 Use Python 3.12 for the exact tested lock file. The package also supports compatible

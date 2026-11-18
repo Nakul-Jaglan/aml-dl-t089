@@ -1,0 +1,23 @@
+{
+  "profile": "smoke",
+  "blocks": 2,
+  "dropout": 0.3,
+  "augmentation": "none",
+  "seed": 42,
+  "device": "cpu",
+  "batch_size": 128,
+  "max_epochs": 2,
+  "patience": 5,
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.0001
+  },
+  "loss": "CrossEntropyLoss",
+  "selection_metric": "val_macro_f1",
+  "run_order": 0,
+  "name": "cnn2",
+  "purpose": "Plumbing check on the saved 2,000/1,000 smoke split: data, loss, checkpoint reload, predictions. Never selectable.",
+  "config_sha256": "e7074488a22ee0e73748caea1b5c935e436414edf6e2d85a0e1575be9b3a5e75",
+  "run_id": "smoke_cnn2_s42_e7074488"
+}

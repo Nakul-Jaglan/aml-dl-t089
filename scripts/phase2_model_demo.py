@@ -87,15 +87,15 @@ def demonstrate_models():
     m.eval()
     with torch.inference_mode():
         # Block 1
-        b1_out = m.blocks[2](m.blocks[1](m.blocks[0](single_img)))
+        b1_out = m.features[2](m.features[1](m.features[0](single_img)))
         print(f"After Block 1 (C1,ReLU,Pool): {list(b1_out.shape)}  (28x28 -> 14x14)")
         # Block 2
-        b2_out = m.blocks[5](m.blocks[4](m.blocks[3](b1_out)))
+        b2_out = m.features[5](m.features[4](m.features[3](b1_out)))
         print(f"After Block 2 (C2,ReLU,Pool): {list(b2_out.shape)}   (14x14 -> 7x7)")
         # Flatten & Projection
-        flat = b2_out.flatten(1)
+        flat = torch.flatten(b2_out, 1)
         print(f"After Spatial Flatten       : {list(flat.shape)}   (64 * 7 * 7 = 3,136)")
-        proj = torch.relu(m.projection(flat))
+        proj = torch.relu(m.dense[1](flat))
         print(f"After Linear Projection+ReLU: {list(proj.shape)}      (64 learned features)")
         logits = m.classifier(proj)
         print(f"After Classification Head   : {list(logits.shape)}      (10 class logits)")
@@ -105,10 +105,10 @@ def demonstrate_models():
     print("=" * 80)
     print("""
 1. Parameter Count Disparity:
-   Q: Why does deeper CNN-3 have 93k params while CNN-2 has 220k params?
-   A: The 3rd pooling layer floors 7/2 to 3, shrinking dense layer inputs from 3,136 to 576.
-      Dense weights drop from 200,768 to 36,928 (saving 163,840), exceeding the 36,928 weights
-      of the added Conv3 layer.
+   Q: Why does deeper CNN-3 have 167k params while CNN-2 has 220k params?
+   A: The 3rd pooling layer floors 7/2 to 3, shrinking dense layer inputs from 3,136 to 1,152.
+      Dense weights drop from 200,768 to 73,792 (saving 126,976), which outweighs the 73,856
+      weights of the added Conv3 layer.
 
 2. Pooling vs. Shirt Recall:
    Q: Why can pooling hurt Shirt recall?
@@ -123,8 +123,8 @@ def demonstrate_models():
 4. Hinglish Summary (for verbal presentation):
    "Phase 1 mein fixed HOG features aur SVM use kiya tha jisme Shirt recall 73.3% tha.
     Phase 2 mein humne 2-block aur 3-block CNN design kiye jo spatial features end-to-end learn
-    karte hain. Hamara model encode(x) ke through pre-dropout 64-dim embeddings deta hai jo HOG
-    ke sath combine karke hybrid ML+DL model banane ke kaam aata hai."
+    karte hain. Hamara model embed(x)/encode(x) ke through pre-dropout 64-dim embeddings deta hai
+    jo HOG ke sath combine karke hybrid ML+DL model banane ke kaam aata hai."
 """)
     print("=" * 80)
 

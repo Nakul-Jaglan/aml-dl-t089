@@ -1,0 +1,374 @@
+{
+  "run_id": "smoke_cnn2_s42_e7074488",
+  "name": "cnn2",
+  "status": "completed",
+  "fingerprint": "5eecb46fba7fd2f9b65dc8879d84c9c75c2e5e0de0220a490c1a0a156f214418",
+  "config": {
+    "profile": "smoke",
+    "blocks": 2,
+    "dropout": 0.3,
+    "augmentation": "none",
+    "seed": 42,
+    "device": "cpu",
+    "batch_size": 128,
+    "max_epochs": 2,
+    "patience": 5,
+    "optimizer": {
+      "name": "AdamW",
+      "lr": 0.001,
+      "weight_decay": 0.0001
+    },
+    "loss": "CrossEntropyLoss",
+    "selection_metric": "val_macro_f1",
+    "run_order": 0,
+    "name": "cnn2",
+    "purpose": "Plumbing check on the saved 2,000/1,000 smoke split: data, loss, checkpoint reload, predictions. Never selectable.",
+    "config_sha256": "e7074488a22ee0e73748caea1b5c935e436414edf6e2d85a0e1575be9b3a5e75",
+    "run_id": "smoke_cnn2_s42_e7074488"
+  },
+  "config_sha256": "e7074488a22ee0e73748caea1b5c935e436414edf6e2d85a0e1575be9b3a5e75",
+  "split_file": "data/smoke_indices.npz",
+  "split_sha256": "800178fd66febfb5b4a5460ee3b7e7317bf918d2f270678f4a6ce3776a89645b",
+  "fit_n": 2000,
+  "val_n": 1000,
+  "fit_ids_sha256": "8a3ae54cb5a44c79679ffa2941f0af0eb26c3df2b10ce6a5d204dbdc6e0a099a",
+  "val_ids_sha256": "d409c98aa185105ebbf4c8261bdb708a4db36f2b1fe1cd0c7c9c0a8c0b935840",
+  "first_ids_to_labels": {
+    "fit": [
+      [
+        19335,
+        2
+      ],
+      [
+        42911,
+        7
+      ],
+      [
+        2487,
+        8
+      ],
+      [
+        11639,
+        8
+      ],
+      [
+        56913,
+        9
+      ]
+    ],
+    "val": [
+      [
+        7577,
+        8
+      ],
+      [
+        20693,
+        6
+      ],
+      [
+        36930,
+        4
+      ],
+      [
+        43036,
+        2
+      ],
+      [
+        13018,
+        6
+      ]
+    ]
+  },
+  "parameters": 220234,
+  "shape_table": [
+    {
+      "layer": "0:Conv2d",
+      "output_shape": [
+        32,
+        28,
+        28
+      ],
+      "parameters": 320
+    },
+    {
+      "layer": "1:ReLU",
+      "output_shape": [
+        32,
+        28,
+        28
+      ],
+      "parameters": 0
+    },
+    {
+      "layer": "2:MaxPool2d",
+      "output_shape": [
+        32,
+        14,
+        14
+      ],
+      "parameters": 0
+    },
+    {
+      "layer": "3:Conv2d",
+      "output_shape": [
+        64,
+        14,
+        14
+      ],
+      "parameters": 18496
+    },
+    {
+      "layer": "4:ReLU",
+      "output_shape": [
+        64,
+        14,
+        14
+      ],
+      "parameters": 0
+    },
+    {
+      "layer": "5:MaxPool2d",
+      "output_shape": [
+        64,
+        7,
+        7
+      ],
+      "parameters": 0
+    },
+    {
+      "layer": "dense:Sequential",
+      "output_shape": [
+        64
+      ],
+      "parameters": 200768
+    },
+    {
+      "layer": "dropout:Dropout",
+      "output_shape": [
+        64
+      ],
+      "parameters": 0
+    },
+    {
+      "layer": "classifier:Linear",
+      "output_shape": [
+        10
+      ],
+      "parameters": 650
+    }
+  ],
+  "environment": {
+    "python": "3.13.6",
+    "platform": "macOS-26.1-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "device": "cpu",
+    "torch_threads": 5,
+    "packages": {
+      "torch": "2.15.0",
+      "numpy": "2.5.5",
+      "pandas": "3.1.1",
+      "scikit-learn": "1.9.1",
+      "scikit-image": "0.26.0"
+    },
+    "git_commit": "435acc3df5615c2435816f5cc833735311a81d22",
+    "src_dirty": true,
+    "phase2_source_sha256": {
+      "__init__.py": "cca3c89da1d42f1bb6218ffe095755da299a9715c99b36e8633be2515064d7b8",
+      "__main__.py": "ee60a3ac7d3e48b9c98c1a1a4ea4165c7fc8794bae95b8ea3d3f9fa2e75ace76",
+      "data.py": "dce0559aab12a9b91665b635f9ad0926dfa168efc406edbe5cdae4c71284febd",
+      "models.py": "25808203a1d20e60f9578959bdcbf38fd2b2ff8c87a8073ed85c360b050c08e5",
+      "runner.py": "79849c4a70268d18941f96990c16a03091fc3b729a5fc71324de95888f1e10c2"
+    },
+    "dataloader": "num_workers=0, seeded torch.Generator for shuffling and augmentation"
+  },
+  "started_utc": "2026-11-17T17:53:04.199686+00:00",
+  "warnings": [],
+  "finished_utc": "2026-11-17T17:53:05.110995+00:00",
+  "train_seconds": 0.860861166001996,
+  "best_epoch": 2,
+  "stop_epoch": 2,
+  "stopped_early": false,
+  "val_macro_f1": 0.6274809840589687,
+  "val_accuracy": 0.664,
+  "val_metrics": {
+    "accuracy": 0.664,
+    "macro_f1": 0.6274809840589687,
+    "support": [
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100
+    ],
+    "recall": [
+      0.81,
+      0.85,
+      0.8,
+      0.71,
+      0.36,
+      0.52,
+      0.0,
+      0.89,
+      0.83,
+      0.87
+    ],
+    "confusion": [
+      [
+        81,
+        3,
+        4,
+        9,
+        0,
+        2,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        85,
+        1,
+        14,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        6,
+        1,
+        80,
+        1,
+        9,
+        2,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        15,
+        8,
+        3,
+        71,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        3,
+        3,
+        41,
+        13,
+        36,
+        0,
+        0,
+        0,
+        4,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        52,
+        0,
+        34,
+        3,
+        11
+      ],
+      [
+        29,
+        1,
+        42,
+        6,
+        12,
+        10,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        5,
+        0,
+        89,
+        0,
+        6
+      ],
+      [
+        0,
+        0,
+        6,
+        6,
+        0,
+        1,
+        0,
+        4,
+        83,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        10,
+        1,
+        87
+      ]
+    ]
+  },
+  "val_loss": 1.0004451293945313,
+  "checkpoint_path": "artifacts/phase2/smoke/smoke_cnn2_s42_e7074488.pt",
+  "checkpoint_sha256": "263696bbba2433ce50594e660ee4e7e21b26a4a848a721d40e51beede0f625b3",
+  "checkpoint_bytes": 885357,
+  "val_predictions_sha256": "195e20a67e721d84dc93f94a2fbbfbdfe51cb04dd2128867558c303a533092f3",
+  "history": [
+    {
+      "epoch": 1,
+      "fit_loss": 2.1025260181427003,
+      "fit_accuracy": 0.289,
+      "fit_macro_f1": 0.23605247255556666,
+      "val_loss": 1.6036124782562255,
+      "val_accuracy": 0.542,
+      "val_macro_f1": 0.47991699517778963,
+      "elapsed_seconds": 0.42263766600808594,
+      "best_epoch": 1,
+      "improved": true
+    },
+    {
+      "epoch": 2,
+      "fit_loss": 1.3564138145446778,
+      "fit_accuracy": 0.5135,
+      "fit_macro_f1": 0.4990369085175117,
+      "val_loss": 1.0004451293945313,
+      "val_accuracy": 0.664,
+      "val_macro_f1": 0.6274809840589687,
+      "elapsed_seconds": 0.8099010000005364,
+      "best_epoch": 2,
+      "improved": true
+    }
+  ]
+}

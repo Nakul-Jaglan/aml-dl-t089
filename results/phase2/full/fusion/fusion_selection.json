@@ -1,0 +1,87 @@
+{
+  "selection_rule": "per head: highest validation macro F1, then accuracy, then C order [0.1, 1.0]; converged fits only",
+  "selection_stage": "validation_only",
+  "test_used_for_selection": false,
+  "encoder_checkpoint_sha256": "e29a9d77d042c3e645e465ccb918c2f815467f8806adb0bbcf5474f563ce52e7",
+  "extraction": {
+    "encoder_run_id": "full_cnn3_s42_80a2edee",
+    "encoder_checkpoint_sha256": "e29a9d77d042c3e645e465ccb918c2f815467f8806adb0bbcf5474f563ce52e7",
+    "encoder_epoch": 22,
+    "embedding": "dense ReLU output before dropout, eval mode, canonical images",
+    "hog_settings": {
+      "orientations": 9,
+      "pixels_per_cell": [
+        4,
+        4
+      ],
+      "cells_per_block": [
+        2,
+        2
+      ],
+      "block_norm": "L2-Hys",
+      "transform_sqrt": false,
+      "feature_vector": true,
+      "channel_axis": null
+    },
+    "hog_cache_keys": [
+      "c8a01bae0aba45067664061496b59a2565dbf08d16e98b030cad3e3372872e5f",
+      "9c97e213183912199862e393a4c121f4d58e616dda678aa2b6fded882280b104"
+    ],
+    "split_sha256": "9172928b23246a9a23877f6ad6428698b97ea5de6ef13e6b1b9cafec24380ec9"
+  },
+  "C_grid": [
+    0.1,
+    1.0
+  ],
+  "selected_rows": [
+    {
+      "row": "emb_lr",
+      "run_id": "full_emb_lr_C0.1_033b7a83",
+      "C": 0.1,
+      "artifact_path": "artifacts/phase2/full/fusion/full_emb_lr_C0.1_033b7a83.joblib",
+      "artifact_sha256": "221922c6ff396f78690dc0e8d6f6c1bdfe7868a58181e7c15f3e29f237a9ccc4",
+      "val_macro_f1": 0.9318574221735529,
+      "val_accuracy": 0.9318333333333333
+    },
+    {
+      "row": "hog_lr",
+      "run_id": "full_hog_lr_C0.1_c1406307",
+      "C": 0.1,
+      "artifact_path": "artifacts/phase2/full/fusion/full_hog_lr_C0.1_c1406307.joblib",
+      "artifact_sha256": "f52374fdb124c6f8a59bd645bc49365fe1dfce9e8a18a84be9ef3c6320897f35",
+      "val_macro_f1": 0.883225932731067,
+      "val_accuracy": 0.8830833333333333
+    },
+    {
+      "row": "fusion_lr",
+      "run_id": "full_fusion_lr_C0.1_db46d180",
+      "C": 0.1,
+      "artifact_path": "artifacts/phase2/full/fusion/full_fusion_lr_C0.1_db46d180.joblib",
+      "artifact_sha256": "f7237c71493235d0b8664c263cab7a14ef42ba2dcdbc9b9b3d1023210bb078df",
+      "val_macro_f1": 0.9261378769624532,
+      "val_accuracy": 0.926
+    }
+  ],
+  "paired_validation_errors": {
+    "fusion_vs_emb_lr": {
+      "both_correct": 10947,
+      "only_fusion_correct": 165,
+      "only_other_correct": 235,
+      "both_wrong": 653
+    },
+    "fusion_vs_hog_lr": {
+      "both_correct": 10311,
+      "only_fusion_correct": 801,
+      "only_other_correct": 286,
+      "both_wrong": 602
+    },
+    "fusion_vs_selected_cnn": {
+      "both_correct": 10925,
+      "only_fusion_correct": 187,
+      "only_other_correct": 246,
+      "both_wrong": 642
+    }
+  },
+  "embed_seconds_fit_plus_val": 4.321387749994756,
+  "created_utc": "2026-11-17T18:11:00.523263+00:00"
+}

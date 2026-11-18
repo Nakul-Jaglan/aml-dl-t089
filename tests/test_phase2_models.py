@@ -7,33 +7,39 @@ and embedding output shapes specified in Phase 2 Work Guide.
 from pathlib import Path
 import tempfile
 import pytest
-import torch
-from torch import nn
 
-from clothing_ml.phase2.models import (
+torch = pytest.importorskip("torch")
+from torch import nn  # noqa: E402
+
+from clothing_ml.phase2.models import (  # noqa: E402
     SmallCNN,
+    build_model,
     count_parameters,
     get_parameter_breakdown,
-    save_checkpoint,
     load_checkpoint,
+    parameter_count,
+    save_checkpoint,
+    shape_table,
 )
 
 
 @pytest.mark.parametrize(
-    "depth,expected_params,expected_side",
+    "depth,channels,expected_params,expected_side",
     [
-        (2, 220_234, 7),
-        (3, 93_322, 3),
+        (2, None, 220_234, 7),
+        (3, None, 167_114, 3),
+        (3, (32, 64, 64), 93_322, 3),
     ],
 )
-def test_small_cnn_hand_counted_parameters(depth, expected_params, expected_side):
+def test_small_cnn_hand_counted_parameters(depth, channels, expected_params, expected_side):
     """Reproduce and assert exact hand-calculated parameter arithmetic."""
-    model = SmallCNN(depth=depth)
+    model = SmallCNN(depth=depth, channels=channels)
     assert model.spatial_side == expected_side
     measured_params = count_parameters(model)
     assert measured_params == expected_params, (
         f"Depth {depth} expected {expected_params} parameters, got {measured_params}"
     )
+    assert parameter_count(model) == expected_params
 
     # Verify breakdown arithmetic
     breakdown = get_parameter_breakdown(model)
@@ -52,7 +58,7 @@ def test_small_cnn_invalid_depth():
 
 @pytest.mark.parametrize("depth", [2, 3])
 def test_small_cnn_forward_backward_pass(depth):
-    """Verify synthetic forward pass, finite loss, non-zero gradients, and encode contract."""
+    """Verify synthetic forward pass, finite loss, non-zero gradients, and encode/embed contract."""
     torch.manual_seed(42)
     batch_size = 4
     model = SmallCNN(depth=depth, dropout=0.30)
@@ -80,6 +86,7 @@ def test_small_cnn_forward_backward_pass(depth):
     with torch.inference_mode():
         embeddings = model.encode(x)
         assert embeddings.shape == (batch_size, 64), f"Expected shape ({batch_size}, 64), got {embeddings.shape}"
+        assert torch.equal(embeddings, model.embed(x)), "encode(x) must match embed(x)"
         assert (embeddings >= 0).all(), "ReLU embeddings should be non-negative"
 
         # Deterministic predictions in eval mode
@@ -105,6 +112,14 @@ def test_small_cnn_dropout_ablation_behavior():
     torch.testing.assert_close(out_train, out_eval)
 
 
+def test_small_cnn_shape_table():
+    """Verify shape_table function outputs valid layers."""
+    model = SmallCNN(depth=2)
+    table = shape_table(model)
+    assert len(table) > 0
+    assert table[0]["parameters"] == 320
+
+
 def test_small_cnn_checkpoint_roundtrip():
     """Verify atomic checkpoint saving and restoring with metadata fidelity."""
     model = SmallCNN(depth=3, dropout=0.15)
@@ -128,7 +143,7 @@ def test_small_cnn_checkpoint_roundtrip():
         assert payload["epoch"] == 12
         assert payload["config"] == dummy_config
         assert payload["metrics"] == dummy_metrics
-        assert count_parameters(loaded_model) == 93_322
+        assert count_parameters(loaded_model) == 167_114
 
         # Verify weights match
         x = torch.rand(2, 1, 28, 28)
@@ -137,3 +152,17 @@ def test_small_cnn_checkpoint_roundtrip():
         with torch.inference_mode():
             torch.testing.assert_close(model(x), loaded_model(x))
             torch.testing.assert_close(model.encode(x), loaded_model.encode(x))
+
+
+def test_existing_checkpoints_load_cleanly():
+    """Verify that committed checkpoints in artifacts/phase2/full/ load into SmallCNN."""
+    ckpt_path = Path("artifacts/phase2/full/full_cnn3_s42_80a2edee.pt")
+    if not ckpt_path.exists():
+        pytest.skip("Full checkpoint not present")
+    model, bundle = load_checkpoint(ckpt_path)
+    assert model.depth == 3
+    assert count_parameters(model) == 167_114
+    x = torch.zeros(1, 1, 28, 28)
+    with torch.inference_mode():
+        logits = model(x)
+        assert logits.shape == (1, 10)

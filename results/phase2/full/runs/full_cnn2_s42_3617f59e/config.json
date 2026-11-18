@@ -1,0 +1,23 @@
+{
+  "profile": "full",
+  "blocks": 2,
+  "dropout": 0.3,
+  "augmentation": "none",
+  "seed": 42,
+  "device": "cpu",
+  "batch_size": 128,
+  "max_epochs": 25,
+  "patience": 5,
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.0001
+  },
+  "loss": "CrossEntropyLoss",
+  "selection_metric": "val_macro_f1",
+  "run_order": 1,
+  "name": "cnn2",
+  "purpose": "Main reference configuration: two conv blocks, dropout 0.30, divide-by-255 only.",
+  "config_sha256": "3617f59e6e280ec1b818151484a206212decdc10b1690a46e39f02ba81964adc",
+  "run_id": "full_cnn2_s42_3617f59e"
+}

@@ -1,0 +1,39 @@
+{
+  "run_id": "full_cnn3_s42_80a2edee",
+  "checkpoint_sha256_verified": true,
+  "checkpoint_epoch": 22,
+  "predictions_identical": true,
+  "n": 12000,
+  "mismatches": 0,
+  "val_macro_f1": 0.9307809868130175,
+  "record_val_macro_f1": 0.9307809868130175,
+  "first_ids_to_labels": [
+    [
+      37343,
+      5,
+      5
+    ],
+    [
+      2050,
+      4,
+      4
+    ],
+    [
+      12128,
+      5,
+      5
+    ],
+    [
+      30987,
+      2,
+      2
+    ],
+    [
+      43799,
+      1,
+      1
+    ]
+  ],
+  "verified_utc": "2026-11-17T18:09:40.299796+00:00",
+  "device": "cpu"
+}
