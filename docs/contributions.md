@@ -241,3 +241,30 @@ Verification and finding: 27 prediction files pass ID/label checks and their
   vs 0.31 ms for the CNN. 43 tests pass.
 Commit or evidence path: branch phase2/evaluation-neelanshu
 ```
+
+### 2026-11-19 — Nakul — Phase 2 integration and final artifacts
+
+```text
+Date: 2026-11-19
+Member: Nakul
+File/run/figure: src/clothing_ml/phase2/reporting.py, scripts/build_phase2_*,
+  notebooks/01_phase2_master.ipynb/.html, report/phase2/, presentation/phase2/,
+  docs/phase2_literature_review.md, docs/phase2_integration_nakul.md
+Actual change or review: Reviewed remote branch and PR ancestry; integrated
+  Sudeshhna's outstanding data adapter (PR #8), retaining Puneet's model exports
+  and both contribution logs. Added CPU PyTorch to CI. Assembled the Phase 2
+  literature review, executed master notebook, IEEE report and 20-slide deck
+  with short Hinglish presenter notes. Re-derived metrics independently from
+  integer confusion counts and retained all original selection/test evidence.
+Verification and finding: 60 tests pass. The integrated selected checkpoint
+  matches 12,000/12,000 validation predictions. A fresh isolated two-epoch smoke
+  training run reloads with 1,000/1,000 predictions matching. All 31 full-profile
+  prediction files pass original-ID, authoritative-label and metric checks.
+  Notebook executed in order with no errors; four-page public and private
+  reports compiled and were visually reviewed. Deck has editable tables, five
+  native charts with embedded data workbooks, and 20 Hinglish note parts.
+  CNN improves aggregate accuracy by 1.23 percentage points over SVM, while
+  Shirt recall falls. Fusion does not improve over embedding-only LR.
+Commit or evidence path: PR #8; results/phase2/integration/audit.json;
+  docs/phase2_integration_nakul.md; final artifact paths above.
+```
