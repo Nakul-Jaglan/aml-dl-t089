@@ -57,7 +57,22 @@ python -m clothing_ml.phase2 verify --profile smoke --run-id smoke_cnn2_s42_e707
 ```
 
 On validation, a three-block CNN reached 0.9308 macro F1 (Phase 1 HOG + SVM: 0.9114
-on the same IDs). Phase 2 official-test results have not been produced yet.
+on the same IDs).
+
+The frozen rows reached the official test on 2026-11-18. Neelanshu's evaluation
+([`docs/phase2_neelanshu_evaluation.md`](docs/phase2_neelanshu_evaluation.md)) recomputes
+every score from saved predictions:
+
+| Row | Test accuracy | Test macro F1 | Shirt recall | ms/image (1 CPU thread) |
+|---|---:|---:|---:|---:|
+| Selected CNN-3 | 92.14% | 0.9207 | 71.7% | 0.31 |
+| Phase 1 HOG + RBF SVM | 90.91% | 0.9090 | 73.3% | 19.75 |
+| Embedding + HOG + LR (hybrid) | 92.06% | 0.9206 | 76.0% | 0.52 |
+
+```bash
+python -m clothing_ml.phase2.evaluation all
+python -m clothing_ml.phase2.evaluation lookup --id 40
+```
 
 ## Quick start
 

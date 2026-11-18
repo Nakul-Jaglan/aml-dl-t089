@@ -1,0 +1,10 @@
+{
+  "freeze_manifest_sha256": "250f974af64b67340eea34f4af174c4227561a6242d37c1335357793777a7662",
+  "rows": [
+    "selected_cnn",
+    "emb_lr",
+    "hog_lr",
+    "fusion_lr"
+  ],
+  "opened_utc": "2026-11-18T18:50:34.574716+00:00"
+}

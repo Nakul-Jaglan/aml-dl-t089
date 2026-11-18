@@ -1,0 +1,29 @@
+{
+  "files_checked": 27,
+  "all_passed": true,
+  "schema": [
+    "run_id",
+    "stage",
+    "source_split",
+    "sample_id",
+    "y_true",
+    "y_pred"
+  ],
+  "checks": [
+    "required columns",
+    "single run_id",
+    "stage and source_split match the partition",
+    "exact ID membership, no duplicates",
+    "category IDs 0-9",
+    "y_true equals official label by sample_id",
+    "support sums to n",
+    "diagonal / n equals accuracy",
+    "accuracy, macro F1 (and confusion) equal the saved record",
+    "official test: support 1,000 for each of ten labels"
+  ],
+  "validation_ids": "data/full_indices.npz val_idx (12,000 official_train IDs)",
+  "test_ids": "official_test 0..9,999",
+  "freeze_manifest_sha256": "250f974af64b67340eea34f4af174c4227561a6242d37c1335357793777a7662",
+  "label_source": "load_official (checksum-verified IDX files)",
+  "created_utc": "2026-11-18T18:52:43.265152+00:00"
+}

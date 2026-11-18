@@ -1,0 +1,18 @@
+{
+  "freeze_manifest_sha256": "250f974af64b67340eea34f4af174c4227561a6242d37c1335357793777a7662",
+  "test_n": 10000,
+  "test_summary_sha256": "91b29e9a64e3a650db9ccf7489285379c59922a84120cbd5a84fa38556955b19",
+  "class_names": [
+    "T-shirt/top",
+    "Trouser",
+    "Pullover",
+    "Dress",
+    "Coat",
+    "Sandal",
+    "Shirt",
+    "Sneaker",
+    "Bag",
+    "Ankle boot"
+  ],
+  "test_tuned": false
+}

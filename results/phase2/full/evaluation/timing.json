@@ -1,0 +1,267 @@
+{
+  "ids": "official_test 0..1023 (raw uint8)",
+  "batch_size": 128,
+  "warmup_batches": 1,
+  "repeats": 5,
+  "timer": "time.perf_counter wall time per 1,024 images per repeat, converted to ms/image; loading and disk I/O excluded",
+  "environment": {
+    "python": "3.12.5",
+    "platform": "macOS-26.2-arm64-arm-64bit",
+    "cpu": "Apple M3",
+    "logical_cpus": 8,
+    "torch": "2.15.0",
+    "torch_threads": 1,
+    "torch_interop_threads": 1,
+    "native_threads": "threadpoolctl limits=1 for NumPy/BLAS/OpenMP",
+    "device": "cpu (no accelerator numbers reported)",
+    "numpy": "2.5.5",
+    "scikit-learn": "1.9.1",
+    "scikit-image": "0.26.0",
+    "threadpoolctl": "3.8.0",
+    "joblib": "1.6.0"
+  },
+  "phase1_svm_artifact": {
+    "source": "refit for timing only (Phase 1 artifact is git-ignored)",
+    "refit_artifact": "work/phase2_timing/full_hog_svm_3fd9d87a_refit.joblib",
+    "refit_artifact_sha256": "f4aca769437880375249f08347c9a794a1c2bfe63440c30b15f7cf5065188a5f",
+    "refit_artifact_bytes": 92082654,
+    "estimator_settings_match_record": true,
+    "test_predictions_identical_to_saved": "10000/10000",
+    "support_vectors_refit": 20916,
+    "support_vectors_record": 20916
+  },
+  "measurements": {
+    "hog_svm": {
+      "run_id": "full_hog_svm_3fd9d87a",
+      "includes": "raw uint8 -> /255 -> HOG -> StandardScaler -> RBF SVC",
+      "timed_predictions_match_saved": "1024/1024",
+      "batch128_amortized": {
+        "median_ms_per_image": 19.748312663089962,
+        "min_ms_per_image": 19.301708699224207,
+        "max_ms_per_image": 19.90249861718496,
+        "repeat_seconds": [
+          20.305548042000737,
+          20.22227216700412,
+          19.780084083002293,
+          20.3801585839974,
+          19.764949708005588
+        ],
+        "images": 1024,
+        "batch_size": 128,
+        "repeats": 5,
+        "warmup_batches": 1,
+        "native_threads": 1,
+        "interpretation": "amortized batch cost; excludes disk reads and model loading"
+      },
+      "single_image_latency": {
+        "median_ms_per_image": 19.18484732811976,
+        "min_ms_per_image": 18.92111783593009,
+        "max_ms_per_image": 20.63549967186873,
+        "repeat_seconds": [
+          2.4265222920003,
+          2.4219030829990515,
+          2.5148751249944326,
+          2.6413439579991973,
+          2.455660457999329
+        ],
+        "images": 128,
+        "batch_size": 1,
+        "repeats": 5,
+        "warmup_batches": 1,
+        "native_threads": 1,
+        "interpretation": "amortized batch cost; excludes disk reads and model loading"
+      },
+      "torch_threads_during_timing": 1
+    },
+    "selected_cnn": {
+      "run_id": "full_cnn3_s42_80a2edee",
+      "includes": "raw uint8 -> /255 tensor [B,1,28,28] -> CNN-3 eval forward -> argmax",
+      "timed_predictions_match_saved": "1024/1024",
+      "batch128_amortized": {
+        "median_ms_per_image": 0.31200703906364424,
+        "min_ms_per_image": 0.2933942060536765,
+        "max_ms_per_image": 0.42096691894499827,
+        "repeat_seconds": [
+          0.34241766599734547,
+          0.43107012499967823,
+          0.3138782079986413,
+          0.3194952080011717,
+          0.30043566699896473
+        ],
+        "images": 1024,
+        "batch_size": 128,
+        "repeats": 5,
+        "warmup_batches": 1,
+        "native_threads": 1,
+        "interpretation": "amortized batch cost; excludes disk reads and model loading"
+      },
+      "single_image_latency": {
+        "median_ms_per_image": 0.27445866402331376,
+        "min_ms_per_image": 0.25795214844492875,
+        "max_ms_per_image": 0.28231413284629525,
+        "repeat_seconds": [
+          0.03469537499768194,
+          0.03513070899498416,
+          0.03555416599556338,
+          0.03613620900432579,
+          0.03301787500095088
+        ],
+        "images": 128,
+        "batch_size": 1,
+        "repeats": 5,
+        "warmup_batches": 1,
+        "native_threads": 1,
+        "interpretation": "amortized batch cost; excludes disk reads and model loading"
+      },
+      "torch_threads_during_timing": 1
+    },
+    "emb_lr": {
+      "run_id": "full_emb_lr_C0.1_033b7a83",
+      "includes": "raw -> CNN-3 embedding (64) -> scaler -> LR",
+      "timed_predictions_match_saved": "1024/1024",
+      "batch128_amortized": {
+        "median_ms_per_image": 0.3146451826196994,
+        "min_ms_per_image": 0.29414379883263564,
+        "max_ms_per_image": 0.39302530858975615,
+        "repeat_seconds": [
+          0.3012032500046189,
+          0.4024579159959103,
+          0.31479324999963865,
+          0.36860687500302447,
+          0.3221966670025722
+        ],
+        "images": 1024,
+        "batch_size": 128,
+        "repeats": 5,
+        "warmup_batches": 1,
+        "native_threads": 1,
+        "interpretation": "amortized batch cost; excludes disk reads and model loading"
+      },
+      "single_image_latency": {
+        "median_ms_per_image": 0.36793228906617514,
+        "min_ms_per_image": 0.3563336562706354,
+        "max_ms_per_image": 0.3926575546984168,
+        "repeat_seconds": [
+          0.05026016700139735,
+          0.04709533300047042,
+          0.04589641700295033,
+          0.04561070800264133,
+          0.047890333997202106
+        ],
+        "images": 128,
+        "batch_size": 1,
+        "repeats": 5,
+        "warmup_batches": 1,
+        "native_threads": 1,
+        "interpretation": "amortized batch cost; excludes disk reads and model loading"
+      },
+      "torch_threads_during_timing": 1
+    },
+    "hog_lr": {
+      "run_id": "full_hog_lr_C0.1_c1406307",
+      "includes": "raw -> HOG (1,296) -> scaler -> LR",
+      "timed_predictions_match_saved": "1024/1024",
+      "batch128_amortized": {
+        "median_ms_per_image": 0.20532674120943284,
+        "min_ms_per_image": 0.2037054853545328,
+        "max_ms_per_image": 0.2150813808583507,
+        "repeat_seconds": [
+          0.21002679199591512,
+          0.21218812499864725,
+          0.2085944170030416,
+          0.21025458299845923,
+          0.22024333399895113
+        ],
+        "images": 1024,
+        "batch_size": 128,
+        "repeats": 5,
+        "warmup_batches": 1,
+        "native_threads": 1,
+        "interpretation": "amortized batch cost; excludes disk reads and model loading"
+      },
+      "single_image_latency": {
+        "median_ms_per_image": 0.3298450546935783,
+        "min_ms_per_image": 0.32646810160485984,
+        "max_ms_per_image": 0.3322825546661079,
+        "repeat_seconds": [
+          0.04222016700077802,
+          0.042472332999750506,
+          0.04178791700542206,
+          0.042198584000288974,
+          0.04253216699726181
+        ],
+        "images": 128,
+        "batch_size": 1,
+        "repeats": 5,
+        "warmup_batches": 1,
+        "native_threads": 1,
+        "interpretation": "amortized batch cost; excludes disk reads and model loading"
+      },
+      "torch_threads_during_timing": 1
+    },
+    "fusion_lr": {
+      "run_id": "full_fusion_lr_C0.1_db46d180",
+      "includes": "raw -> [CNN-3 embedding (64) | HOG (1,296)] -> scaler -> LR",
+      "timed_predictions_match_saved": "1024/1024",
+      "batch128_amortized": {
+        "median_ms_per_image": 0.5175190830115639,
+        "min_ms_per_image": 0.5151189775389753,
+        "max_ms_per_image": 0.5537127685570908,
+        "repeat_seconds": [
+          0.567001875002461,
+          0.557209332997445,
+          0.5287537920012255,
+          0.5299395410038414,
+          0.5274818329999107
+        ],
+        "images": 1024,
+        "batch_size": 128,
+        "repeats": 5,
+        "warmup_batches": 1,
+        "native_threads": 1,
+        "interpretation": "amortized batch cost; excludes disk reads and model loading"
+      },
+      "single_image_latency": {
+        "median_ms_per_image": 0.5784987030779121,
+        "min_ms_per_image": 0.5731087187541561,
+        "max_ms_per_image": 0.5821132812684482,
+        "repeat_seconds": [
+          0.07404783399397274,
+          0.07335791600053199,
+          0.07451050000236137,
+          0.07428520900430158,
+          0.07396737499948358
+        ],
+        "images": 128,
+        "batch_size": 1,
+        "repeats": 5,
+        "warmup_batches": 1,
+        "native_threads": 1,
+        "interpretation": "amortized batch cost; excludes disk reads and model loading"
+      },
+      "torch_threads_during_timing": 1
+    }
+  },
+  "phase1_historical_hog_svm": {
+    "median_ms_per_image": 21.70900667385922,
+    "environment": {
+      "python": "3.12.14",
+      "platform": "macOS-26.5.2-arm64-arm-64bit",
+      "processor": "arm",
+      "machine": "arm64",
+      "git_commit": "ef69e8b84f7dab9c8d9376fb3eaf19ab6b400fe7",
+      "packages": {
+        "numpy": "2.5.4",
+        "pandas": "3.1.0",
+        "scipy": "1.18.1",
+        "scikit-learn": "1.9.1",
+        "scikit-image": "0.26.0",
+        "matplotlib": "3.11.2",
+        "joblib": "1.6.0",
+        "threadpoolctl": "3.7.0"
+      }
+    },
+    "note": "Phase 1 end-to-end timing from results/full/timing.json; different machine and session"
+  },
+  "created_utc": "2026-11-18T19:02:34.643130+00:00"
+}

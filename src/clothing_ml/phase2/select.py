@@ -174,7 +174,7 @@ def final_test(profile="full", allow_test=False):
                 logits = model.classifier(torch.from_numpy(embeddings))  # eval mode: dropout is identity
             predictions = logits.argmax(dim=1).numpy()
         else:
-            predictions = joblib.load(ROOT / row["artifact_path"]).predict(row_matrix(row["row"], embeddings, hog))
+            predictions = joblib.load(ROOT / row["artifact_path"])["pipeline"].predict(row_matrix(row["row"], embeddings, hog))
         frame = prediction_frame(row["run_id"], "test", ids, labels, predictions)
         validate_predictions(frame, ids, labels, "test", row["run_id"])
         frame.to_csv(result / "predictions" / f"{row['run_id']}_test.csv.gz", index=False, compression={"method": "gzip", "mtime": 0})
