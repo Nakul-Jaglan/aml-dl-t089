@@ -23,7 +23,7 @@ member's individual review or contribution.
 | Sudeshhna | Data quality, EDA, shared splits | Near-duplicate audit contributed (AI-assisted, see log below); personal review and viva preparation pending |
 | Puneet | Pixels/HOG, LR and kNN | Feature tests, kNN neighbour analysis and LR/kNN notebook contributed (AI-assisted, see log below); personal review and viva preparation pending |
 | Samarth | RF, SVM and experiment harness; Phase 2 training runner, ablations, fusion | Phase 2 runner, ablations and fusion contributed (AI-assisted, see log below); personal review and viva preparation pending |
-| Neelanshu | Metrics, timing and error analysis | Human review and own contribution pending |
+| Neelanshu | Metrics, timing and error analysis; Phase 2 evaluation | Phase 2 prediction audit, official-test run, paired error analysis and timing contributed (AI-assisted, see log below); personal review and viva preparation pending |
 
 ## Add real evidence as work happens
 
@@ -156,3 +156,28 @@ policy has not been provided, so this repository records assistance transparentl
 without inventing a course rule or claiming permission from the faculty.
 
 Follow any disclosure requirements specified by the faculty.
+
+### 2026-11-19 — Neelanshu — Phase 2 evaluation, timing and paired errors
+
+```text
+Date: 2026-11-19
+Member: Neelanshu
+File/run/figure: src/clothing_ml/phase2/evaluation.py, tests/test_phase2_evaluation.py,
+  results/phase2/full/evaluation/, figures/phase2/full/evaluation/,
+  results/phase2/full/test_access_log.md, docs/phase2_neelanshu_evaluation.md
+Actual change or review: Ran the frozen Phase 2 rows on the official test
+  (freeze 250f974a…7a662). Fixed a one-line bug in select.final_test, which
+  called .predict on the joblib dict instead of bundle["pipeline"]; the crash
+  happened after the CNN row and before any summary was written. Added the
+  evaluation module: prediction audit, one-row-per-run table, per-class table,
+  paired outcome groups and label-pair counts, example panels, same-machine
+  timing and complexity columns.
+Verification and finding: 27 prediction files pass ID/label checks and their
+  recomputed metrics equal the stored records. CNN-3 vs HOG + SVM on test:
+  +1.23 pp accuracy (bootstrap 95% +0.73 to +1.75 pp), +0.0118 macro F1,
+  425 only-CNN vs 302 only-SVM correct. Shirt recall falls 73.3% -> 71.7% while
+  T-shirt -> Shirt errors drop 104 -> 64. The refit Phase 1 SVM matches all
+  10,000 saved test predictions; on one M3 CPU thread it takes 19.7 ms/image
+  vs 0.31 ms for the CNN. 43 tests pass.
+Commit or evidence path: branch phase2/evaluation-neelanshu
+```

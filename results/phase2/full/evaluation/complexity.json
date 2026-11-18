@@ -1,0 +1,54 @@
+[
+  {
+    "row": "selected_cnn",
+    "run_id": "full_cnn3_s42_80a2edee",
+    "value": 167114,
+    "unit": "trainable float32 scalars (all CNN-3 parameters)",
+    "scaler_scalars": 0,
+    "artifact_bytes": 673525,
+    "artifact_format": "torch.save zip (state_dict + arch), float32, no extra compression"
+  },
+  {
+    "row": "hog_svm",
+    "run_id": "full_hog_svm_3fd9d87a",
+    "value": 27295425,
+    "unit": "stored SVC decision-array scalars (support vectors + dual coefficients + intercepts); storage proxy, not learned weights",
+    "support_vectors": 20916,
+    "scaler_scalars": 2592,
+    "artifact_bytes": 92083815,
+    "artifact_format": "joblib bundle, compress=3 (Phase 1 record)"
+  },
+  {
+    "row": "emb_lr",
+    "run_id": "full_emb_lr_C0.1_033b7a83",
+    "value": 650,
+    "unit": "LR coefficients + intercepts",
+    "frozen_encoder_scalars_shipped": 166464,
+    "frozen_encoder_note": "CNN-3 conv blocks + dense layer up to the 64-value embedding (its own 650-value head unused)",
+    "scaler_scalars": 128,
+    "artifact_bytes": 4415,
+    "artifact_format": "joblib bundle (scikit-learn Pipeline) + CNN-3 checkpoint"
+  },
+  {
+    "row": "hog_lr",
+    "run_id": "full_hog_lr_C0.1_c1406307",
+    "value": 12970,
+    "unit": "LR coefficients + intercepts",
+    "frozen_encoder_scalars_shipped": 0,
+    "frozen_encoder_note": "none",
+    "scaler_scalars": 2592,
+    "artifact_bytes": 79571,
+    "artifact_format": "joblib bundle (scikit-learn Pipeline)"
+  },
+  {
+    "row": "fusion_lr",
+    "run_id": "full_fusion_lr_C0.1_db46d180",
+    "value": 13610,
+    "unit": "LR coefficients + intercepts",
+    "frozen_encoder_scalars_shipped": 166464,
+    "frozen_encoder_note": "CNN-3 conv blocks + dense layer up to the 64-value embedding (its own 650-value head unused)",
+    "scaler_scalars": 2720,
+    "artifact_bytes": 82514,
+    "artifact_format": "joblib bundle (scikit-learn Pipeline) + CNN-3 checkpoint"
+  }
+]

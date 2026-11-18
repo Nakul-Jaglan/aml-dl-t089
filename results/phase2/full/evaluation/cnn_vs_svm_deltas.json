@@ -1,0 +1,36 @@
+{
+  "cnn_run_id": "full_cnn3_s42_80a2edee",
+  "svm_run_id": "full_hog_svm_3fd9d87a",
+  "deltas_cnn_minus_svm": {
+    "accuracy_pp": 1.2299999999999978,
+    "macro_f1_points_x100": 1.1791621145209263,
+    "recall_pp_by_class": {
+      "T-shirt/top": 4.900000000000004,
+      "Trouser": 1.4000000000000012,
+      "Pullover": 3.500000000000003,
+      "Dress": 0.9000000000000008,
+      "Coat": 0.9000000000000008,
+      "Sandal": 2.100000000000002,
+      "Shirt": -1.6000000000000014,
+      "Sneaker": 1.0000000000000009,
+      "Bag": 0.30000000000000027,
+      "Ankle boot": -1.100000000000001
+    },
+    "speed_ratio_svm_over_cnn": 63.29444592774599
+  },
+  "paired_bootstrap": {
+    "seed": 42,
+    "repeats": 2000,
+    "resampled_unit": "aligned official-test ID pair",
+    "accuracy_delta_ci95": [
+      0.007300000000000084,
+      0.01750000000000007
+    ],
+    "macro_f1_delta_ci95": [
+      0.00673082723460382,
+      0.01703891742266053
+    ],
+    "scope": "sampling variability of this 10,000-image benchmark only; excludes training-seed sensitivity and transfer to real catalogue photos"
+  },
+  "rounding": "deltas from unrounded values; round once when reporting"
+}

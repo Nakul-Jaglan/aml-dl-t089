@@ -1,0 +1,5 @@
+row,run_id,accuracy,macro_f1,recall_shirt
+selected_cnn,full_cnn3_s42_80a2edee,0.9214,0.9207446504151703,0.717
+emb_lr,full_emb_lr_C0.1_033b7a83,0.9221,0.921774022368497,0.746
+hog_lr,full_hog_lr_C0.1_c1406307,0.876,0.8757223506647399,0.661
+fusion_lr,full_fusion_lr_C0.1_db46d180,0.9206,0.9205502764941695,0.76

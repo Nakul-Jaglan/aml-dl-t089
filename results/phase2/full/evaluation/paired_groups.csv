@@ -1,0 +1,13 @@
+scope,group,count,scope_n
+all ten classes,Both correct,8789,10000
+all ten classes,Only CNN correct,425,10000
+all ten classes,Only HOG + SVM correct,302,10000
+all ten classes,Both wrong,484,10000
+true T-shirt/Pullover/Coat/Shirt,Both correct,3085,4000
+true T-shirt/Pullover/Coat/Shirt,Only CNN correct,308,4000
+true T-shirt/Pullover/Coat/Shirt,Only HOG + SVM correct,231,4000
+true T-shirt/Pullover/Coat/Shirt,Both wrong,376,4000
+true Shirt,Both correct,630,1000
+true Shirt,Only CNN correct,87,1000
+true Shirt,Only HOG + SVM correct,103,1000
+true Shirt,Both wrong,180,1000
