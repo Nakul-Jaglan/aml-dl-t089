@@ -1,0 +1,39 @@
+{
+  "run_id": "full_cnn2_aug_p50_s42_fe3c3cdd",
+  "checkpoint_sha256_verified": true,
+  "checkpoint_epoch": 25,
+  "predictions_identical": true,
+  "n": 12000,
+  "mismatches": 0,
+  "val_macro_f1": 0.9279483431994802,
+  "record_val_macro_f1": 0.9279483431994802,
+  "first_ids_to_labels": [
+    [
+      37343,
+      5,
+      5
+    ],
+    [
+      2050,
+      4,
+      4
+    ],
+    [
+      12128,
+      5,
+      5
+    ],
+    [
+      30987,
+      2,
+      2
+    ],
+    [
+      43799,
+      1,
+      1
+    ]
+  ],
+  "verified_utc": "2026-11-18T18:09:30.403636+00:00",
+  "device": "cpu"
+}

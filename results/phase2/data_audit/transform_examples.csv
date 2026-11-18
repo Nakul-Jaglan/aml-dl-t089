@@ -1,0 +1,8 @@
+original_id,label,class,dx,dy,corner_shift_mass_lost_fraction,shifted_min,shifted_max
+15775,0,T-shirt/top,2,0,0.0696,0.0,1.0
+36607,2,Pullover,-1,2,0.0217,0.0,1.0
+51771,4,Coat,-1,-2,0.0278,0.0,1.0
+37755,6,Shirt,-2,2,0.0561,0.0,1.0
+28462,5,Sandal,-2,1,0.0224,0.0,1.0
+15338,7,Sneaker,1,2,0.0361,0.0,0.9960784316062927
+32673,9,Ankle boot,-2,2,0.0103,0.0,1.0

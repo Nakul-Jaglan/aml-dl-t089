@@ -1,4 +1,4 @@
-name: Phase 1 integrity checks
+name: Project integrity checks
 on:
   push:
   pull_request:
@@ -13,7 +13,9 @@ jobs:
         with:
           python-version: '3.12'
           cache: pip
-      - run: python -m pip install -e '.[dev]'
+      - name: Install CPU PyTorch for Phase 2 checks
+        run: python -m pip install 'torch==2.15.0' --index-url https://download.pytorch.org/whl/cpu
+      - run: python -m pip install -e '.[dev,phase2]'
       - run: python -m pytest -q
       - name: Validate notebook format without retraining
         run: python scripts/check_notebook.py

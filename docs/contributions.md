@@ -20,7 +20,7 @@ member's individual review or contribution.
 | Member | Planned responsibility | Individual review/contribution status |
 |---|---|---|
 | Nakul | Integration, literature, repository, master notebook, report assembly | AI-assisted materials prepared; human review/viva practice pending |
-| Sudeshhna | Data quality, EDA, shared splits | Near-duplicate audit contributed (AI-assisted, see log below); personal review and viva preparation pending |
+| Sudeshhna | Data quality, EDA, shared splits; Phase 2 CNN data adapter and augmentation | Near-duplicate audit and Phase 2 data adapter/augmentation ablation contributed (AI-assisted, see log below); personal review and viva preparation pending |
 | Puneet | Pixels/HOG, LR and kNN | Feature tests, kNN neighbour analysis and LR/kNN notebook contributed (AI-assisted, see log below); personal review and viva preparation pending |
 | Samarth | RF, SVM and experiment harness; Phase 2 training runner, ablations, fusion | Phase 2 runner, ablations and fusion contributed (AI-assisted, see log below); personal review and viva preparation pending |
 | Neelanshu | Metrics, timing and error analysis; Phase 2 evaluation | Phase 2 prediction audit, official-test run, paired error analysis and timing contributed (AI-assisted, see log below); personal review and viva preparation pending |
@@ -178,6 +178,37 @@ Commit or evidence path: branch phase2/cnn-architecture-puneet; PR #6;
   docs/phase2_cnn_architecture_puneet.md; scripts/phase2_model_demo.py
 AI assistance: Prepared on the same transparent basis as Phase 1. The code,
   tests, arithmetic proofs, and demo scripts are verified and reproducible.
+```
+
+### 2026-11-18 — Sudeshhna — Phase 2 CNN data adapter and augmentation ablation
+
+```text
+Date: 2026-11-18
+Member: Sudeshhna
+File/run/figure: src/clothing_ml/phase2/data.py, tests/test_phase2_data.py,
+  scripts/phase2_data_audit.py, scripts/phase2_augmentation_report.py,
+  configs/phase2/cnn2_aug_p50.json, results/phase2/data_audit/,
+  results/phase2/full/runs/full_cnn2_aug_p50_s42_fe3c3cdd/,
+  figures/phase2/data/, docs/phase2_sudeshhna_data.md
+Actual change or review: Replaced the stand-in loader with the CNN data adapter
+  (ClothingImages: raw uint8 -> float32 [1,28,28] divided by 255 once, original ID
+  on every item), one loader factory (make_loaders), handoff batch checks
+  (check_batch) and the work-guide fit-only translation policy (+-2 px, zero fill,
+  no wraparound, p = 0.5). The runner-facing names are unchanged; select.py now
+  restricts candidates to the declared run_order 1-4.
+Verification and finding: 7 new tests pass (full suite green). The new adapter is
+  bit-identical to the stand-in on full validation tensors and full shuffled fit
+  epochs for both earlier policies; CNN-3 still reproduces 12,000/12,000 validation
+  predictions after reload. Split audit: 4,800 fit / 1,200 validation per class,
+  split SHA-256 matches Phase 1 provenance and every Phase 2 run; two validation
+  passes identical; 125 wraparound cases pass. Validation-only ablation:
+  p = 0.5 shift 0.9279 macro F1 vs 0.9267 unaugmented (+0.0012, one seed, not
+  claimed as robust) vs 0.9202 shifting every image; Shirt recall 0.723 vs 0.772.
+  Official test was not loaded.
+Commit or evidence path: branch phase2/data-adapter-sudeshhna; docs/phase2_sudeshhna_data.md
+AI assistance: Prepared with Claude, on the same transparent basis as the rest of
+  this repository. Sudeshhna's own review of this work, and her ability to explain
+  it in the individual viva, are separate and are NOT claimed by this entry.
 ```
 
 Before submission, follow the faculty's actual AI-use/disclosure policy. That
