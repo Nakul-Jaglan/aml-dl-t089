@@ -15,6 +15,7 @@ from ..utils import ROOT, RESULTS_ROOT, read_json, sha256, stable_hash, write_js
 from .runner import load_checkpoint, phase2_environment, phase2_paths
 
 PRIMARY_SEED = 42
+SELECTABLE_RUN_ORDERS = {1, 2, 3, 4}
 SELECTION_RULE = ("highest validation macro F1, then validation accuracy, then declared run_order "
                   "(cnn2=1, cnn2_p0=2, cnn2_aug=3, cnn3=4); primary seed 42 only")
 PHASE1_REFERENCE = RESULTS_ROOT / "full" / "freeze.json"
@@ -67,7 +68,10 @@ def select_cnn(profile="full"):
         raise ValueError("Smoke runs are plumbing checks and cannot be selected")
     result, _ = phase2_paths(profile)
     runs = completed_runs(profile)
-    primary = [r for r in runs if r["config"]["seed"] == PRIMARY_SEED and not r["config"].get("max_fit") and not r["config"].get("max_val")]
+    # Only the four declared run_order rows are candidates; later validation-only
+    # ablations (e.g. cnn2_aug_p50, run_order 5) are reported but never selected.
+    primary = [r for r in runs if r["config"]["seed"] == PRIMARY_SEED and not r["config"].get("max_fit")
+               and not r["config"].get("max_val") and r["config"]["run_order"] in SELECTABLE_RUN_ORDERS]
     if not primary:
         raise ValueError("No completed primary-seed runs")
     for key in ["split_sha256", "fit_ids_sha256", "val_ids_sha256"]:

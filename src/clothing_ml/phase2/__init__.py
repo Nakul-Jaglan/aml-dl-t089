@@ -5,7 +5,8 @@ results/*/protocol.json (src/clothing_ml/*.py, non-recursive) stay unchanged.
 
 Interfaces (team handoff, Phase 2 guide p.9):
 - data.py   image float32 [B,1,28,28], label int64 [B], original ID int64 [B]
-            (stand-in until Sudeshhna's adapter lands; same contract)
+            (Sudeshhna's adapter: ClothingImages, make_loaders, check_batch,
+            fit-only translation policies; bit-identical to the earlier stand-in)
 - models.py logits [B,10]; .embed() -> [B,64] after dense ReLU, before dropout
             (stand-in until Puneet's designs land; same contract)
 - runner.py training runner, best-checkpoint rule, run record (Samarth)
