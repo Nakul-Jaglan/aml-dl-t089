@@ -1,0 +1,23 @@
+{
+  "profile": "full",
+  "blocks": 2,
+  "dropout": 0.3,
+  "augmentation": "translate2_p50",
+  "seed": 42,
+  "device": "cpu",
+  "batch_size": 128,
+  "max_epochs": 25,
+  "patience": 5,
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.0001
+  },
+  "loss": "CrossEntropyLoss",
+  "selection_metric": "val_macro_f1",
+  "run_order": 5,
+  "name": "cnn2_aug_p50",
+  "purpose": "Work-guide augmentation policy (Sudeshhna): fit-only +/-2 px shift applied with probability 0.5; everything else as cnn2. Validation-only ablation, not a selection candidate (selection and freeze were completed before this run).",
+  "config_sha256": "fe3c3cdd816eda691a5f7cf3b8e1abe4534fc2c0214ff2abfb821a2ab493ee7f",
+  "run_id": "full_cnn2_aug_p50_s42_fe3c3cdd"
+}

@@ -1,0 +1,3 @@
+{"name": "cnn2_aug_p50", "profile": "full", "blocks": 2, "dropout": 0.30, "augmentation": "translate2_p50",
+ "seed": 42, "device": "cpu", "run_order": 5,
+ "purpose": "Work-guide augmentation policy (Sudeshhna): fit-only +/-2 px shift applied with probability 0.5; everything else as cnn2. Validation-only ablation, not a selection candidate (selection and freeze were completed before this run)."}

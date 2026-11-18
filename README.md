@@ -56,6 +56,10 @@ python -m clothing_ml.phase2 train --config configs/phase2/smoke.json
 python -m clothing_ml.phase2 verify --profile smoke --run-id smoke_cnn2_s42_e7074488
 ```
 
+Sudeshhna's CNN data adapter, split audit and augmentation ablation are in
+[`docs/phase2_sudeshhna_data.md`](docs/phase2_sudeshhna_data.md)
+(`python scripts/phase2_data_audit.py`).
+
 On validation, a three-block CNN reached 0.9308 macro F1 (Phase 1 HOG + SVM: 0.9114
 on the same IDs). Phase 2 official-test results have not been produced yet.
 
