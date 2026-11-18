@@ -1,0 +1,12 @@
+{
+  "integration_date": "2026-11-19",
+  "all_passed": true,
+  "full_profile_prediction_files": 31,
+  "method": "independent integer confusion counts and classwise F1, authoritative IDX labels, exact IDs and saved artifact hashes",
+  "freeze_sha256": "250f974af64b67340eea34f4af174c4227561a6242d37c1335357793777a7662",
+  "scope": "31 files including all six fusion C candidates and the later validation-only p50 run; original results are read-only",
+  "selected_cnn": "full_cnn3_s42_80a2edee",
+  "fit_n": 48000,
+  "val_n": 12000,
+  "test_n": 10000
+}

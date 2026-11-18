@@ -2,10 +2,10 @@
 
 **Inventory Image Tagging via Handcrafted Features and a Small CNN**
 
-This repository currently implements **Phase 1: classical machine learning only**.
+This repository contains the completed **Phase 1 classical ML and Phase 2 deep learning comparisons**.
 It compares flattened pixels and Histogram of Oriented Gradients (HOG) with
 Logistic Regression, k nearest neighbors, Random Forest and an RBF SVM.
-The CNN and classical-versus-CNN comparison are reserved for Phase 2.
+Phase 2 adds a small CNN, controlled validation ablations and an optional HOG/CNN feature-fusion experiment.
 
 Team: **Nakul, Sudeshhna, Puneet, Samarth and Neelanshu**.
 
@@ -41,42 +41,49 @@ and [PDF copy](presentation/Phase_1_Clothing_Category_Recognition.pdf) include
 assign speaking sections to all five team members.
 
 Section A and the five roll numbers were supplied by the team. Roll numbers live
-only in git-ignored private author files and `report/submission.pdf`. Public
+only in git-ignored private author files and the Phase 1/2 `submission.pdf` files. Public
 GitHub files and `report/main.pdf` omit those identifiers. See [report build notes](report/README.md).
 
-## Phase 2 (in progress): small CNN training runner, ablations and fusion
+## Completed Phase 2 results
 
-Samarth's Phase 2 runner and validation evidence are in
-[`docs/phase2_samarth_results.md`](docs/phase2_samarth_results.md) and
-[`docs/phase2_training_protocol.md`](docs/phase2_training_protocol.md).
-Install PyTorch with `python -m pip install -e '.[dev,phase2]'` (or the official PyTorch installer for your platform), then:
+The [Phase 2 master notebook](notebooks/01_phase2_master.ipynb),
+[HTML companion](notebooks/01_phase2_master.html),
+[IEEE report](report/phase2/main.pdf) and
+[20-slide presentation with Hinglish notes](presentation/phase2/Phase_2_Clothing_Category_Recognition.pptx)
+use the completed teammate experiments and the expanded integration audit.
+The [integration record](docs/phase2_integration_nakul.md) documents the branch review,
+model-selection history, sources, reproduction and limitations.
 
-```bash
-python -m clothing_ml.phase2 train --config configs/phase2/smoke.json
-python -m clothing_ml.phase2 verify --profile smoke --run-id smoke_cnn2_s42_e7074488
-```
-
-Sudeshhna's CNN data adapter, split audit and augmentation ablation are in
-[`docs/phase2_sudeshhna_data.md`](docs/phase2_sudeshhna_data.md)
-(`python scripts/phase2_data_audit.py`).
-
-On validation, a three-block CNN reached 0.9308 macro F1 (Phase 1 HOG + SVM: 0.9114
-on the same IDs).
-
-The frozen rows reached the official test on 2026-11-18. Neelanshu's evaluation
-([`docs/phase2_neelanshu_evaluation.md`](docs/phase2_neelanshu_evaluation.md)) recomputes
-every score from saved predictions:
-
-| Row | Test accuracy | Test macro F1 | Shirt recall | ms/image (1 CPU thread) |
+| Pipeline | Test accuracy | Macro F1 | Shirt recall | CPU ms/image |
 |---|---:|---:|---:|---:|
-| Selected CNN-3 | 92.14% | 0.9207 | 71.7% | 0.31 |
-| Phase 1 HOG + RBF SVM | 90.91% | 0.9090 | 73.3% | 19.75 |
-| Embedding + HOG + LR (hybrid) | 92.06% | 0.9206 | 76.0% | 0.52 |
+| Phase 1 HOG + SVM | 90.91% | 0.9090 | 73.3% | 19.748 |
+| Selected CNN-3 | 92.14% | 0.9207 | 71.7% | 0.312 |
+| Embedding + LR control | 92.21% | 0.9218 | 74.6% | 0.315 |
+| HOG + LR control | 87.60% | 0.8757 | 66.1% | 0.205 |
+| HOG + embedding + LR | 92.06% | 0.9206 | 76.0% | 0.518 |
+
+The CNN improves aggregate accuracy and F1 against SVM, with lower recorded CPU
+batch cost, while Shirt recall falls. Fusion falls below embedding-only LR on
+validation and test F1. All rows use the same official test IDs. Timings are
+medians from one Apple M3 CPU thread, batch 128, 1,024 fixed test IDs and five
+repeats. One training seed, the previously examined public test, near-copy
+findings and one-machine timing bound the conclusions.
 
 ```bash
-python -m clothing_ml.phase2.evaluation all
+python -m pip install -e '.[dev,phase2]'
+python -m pytest -q
+python -m clothing_ml.phase2.reporting
 python -m clothing_ml.phase2.evaluation lookup --id 40
 ```
+
+The reporting command independently checks 31 saved prediction files and writes
+integration tables and figures. Training, selection, freeze and original test
+commands remain explicit in the
+[training protocol](docs/phase2_training_protocol.md). Component notes cover
+[Sudeshhna's data work](docs/phase2_sudeshhna_data.md),
+[Puneet's architecture](docs/phase2_cnn_architecture_puneet.md),
+[Samarth's runs](docs/phase2_samarth_results.md) and
+[Neelanshu's evaluation](docs/phase2_neelanshu_evaluation.md).
 
 ## Quick start
 

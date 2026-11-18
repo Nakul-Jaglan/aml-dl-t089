@@ -21,3 +21,10 @@ report/submission.tex
 report/submission.pdf
 report/submission.*
 
+report/phase2/*.aux
+report/phase2/*.bbl
+report/phase2/*.blg
+report/phase2/*.log
+report/phase2/*.out
+report/phase2/author_details.local.tex
+report/phase2/submission.*
